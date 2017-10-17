@@ -2,7 +2,7 @@
 
 Du trenger:
 1. Git
-2. Python3
+2. Python
 3. Pip (sudo apt-get install pip (eller pip3))
 4. Virtualenv (pip install virtualenv)
 
