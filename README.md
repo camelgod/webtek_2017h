@@ -17,3 +17,6 @@ Sette opp prosjektmappe:
 
 
 3. gå inn i mappen og python manage.py runserver 
+
+
+Test
