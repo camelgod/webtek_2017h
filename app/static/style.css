@@ -16,7 +16,7 @@ body, html {
 .page_container {
 }
 body {
-	background: #92e0d9;
+	background: #61aea8;
 }
 b {
 	font-weight:600;
@@ -259,7 +259,6 @@ a.delete, a.logout {
 	width: 100%;
 	position:fixed;
 	overflow: hidden;
-	text-align:center;
 }
 .header_content li, .head_text{
 	color: rgba(66,66,66,0.87);
@@ -626,7 +625,6 @@ a.delete, a.logout {
 }
 
 .head_text {
-	padding-left:152px;
 	float:none;
 	display:inline-block;
 	cursor:default;
@@ -662,7 +660,8 @@ footer h3{
 	float:left;
 }
 .footer_copyright {
-	background:#61aea8;
+	background:#2f7e79;
+	color:#fff;
 }
 .button_label {
 	margin:0px;
