@@ -16,3 +16,7 @@ def order():
 @app.route('/products', methods=['GET'])
 def products():
     return render_template('about.html')
+
+@app.route('/kontakt', methods=['GET'])
+def kontakt():
+    return render_template('kontakt.html')
