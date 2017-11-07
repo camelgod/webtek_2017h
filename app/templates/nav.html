@@ -4,7 +4,9 @@
 <body>
 	<div class="header_bar">
 		<div id="logo" class="header_logo">
-			<img src="{{url_for('static', filename='logo.png')}}" />
+			<a href="/">
+			<img id="logo_img" src="{{url_for('static', filename='logo.png')}}" />
+			</a>
 		</div>
 		<ul id="navbar" class="header_content">
 			<li><a href="/kunnskap">Kunnskapskatalog</a></li>
@@ -12,5 +14,6 @@
 			<li><a href="/kontakt">Kontakt</a></li>
 			<li><a href="/bruker/registrer">Registrer Bruker</a></li>
 			<li><a href="/nettbutikk">Nettbutikk</a></li>
+
 		</ul>
 	</div>
