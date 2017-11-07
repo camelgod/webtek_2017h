@@ -6,21 +6,24 @@
 
 
 			.menupane {
-			    width: 20%;
+			    width: 19%;
 			    height: 100%;
-			    float: left;
+                display: inline-block;
+                vertical-align: top;
+
 			}
 
 			.articlepane {
-			  width: 80%;
-			  height: 100%;
-			  float: left;
+			 width: 80%;
+			 height: 100%;
+            display: inline-block;
+
 			}
 
 			#articlepicture {
 				width: 300px;
 				height: 300px;
-				float: left;
+                float: left;
 			}
 </style>
 
@@ -28,30 +31,26 @@
 	<h3 class="page_header"><p>Knowledge Center</p></h3>
 	<div class="full">
 		<div class="page_box big">
-			<div class="menupane">
-					<a href="article1.html">Article 1</a>
-					<p>Article 2</p>
-					<p>Article 3</p>
-					<p>Article 4</p>
-					<p>Article 5</p>
-					<p>.....</p>
-					<p>.....</p>
-					<p>.....</p>
-					<p>.....</p>
-					<p>.....</p>
-				</div>
-				<div class="articlepane">
-					<div class="box_header">
-						<p>Article 1</p>
-					</div>
-					<div id="articlepicture">
-					<img src="...images/article1.png" alt="placeholder">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					
-				</div>
+            <div class="box_header">
+                <p>Knowledge Center</p>
+            </div>
+            <div class="box_content top-margin">
+                <div class="menupane">
+			    <ul>
+                    <li> <a href="/article">Article 1</a></li>
+                    <li>Article 2</li>
+                    <li>Article 3</li>
+                    <li>Article 4</li>
+					<li>Article 5</li>
+                </ul>
+                </div>
+                <div class="articlepane">
+                    <img id="articlepicture" src="{{url_for('static', filename='placeholder.png')}}" alt="placeholder">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+               </div>
 			</div>
 		</div>
 	</div>
