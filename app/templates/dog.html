@@ -1,20 +1,21 @@
-<html>
-{% include('header.html') %}
 {% include('nav.html') %}
-{% include('footer.html') %}
-	<div id="store">
-		<div id="navbar">
-			<p>
-				<a href="index.html">Home</a> / <a href="store.html">Store</a> / <a href="category1.html">Category 1</a>
-			</p>
-		</div>
-		<div id="products">
-			<div class="product">
-				<img src="../static/img/product.jpg" alt="product 1">
-				<h3>Product 1</h3>
-				<p>Size</p>
-				<button type="button">Vis produkt</button>
+	<div class="page_container">
+        <h3 class="page_header"><p>bla bla</p></h3>
+        <div class="full">
+            <div class="page_box big">
+				<h3 class="box_header">Product 1</h3>
+                <div id="navbar">
+                    <p>
+                        <a href="/">Home</a> / <a href="/nettbutikk">Store</a> / <a href="/category">Category 1</a>
+                    </p>
+                </div>
+                <div class="box_content top-margin">
+                    <img src="{{url_for('static', filename='catprod.jpg')}}" alt="product 1">
+                    <p>Size</p>
+                    <form action="/product">
+                        <input type="submit" value="Vis produkt">
+                    </form>
+                </div>
 			</div>
 		</div>
 	</div>
-</html>
