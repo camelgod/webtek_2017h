@@ -65,21 +65,7 @@ b {
 	margin:0px;
 	padding-top:20px;
 	padding-bottom:48px;
-}
-.page_header h3{
-	color: rgba(66,66,66,0.87);
-	font-size: 18px;
-	font-weight:400;
-	line-height:44px;
-	margin-left:5%;
-	margin-right:5%;
-}
-.page_header p{
-	color: rgb(66,66,66);
-	font-size: 16px;
-	font-weight:400;
-	line-height:32px;
-
+	height:15%;
 }
 
 .list_button {
