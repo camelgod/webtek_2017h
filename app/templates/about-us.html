@@ -1,4 +1,24 @@
 {% include('nav.html') %}
+<style>
+img {
+    max-width: 200px;
+}
+
+#employees{
+
+    text-align: center;
+}
+.employee{
+    display: inline-block;
+    width: 30%;
+
+}
+.about-left, .about-right{
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+</style>
 	<div class="page_container">
         <h3 class="page_header"><p>Dyresenteret</p></h3>
         <div class="full">
@@ -8,20 +28,46 @@
                         <a href="/">Home</a> / <a href="/om">About us</a>
                     </p>
                 </div>
-                <div id="header">
-                    <h1>Dyresenteret</h1>
+                <div class="about-left">
+                    <h2>Dyresenteret</h2>
                     <p>Lorem ipsum dolor sit amet bla bla bla bla bla bla</p>
                 </div>
-                <div id="picture">
-                    <img src="../static/img/about.jpg" alt="placeholder">
+                <div class="about-right">
+                    <img src="{{url_for('static', filename='placeholder.png')}}" alt="placeholder">
                     <p>Lorem ipsum dolor sit amet bla bla bla bla bla bla bla</p>
                 </div>
+                <hr>
                 <div id="employees">
-                    <h1>Employees</h1>
+                    <h2>Employees</h2>
                     <div class="employee">
-                        <img src="../static/img/employee1.jpg" alt="Employee 1">
-                        <h3>Employee</h3>
-                        <p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+                        <img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
+                        <h3>Employee Name</h3>
+                        <div class="employee-age">
+                            <p> Lorem age </p>
+                        </div>
+                        <div class="employee-info">
+                            <p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+                        </div>
+                     </div>
+                    <div class="employee">
+                        <img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
+                        <h3>Employee Name</h3>
+                        <div class="employee-age">
+                            <p> Lorem age </p>
+                        </div>
+                        <div class="employee-info">
+                            <p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+                        </div>
+                     </div>
+                    <div class="employee">
+                        <img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
+                        <h3>Employee Name</h3>
+                        <div class="employee-age">
+                            <p> Lorem age </p>
+                        </div>
+                        <div class="employee-info">
+                            <p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+                        </div>
                      </div>
                 </div>
             </div>
