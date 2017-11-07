@@ -20,3 +20,7 @@ def products():
 @app.route('/kontakt', methods=['GET'])
 def kontakt():
     return render_template('kontakt.html')
+
+@app.route('/registrer', methods=['GET'])
+def registrer():
+    return render_template('registrer.html')

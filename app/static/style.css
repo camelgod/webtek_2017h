@@ -178,6 +178,7 @@ a.delete, a.logout {
 	border-bottom: 1px solid rgba(0, 0, 0, .12);
 	border-radius:2px 2px 0px 0px;
 }
+
 .box_header h3{
 	color:rgb(66,66,66);
 	font-size: 18px;
@@ -851,3 +852,39 @@ input[type="submit"] {
 	opacity:0.40;
 }
 
+.registrerskjema{
+	position: relative;
+	width: 60%;
+	height : 60%;
+	margin : 0 auto;
+}
+
+#regFornavn{
+	position: absolute;
+	text-size:30px;
+	left:50px;
+}
+
+#regEtternavn{
+	position: absolute;
+}
+
+#regEmail{
+	position: absolute;
+}
+
+#regAdresse{
+	position: absolute;
+}
+
+#regTlf{
+	position: absolute;
+}
+
+#regPostnummer{
+	position: absolute;
+}
+
+#regSubmit{
+	position: absolute;
+}
