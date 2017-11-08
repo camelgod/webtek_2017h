@@ -9,23 +9,40 @@
 		</a>
 		</div>
 		<ul id="navbar" class="header_content">
+			<li class="icon" id="toggleNav"><a href="#">&#9776;</a></li>
 			<li><a href="/kunnskap">Kunnskapskatalog</a></li>
 			<li><a href="/om">Om Oss</a></li>
 			<li><a href="/kontakt">Kontakt</a></li>
 			<li><a href="/bruker/registrer">Registrer Bruker</a></li>
 			<li><a href="/nettbutikk">Nettbutikk</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
+		</ul>
+		<ul id="navbar-dropdown" class="navbar-collapse navbar-hide">
+			<li><a href="/kunnskap">Kunnskapskatalog</a></li>
+			<li><a href="/om">Om Oss</a></li>
+			<li><a href="/kontakt">Kontakt</a></li>
+			<li><a href="/bruker/registrer">Registrer Bruker</a></li>
+			<li><a href="/nettbutikk">Nettbutikk</a></li>
 		</ul>
 	</div>
 	<script>
 
-function myFunction() {
-	var x = document.getElementById("navbar");
-	if (x.className === "topnav") {
-		x.className += " responsive";
-	} else {
-		x.className = "topnav";
-	}
-} 
+window.onload = function() {
+	var button = document.getElementById("toggleNav");
+	var navbar = document.getElementById("navbar-dropdown");
+	var opened = false;
+
+	button.addEventListener('click', function() {
+		if(opened == true) {
+			navbar.className = "navbar-collapse";
+			button.className = "icon icon-open";
+			opened = false;
+		} else {
+			navbar.className = "navbar-collapse navbar-hide";
+			button.className = "icon icon-close";
+			opened = true;
+		};
+	});
+}
+
 	</script>
 
