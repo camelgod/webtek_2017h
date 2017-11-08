@@ -899,3 +899,12 @@ input[type="submit"] {
 .navbar-hide {
 	display:none;
 }
+
+#categories{
+    text-align: center;
+}
+.category{
+    display: inline-block;
+    width: 30%;
+
+}
