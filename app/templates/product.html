@@ -1,4 +1,5 @@
 {% include('nav.html') %}
+<link rel="stylesheet" href="../static/product.css">
 	<div class="page_container">
         <h3 class="page_header"><p>bla bla</p></h3>
         <div class="full">
@@ -9,13 +10,21 @@
                         <a href="/">Home</a> / <a href="/nettbutikk">Store</a> / <a href="/category">Category 1</a> / <a href="/category">Product 1</a>
                     </p>
                 </div>
-                <div class="box_content top-margin">
-                    <img src="{{url_for('static', filename='catprod.jpg')}}" alt="product 1">
-                    <h3>Royal Caning Medium Adult</h3>
-                    <p>15 kg</p>
-                    <form action="">
-                        <input type="submit" value="Legg til i handlekurv">
-                    </form>
+                <div class="top-margin product_box">
+                    <div class="product_left">
+                        <img class="product_img" src="{{url_for('static', filename='catprod.jpg')}}" alt="product 1">
+                    </div>
+                    <div class="product_right">
+                        <div class="product_innertop">
+                            <h3 class="product_h">Royal Caning Medium Adult</h3>
+                            <div class="product_size">15 kg</div>
+                        </div>
+                        <div class="product_button_div">
+                            <form action="">
+                                <input class="product_button" type="submit" value="Legg til i handlekurv">
+                            </form>
+                        </div>
+                    </div>
                 </div>
 			</div>
 		</div>
