@@ -60,11 +60,10 @@ b {
 }
 
 .page_header {
-	color: rgba(66,66,66,0.87);
-	background-color:#92e0d9;
+	background:#92e0d9 url("dog.jpg") no-repeat fixed center;
 	margin:0px;
-	padding-top:20px;
-	padding-bottom:48px;
+	padding-top:100px;
+	padding-bottom:100px;
 	height:15%;
 }
 
@@ -252,49 +251,40 @@ a.delete, a.logout {
 	display:inline-block;
 	float:right;
 	height:100%;
-	width:80%;
 	margin:0px;
 	line-height:56px;
 }
-.header_content li {
-	height:100%;
 
-
-}
-
-.header_content li, .head_text{
+.header_content a, .head_text{
 	color: rgba(66,66,66,0.87);
 	float: right;
 	padding-right: 20px;
 	padding-left:20px;
 	font-size: 18px;
 }
-.header_content li:hover {
+.header_content a:hover {
 	background-color:#61aea8;
 	cursor:pointer;
 }
 
 .navbar-collapse {
 	position:fixed;
-	background-color:#ff8f00;
+	background-color:#fff;
 	overflow-x:hidden;
-	padding-bottom:14px;
 	z-index:3;
-	top:52px;
+	top:40px;
 	right:0;
-	border-bottom: 1px solid rgba(0, 0, 0, .12);
 	overflow:hidden;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .navbar-collapse a{
 	padding: 8px 42px 8px 24px;
-	font-size:24px;
 	display:block;
 	color:rgba(0,0,0,0.87);
 }
 
-.navbar-collapse li{
+.navbar-collapse a{
 	color:rgba(0,0,0,0.87);
 	background-color:#fff;
 	overflow:hidden;
@@ -302,7 +292,7 @@ a.delete, a.logout {
 	list-style: none;
 	border-bottom: 1px solid rgba(0,0,0,.12);
 }
-.navbar-collapse li:hover{
+.navbar-collapse a:hover{
 	color:rgba(0,0,0,0.87);
 	background-color:#ddd;
 	overflow:hidden;
@@ -311,49 +301,14 @@ a.delete, a.logout {
 	border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
-.navbar-collapse i{
-	color:grey;
-	margin-right:10px;
-}
-.navbar-icon {
-	cursor:pointer;
-	transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s ease;
-}
 
-.navbar-open {
+.icon-open {
 	transform: rotate(90deg);
 }
-.todo-collapse {
-	position:fixed;
-	background-color:#ff8f00;
-	overflow-x:hidden;
-	margin-right:52px;
-	padding-bottom:14px;
-	z-index:3;
-	top:52px;
-	right:0;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-.todo-collapse li{
-	color:rgba(0,0,0,0.87);
-	background-color:#fff;
-	overflow:hidden;
-	width:100%;
-	list-style: none;
-	padding: 8px 42px 8px 24px;
-	display:block;
-	font-size:24px;
-	cursor:default;
-	border-bottom: 1px solid rgba(0,0,0,.12);
-}
-.todo-icon {
-	cursor:pointer;
-	transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s ease;
+.icon-open {
+	transform: rotate(-90deg);
 }
 
-.todo-open {
-	transform: rotate(90deg);
-}
 
 .header_logo {
 	padding-left: 20px;
@@ -369,7 +324,7 @@ a.delete, a.logout {
 .header_content a {
 	font-family: "Roboto","Helvetica","Arial",sans-serif;
 	color: rgba(66,66,66,0.87);
-	line-height: 1;
+	line-height: 56px;
 	font-weight: 400;
 	letter-spacing: 0.02em;
 }
@@ -539,9 +494,6 @@ a.delete, a.logout {
 	}
 	.todo-collapse span.icon-text {
 		display: initial !important;
-	}
-	.header_content {
-		padding:5px;
 	}
 }
 @media screen and (max-width:1900px) {
@@ -899,11 +851,15 @@ input[type="submit"] {
 }
 
 /* Dynamic hamburger menu */
-@media screen and (max-width: 600px) {
-	.header_content:not(:first-child) {display: none;}
-	.header_content li.icon {
-		float: right;
-		display: block;
+@media screen and (max-width: 920px) {
+	.header_content a:not(:first-child) {
+		display: none;
+	}
+	.header_content a.icon {
+		float:right;
+		padding-right: 20px;
+		padding-left: 20px;
+		display: inline-block !important;
 	}
 }
 
@@ -916,20 +872,30 @@ input[type="submit"] {
 	}
 }
 
-
 @media screen and (max-width: 600px) {
-	.header_content.responsive {position: relative;}
+	.header_content.responsive {
+		position: relative;
+	}
+
 	.header_content.responsive li.a.icon {
 		position: absolute;
 		right: 0;
 		top: 0;
 	}
-	.header_content.responsive li {
-		float: none;
-		display: block;
-		text-align: left;
+}
+@media screen and (min-width: 920px) {
+	.navbar-collapse {
+		display: none;
 	}
-} 
-.topnav .icon {
+}
+
+.header_content a.icon {
 	display: none;
+}
+
+	cursor:pointer;
+	transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s ease;
+} 
+.navbar-hide {
+	display:none;
 }
