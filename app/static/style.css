@@ -908,3 +908,7 @@ input[type="submit"] {
     width: 30%;
 
 }
+
+.category img {
+    max-width: 200px;
+}
