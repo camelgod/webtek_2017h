@@ -394,15 +394,27 @@ a.delete, a.logout {
 	background:#fafafa;
 	border: 1px solid #ddd;
 }
-.product_table tr:last-child{
+.product_table tr:last-child th{
+	border-bottom:none;
+}
+.product_table tr:last-child td{
 	border-bottom:none;
 }
 
 .product_table label {
 	font-weight: normal;
 }
+.product_table tr td {
+	border-bottom: 1px solid rgba(0,0,0, .12);
+}
+.product_table tr td input {
+	width:100%;
+}
+.product_table tr td textarea {
+	width:100%;
+}
 
-.product_table th {
+.product_table tr th {
 	text-align: left;
 	padding: 20px;
 	border:none;
