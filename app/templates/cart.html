@@ -1,0 +1,78 @@
+{% include('nav.html') %}
+<div class="page_container">
+	<div class="full">
+		<form class="leveringsskjema" action="" method="post">
+			<div class="page_box big">
+				<div class="box_header">
+					<p>Leveringsinformasjon</p>
+				</div>
+				<div class="box_content">
+					<table class="product_table">
+						<tr> 
+							<th class="th-left-border"><label for="fornavn">Fornavn</label></th>
+							<td><input type="text" placeholder="Fornavn" name="fornavn" required> </td>
+						</tr>
+						<tr> 
+							<th class="th-left-border"><label for="etternavn">Etternavn</label></th>
+							<td><input type="text" placeholder="Etternavn" name="etternavn" required> </td>
+						</tr>
+						<tr> 
+							<th class="th-left-border"><label for="adresse">Adresse</label></th>
+							<td><input type="text" placeholder="Adresse" name="adresse" required> </td>
+						</tr>						
+						<tr> 
+							<th class="th-left-border"><label for="postnummer">Postnummer</label></th>
+							<td><input type="text" placeholder="Postnummer" name="postnummer" required> </td>
+						</tr>
+						<tr>
+							<th class="th-left-border"><label for="email">E-post-addresse</label></th>
+							<td><input type="text" placeholder="E-post-addresse" name="email" required> </td>
+						<tr>
+							<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
+							<td><input type="text" placeholder="12345678" name="tlf" required> </td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<br>
+			<div class="page_box big">
+				<div class="box_header">
+					<p>Bekreftelse</p>
+				</div>
+				<div class="box_content top-margin">
+					<p>Blablabla</p>
+				</div>
+			</div>
+			<br>
+			<div class="page_box big">
+				<div class="box_header">
+					<p>Ekstra forespørsler</p>
+				</div>
+				<div class="box_content top-margin">
+					<table class="product_table">
+						<tr>
+							<th class="th-left-border"><label for="message">Forespørsel</label></th>
+							<td><textarea name="message" required> </textarea></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<br>
+			<input type="submit" value="Lever ordre">
+		</form>
+	</div>
+</div>
+
+
+<div class="footer_content">
+		<div class="footer_left">
+			<h3>Hello</h3>
+		</div>
+		<div class="footer_right">
+			<p>Hel</p>
+			<p>Test</p>
+		</div>
+		<div class="footer_copyright">
+			© Dyresenteret 2017
+		</div>
+</footer>
