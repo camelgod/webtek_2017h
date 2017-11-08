@@ -190,7 +190,7 @@ a.delete, a.logout {
 	font-weight:400;
 	line-height:24px;
 }
-.box_header.post h3{
+.box_header h3{
 	font-weight:400;
 	text-transform:none;
 	display:inline-block;
