@@ -1,21 +1,37 @@
 {% include('nav.html') %}
 	<div class="page_container">
-        <h3 class="page_header"><p>Category</p></h3>
+        <h3 class="page_header"></h3>
 		<div class="full">
 			<div class="page_box big">
-
-                <div id="navbar">
-                    <p>
-                        <a href="/index">Home</a> / <a href="">Store</a>
-                    </p>
-                </div>
-				<h3 class="box_header">Category 1</h3>
-                <img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-				<p>Lorem ipsum dolor sit amet blablalbalba</p>
-                <form action="/category">
-	    			<input type="submit" value="Vis kategori">
-                </form>
+				<div class="box_header">
+				<p>Nettbutikk</p>
+				</div>
+				<div id="categories">
+					<h2>Kategorier</h2>
+					<div class="category">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<form action="/category">
+							<input type="submit" value="Vis kategori">
+						</form>
+					</div>
+					<div class="category">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<form action="/category">
+							<input type="submit" value="Vis kategori">
+						</form>
+					</div>
+					<div class="category">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<form action="/category">
+							<input type="submit" value="Vis kategori">
+						</form>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 {% include('footer.html') %}
+
