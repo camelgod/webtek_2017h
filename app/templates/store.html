@@ -1,37 +1,37 @@
 {% include('nav.html') %}
-	<div class="page_container">
-        <h3 class="page_header"></h3>
-		<div class="full">
-			<div class="page_box big">
-				<div class="box_header">
-				<p>Nettbutikk</p>
+<div class="page_container">
+    <h3 class="page_header"></h3>
+	<div class="full">
+		<div class="page_box big">
+			<div class="box_header">
+			<p>Nettbutikk</p>
+			</div>
+			<div id="categories">
+				<h2>Kategorier</h2>
+				<div class="category">
+					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+					<h3>Category Name</h3>
+					<form action="/category">
+						<input type="submit" value="Vis kategori">
+					</form>
 				</div>
-				<div id="categories">
-					<h2>Kategorier</h2>
-					<div class="category">
-						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-						<h3>Category Name</h3>
-						<form action="/category">
-							<input type="submit" value="Vis kategori">
-						</form>
-					</div>
-					<div class="category">
-						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-						<h3>Category Name</h3>
-						<form action="/category">
-							<input type="submit" value="Vis kategori">
-						</form>
-					</div>
-					<div class="category">
-						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-						<h3>Category Name</h3>
-						<form action="/category">
-							<input type="submit" value="Vis kategori">
-						</form>
-					</div>
+				<div class="category">
+					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+					<h3>Category Name</h3>
+					<form action="/category">
+						<input type="submit" value="Vis kategori">
+					</form>
+				</div>
+				<div class="category">
+					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+					<h3>Category Name</h3>
+					<form action="/category">
+						<input type="submit" value="Vis kategori">
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 {% include('footer.html') %}
 
