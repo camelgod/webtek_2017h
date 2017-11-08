@@ -873,3 +873,14 @@ input[type="submit"] {
 	display:none;
 }
 
+.page_box img {
+    max-width: 200px;
+}
+
+#categories{
+    text-align: center;
+}
+.category{
+    display: inline-block;
+    width: 30%;
+}
