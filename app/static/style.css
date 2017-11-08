@@ -628,10 +628,13 @@ a.delete, a.logout {
 }
 .footer_content {
 	text-decoration: none;
+    position: absolute;
+    width:100%;
 }
 .footer_content li{
 	padding-bottom:5px;
 	border-bottom: 1px solid rgba(255,255,255,0.57);
+
 }
 footer h3{
 	color: rgba(66,66,66,0.87);
@@ -645,7 +648,6 @@ footer h3{
 	height:56px;
 }
 .footer_left {
-    vertical-align: middle;
 	padding:10px;
 	width:25%;
 	padding-left:20px;
@@ -660,6 +662,9 @@ footer h3{
 	padding-left:20px;
 	display:inline-block;
     vertical-align:top;
+}
+.footer_map img{
+    margin-top: -20px;
 }
 .footer_right {
 	padding:10px;
