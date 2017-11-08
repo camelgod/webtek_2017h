@@ -15,7 +15,6 @@ def about():
 def kontakt():
     return render_template('kontakt.html')
 
-
 @app.route('/kunnskap', methods=['GET'])
 def kunnskap():
     return render_template('knowledge-center.html')
@@ -46,6 +45,6 @@ def cart():
     return render_template('cart.html')
 
 
-@app.route('/registrer', methods=['GET'])
+@app.route('/bruker/registrer', methods=['GET'])
 def registrer():
     return render_template('registrer.html')

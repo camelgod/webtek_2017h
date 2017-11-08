@@ -177,6 +177,7 @@ a.delete, a.logout {
 	border-bottom: 1px solid rgba(0, 0, 0, .12);
 	border-radius:2px 2px 0px 0px;
 }
+
 .box_header h3{
 	color:rgb(66,66,66);
 	font-size: 18px;
@@ -355,7 +356,7 @@ a.delete, a.logout {
 	border-radius: 2px;
 	margin-bottom: 50px;
 	display: inline-table;
-	width: 90%;
+	max-width: 90%;
 	background:#fafafa;
 	border: 1px solid #ddd;
 }
@@ -843,6 +844,21 @@ input[type="submit"] {
 	opacity:0.40;
 }
 
+/* Registrer.html styling */
+.registreringsskjema{
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+@media screen and (max-width: 750px) {
+	.registreringsskjema{
+		left: 25%;
+		right: 25%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 /* Dynamic hamburger menu */
 @media screen and (max-width: 920px) {
 	.header_content a:not(:first-child) {
@@ -856,16 +872,27 @@ input[type="submit"] {
 	}
 }
 
+@media screen and (max-width: 600px) {
+	.header_content.responsive {
+		position: relative;
+	}
+
+	.header_content.responsive li.a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
 @media screen and (min-width: 920px) {
 	.navbar-collapse {
 		display: none;
 	}
 }
 
-
-
 .header_content a.icon {
 	display: none;
+}
+
 	cursor:pointer;
 	transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s ease;
 } 
