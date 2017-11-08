@@ -645,20 +645,33 @@ footer h3{
 	height:56px;
 }
 .footer_left {
-	float:left;
+    vertical-align: middle;
 	padding:10px;
-	width:132px;
+	width:25%;
 	padding-left:20px;
 	display:inline-block;
+    vertical-align:top;
+}
+.footer_map {
+    height: 100px;
+	padding:10px;
+    margin-left: 10%;
+	width:20%;
+	padding-left:20px;
+	display:inline-block;
+    vertical-align:top;
 }
 .footer_right {
 	padding:10px;
-	padding-left:50px;
-	float:left;
+    display: inline-block;
+    margin-right:5%;
+    width: 25%;
+    padding-left:5%;
 }
 .footer_copyright {
 	background:#2f7e79;
 	color:#fff;
+    text-align:center;
 }
 .button_label {
 	margin:0px;
