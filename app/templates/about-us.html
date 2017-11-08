@@ -1,28 +1,106 @@
-<html>
-{% include('header.html') %}
 {% include('nav.html') %}
-{% include('footer.html') %}
-	<div id="about">
-		<div id="navbar">
-			<p>
-				<a href="index.html">Home</a> / <a href="about-us.html">About us</a>
-			</p>
+<style>
+.page_box img {
+    max-width: 200px;
+}
+
+#employees{
+    text-align: center;
+}
+.employee{
+    display: inline-block;
+    width: 30%;
+
+}
+.about-left {
+	float:left; 
+
+}
+.about-left, .about-right{
+    text-align:left;
+margin-top:0px;
+	height:auto;
+		margin-bottom:32px;
+}
+.box_content {
+	padding:24px;
+}
+.about-right {
+	float:right;
+	text-align:center;
+	padding-top:16px;
+}
+.about-right p {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.row {
+	margin-bottom:32px;
+	width:100%;
+		display:inline-block;
+}
+.content_header_text {
+	text-align:left;
+}
+</style>
+	<div class="page_container">
+        <h3 class="page_header"></h3>
+        <div class="full">
+            <div class="page_box big">
+                <div id="breadcrumb">
+			<!-- Todo: Fix flask dynamic breadcrumbs -->
+                </div>
+		<div class="box_header">
+			<p>Om oss</p>
 		</div>
-		<div id="header">
-			<h1>Dyresenteret</h1>
-			<p>Lorem ipsum dolor sit amet bla bla bla bla bla bla</p>
-		</div>
-		</div id="picture">
-			<img src="../static/img/about.jpg" alt="placeholder">
-			<p>Lorem ipsum dolor sit amet bla bla bla bla bla bla bla</p>
-		</div>
-		<div id="employees">
-			<h1>Employees</h1>
-			<div class="employee">
-				<img src="../static/img/employee1.jpg" alt="Employee 1">
-				<h3>Employee</h3>
-				<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+		<div class="box_content">
+			<div class="row">
+					<h3 class="content_header_text">Dyresenteret</h3>
+			</div>
+			<div class="row">
+				<div class="about-left left">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+				</div>
+				<div class="about-right right">
+					<img src="{{url_for('static', filename='placeholder.png')}}" alt="placeholder">
+					<p>Lorem ipsum dolor sit amet bla bla bla bla bla bla bla</p>
+				</div>
+			</div>
+			<hr>
+			<div id="employees">
+				<h2>Employees</h2>
+				<div class="employee">
+					<img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
+					<h3>Employee Name</h3>
+					<div class="employee-age">
+						<p> Lorem age </p>
+					</div>
+					<div class="employee-info">
+						<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+					</div>
+				</div>
+				<div class="employee">
+					<img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
+					<h3>Employee Name</h3>
+					<div class="employee-age">
+						<p> Lorem age </p>
+					</div>
+					<div class="employee-info">
+						<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+					</div>
+				</div>
+				<div class="employee">
+					<img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
+					<h3>Employee Name</h3>
+					<div class="employee-age">
+						<p> Lorem age </p>
+					</div>
+					<div class="employee-info">
+						<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+					</div>
+				</div>
 			</div>
 		</div>
+	    </div>
 	</div>
-</html>

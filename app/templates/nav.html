@@ -4,9 +4,9 @@
 <body>
 	<div class="header_bar">
 		<div id="logo" class="header_logo">
-			<a href="/">
-			<img id="logo_img" src="{{url_for('static', filename='logo.png')}}" />
-			</a>
+		<a href="/">
+				<img id="logo_img" src="{{url_for('static', filename='logo.png')}}" />
+		</a>
 		</div>
 		<ul id="navbar" class="header_content">
 			<li><a href="/kunnskap">Kunnskapskatalog</a></li>
@@ -14,6 +14,18 @@
 			<li><a href="/kontakt">Kontakt</a></li>
 			<li><a href="/registrer">Registrer Bruker</a></li>
 			<li><a href="/nettbutikk">Nettbutikk</a></li>
-
+			<li><a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a></li>
 		</ul>
 	</div>
+	<script>
+
+function myFunction() {
+	var x = document.getElementById("navbar");
+	if (x.className === "topnav") {
+		x.className += " responsive";
+	} else {
+		x.className = "topnav";
+	}
+} 
+	</script>
+
