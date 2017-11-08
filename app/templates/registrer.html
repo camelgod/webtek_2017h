@@ -1,9 +1,9 @@
 {% include('nav.html') %}
 <div class="page_container">
-	<h3 class="page_header"><p>Test page title</p></h3>
+	<div class="page_header"></div>
 	<div class="full">
 		<div class="page_box big">
-			<div class="box_header box_content">
+			<div class="box_header">
 				<p>Registrering</p>
 			</div>
 			<div class="box_content top-margin">
@@ -14,51 +14,20 @@
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <div class="registrerskjema">
-                    <form action="" method="post">
-                        <div id="regFornavn">
-                            <input type="text" placeholder="Fornavn" required>
-                        </div>
-                        <div id="regEtternavn">
-                            <input type="text" placeholder="Etternavn" required>
-                        </div>
-                        <div id="regEmail">
-                            <input type="email" placeholder="Email" required>
-                        </div>
-                        <div id="regAdresse">
-                            <input type="text" placeholder="Adresse" required>
-                        </div>
-                        <div id="regTlf">
-                            <input type="number" placeholder="Tlf" required>
-                        </div>
-                        <div id="regPostnummer">
-                            <input type="number" placeholder="Postnummer" required>
-                        </div>
-                        <div id="regSubmit">
-                            <button type="submit">Registrer</button>
-                        </div>
-                    </form>
-                </div>
-			</div>
+
+                <form action="" method="post">
+                    <table class="product_table">
+                    <input type="text" placeholder="Fornavn" required>
+                    <input type="text" placeholder="Etternavn" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Adresse" required>
+                    <input type="number" placeholder="Tlf" required>
+                    <input type="number" placeholder="Postnummer" required>
+                    <button type="submit">Registrer</button>
+                    </table>
+                </form>
+            </div>
 		</div>
 	</div>
 </div>
-
-
-<div class="footer_content">
-		<div class="footer_left">
-			<h3>Kontakt</h3>
-            <p>Tlf</p>
-            <p>Adresse</p>
-            <p>Email</p>
-		</div>
-		<div class="footer_right">
-			<h3>Sider</h3>
-            <p><a href="/om">Om Oss</a></p>
-            <p><a href="/kunnskap">Kunnskapskatalog</a></p>
-            <p><a href="/nettbutikk">Nettbutikk</a></p>
-		</div>
-		<div class="footer_copyright">
-			© Dyresenteret 2017
-		</div>
-</footer>
+{% include('footer.html') %}

@@ -892,42 +892,7 @@ input[type="submit"] {
 	opacity:0.40;
 }
 
-.registrerskjema{
-	position: relative;
-	width: 80%;
-	height : 100%;
-	margin : 0 auto;
-}
-
-#regFornavn{
-	position: absolute;
-	text-size:30px;
-	left:50px;
-}
-
-#regEtternavn{
-	position: absolute;
-}
-
-#regEmail{
-	position: absolute;
-}
-
-#regAdresse{
-	position: absolute;
-}
-
-#regTlf{
-	position: absolute;
-}
-
-#regPostnummer{
-	position: absolute;
-}
-
-#regSubmit{
-	position: absolute;
-}
+/* Registrer.html styling */
 
 /* Dynamic hamburger menu */
 @media screen and (max-width: 600px) {
