@@ -401,7 +401,7 @@ a.delete, a.logout {
 	border-radius: 2px;
 	margin-bottom: 50px;
 	display: inline-table;
-	width: 90%;
+	max-width: 90%;
 	background:#fafafa;
 	border: 1px solid #ddd;
 }
@@ -893,6 +893,10 @@ input[type="submit"] {
 }
 
 /* Registrer.html styling */
+.registreringsskjema{
+	margin-left: 25%;
+	margin-right: 25%;
+}
 
 /* Dynamic hamburger menu */
 @media screen and (max-width: 600px) {
@@ -900,6 +904,15 @@ input[type="submit"] {
 	.header_content li.icon {
 		float: right;
 		display: block;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.registreringsskjema{
+		left: 25%;
+		right: 25%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

@@ -7,23 +7,33 @@
 				<p>Registrering</p>
 			</div>
 			<div class="box_content top-margin">
-				<p>
-                    Hva skal informasjonen brukes til?----
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-
-                <form action="" method="post">
-                    <table class="product_table">
-                    <input type="text" placeholder="Fornavn" required>
-                    <input type="text" placeholder="Etternavn" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="text" placeholder="Adresse" required>
-                    <input type="number" placeholder="Tlf" required>
-                    <input type="number" placeholder="Postnummer" required>
-                    <button type="submit">Registrer</button>
+                <ul>
+					<li>Her kan du registrere informasjon om deg som kunde slik at vi kan lagre det lokalt i butikken.</li>
+				</ul>
+                <br>
+                <form name="registreringsskjema" action="" method="post">
+                    <table class="product_table registreringsskjema">
+                        <tr>
+                            <th colspan="3">Kundeinformasjon</th>
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="navn">Fullt navn</label></th>
+                            <td><label for="fornavn"><h4>Fornavn</h4></label><input type="text" name="fornavn" required> </td>
+                            <td><label for="etternavn"><h4>Etternavn</h4></label><input type="text" name="etternavn" required> </td>
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="kontakt">Kontakt</label></th>
+                            <td><label for="email"><h4>Email</h4></label><input type="text" name="email" required> </td>
+                            <td><label for="tlf"><h4>Tlf</h4></label><input type="text" name="tlf" required> </td>
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="navn">Adresse</label></th>
+                            <td><label for="adresse"><h4>Adresse</h4></label><input type="text" name="adresse" required> </td>
+                            <td><label for="postnummer"><h4>Postnummer</h4></label><input type="text" name="postnummer" required> </td>
+                        </tr>
+                        <th class="th-left-border" colspan="3">
+                            <button type="submit" class="flat_button">Registrer</button>
+                        </th>
                     </table>
                 </form>
             </div>
