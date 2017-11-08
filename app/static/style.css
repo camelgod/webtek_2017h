@@ -291,7 +291,7 @@ a.delete, a.logout {
 	list-style: none;
 	border-bottom: 1px solid rgba(0,0,0,.12);
 }
-.navbar-collapse li:hover{
+.navbar-collapse a:hover{
 	color:rgba(0,0,0,0.87);
 	background-color:#ddd;
 	overflow:hidden;
@@ -873,14 +873,3 @@ input[type="submit"] {
 	display:none;
 }
 
-.page_box img {
-    max-width: 200px;
-}
-
-#categories{
-    text-align: center;
-}
-.category{
-    display: inline-block;
-    width: 30%;
-}
