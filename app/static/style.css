@@ -283,7 +283,7 @@ a.delete, a.logout {
 	color:rgba(0,0,0,0.87);
 }
 
-.navbar-collapse li{
+.navbar-collapse a{
 	color:rgba(0,0,0,0.87);
 	background-color:#fff;
 	overflow:hidden;
