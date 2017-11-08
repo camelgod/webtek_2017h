@@ -8,41 +8,39 @@
 				<img id="logo_img" src="{{url_for('static', filename='logo.png')}}" />
 		</a>
 		</div>
-		<ul id="navbar" class="header_content">
-			<li class="icon" id="toggleNav"><a href="#">&#9776;</a></li>
-			<li><a href="/kunnskap">Kunnskapskatalog</a></li>
-			<li><a href="/om">Om Oss</a></li>
-			<li><a href="/kontakt">Kontakt</a></li>
-			<li><a href="/bruker/registrer">Registrer Bruker</a></li>
-			<li><a href="/nettbutikk">Nettbutikk</a></li>
-		</ul>
+		<div id="navbar" class="header_content">
+			<a href="#"class="icon" id="toggleNav">&#9776;</a>
+			<a href="/kunnskap">Kunnskapskatalog</a>
+			<a href="/om">Om Oss</a>
+			<a href="/kontakt">Kontakt</a>
+			<a href="/bruker/registrer">Registrer Bruker</a>
+			<a href="/nettbutikk">Nettbutikk</a>
+		</div>
 		<ul id="navbar-dropdown" class="navbar-collapse navbar-hide">
-			<li><a href="/kunnskap">Kunnskapskatalog</a></li>
-			<li><a href="/om">Om Oss</a></li>
-			<li><a href="/kontakt">Kontakt</a></li>
-			<li><a href="/bruker/registrer">Registrer Bruker</a></li>
-			<li><a href="/nettbutikk">Nettbutikk</a></li>
+			<a href="/kunnskap">Kunnskapskatalog</a>
+			<a href="/om">Om Oss</a>
+			<a href="/kontakt">Kontakt</a>
+			<a href="/bruker/registrer">Registrer Bruker</a>
+			<a href="/nettbutikk">Nettbutikk</a>
 		</ul>
 	</div>
 	<script>
+	window.onload = function() {
+		var button = document.getElementById("toggleNav");
+		var navbar = document.getElementById("navbar-dropdown");
+		var opened = false;
 
-window.onload = function() {
-	var button = document.getElementById("toggleNav");
-	var navbar = document.getElementById("navbar-dropdown");
-	var opened = false;
-
-	button.addEventListener('click', function() {
-		if(opened == false) {
-			navbar.className = "navbar-collapse";
-			button.className = "icon icon-open";
-			opened = true;
-		} else {
-			navbar.className = "navbar-collapse navbar-hide";
-			button.className = "icon icon-close";
-			opened = false;
-		};
-	});
-}
-
+		button.addEventListener('click', function() {
+			if(opened == false) {
+				navbar.className = "navbar-collapse";
+				button.className = "icon icon-open";
+				opened = true;
+			} else {
+				navbar.className = "navbar-collapse navbar-hide";
+				button.className = "icon icon-close";
+				opened = false;
+			};
+		});
+	}
 	</script>
 

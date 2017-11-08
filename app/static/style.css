@@ -254,14 +254,14 @@ a.delete, a.logout {
 	line-height:56px;
 }
 
-.header_content li, .head_text{
+.header_content a, .head_text{
 	color: rgba(66,66,66,0.87);
 	float: right;
 	padding-right: 20px;
 	padding-left:20px;
 	font-size: 18px;
 }
-.header_content li:hover {
+.header_content a:hover {
 	background-color:#61aea8;
 	cursor:pointer;
 }
@@ -323,7 +323,7 @@ a.delete, a.logout {
 .header_content a {
 	font-family: "Roboto","Helvetica","Arial",sans-serif;
 	color: rgba(66,66,66,0.87);
-	line-height: 1;
+	line-height: 56px;
 	font-weight: 400;
 	letter-spacing: 0.02em;
 }
@@ -845,10 +845,10 @@ input[type="submit"] {
 
 /* Dynamic hamburger menu */
 @media screen and (max-width: 920px) {
-	.header_content li:not(:first-child) {
+	.header_content a:not(:first-child) {
 		display: none;
 	}
-	.header_content li.icon {
+	.header_content a.icon {
 		float:right;
 		padding-right: 20px;
 		padding-left: 20px;
@@ -864,7 +864,7 @@ input[type="submit"] {
 
 
 
-.header_content li.icon {
+.header_content a.icon {
 	display: none;
 	cursor:pointer;
 	transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s ease;
