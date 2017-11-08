@@ -32,14 +32,14 @@ window.onload = function() {
 	var opened = false;
 
 	button.addEventListener('click', function() {
-		if(opened == true) {
+		if(opened == false) {
 			navbar.className = "navbar-collapse";
 			button.className = "icon icon-open";
-			opened = false;
+			opened = true;
 		} else {
 			navbar.className = "navbar-collapse navbar-hide";
 			button.className = "icon icon-close";
-			opened = true;
+			opened = false;
 		};
 	});
 }
