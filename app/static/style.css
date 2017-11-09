@@ -53,18 +53,6 @@ b {
 	height:15%;
 }
 
-.list_button {
-	text-align: center;
-	display:inline-block;
-	background-color: #61aea8;
-	border-radius: 50%;
-	width: 6px;
-	height: 6px;
-	cursor: default;
-	margin-left:16px;
-	margin-right:16px;
-}
-
 .page_box {
 	background:#eeeeee;
 	margin:20px;
@@ -82,12 +70,6 @@ b {
     margin:auto;
 }
 
-.top-margin {
-	margin-top: 20px;
-}
-.bottom-margin {
-	margin-bottom: 20px;
-}
 .big {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -533,13 +515,26 @@ input[type="submit"] {
 	}
 }
 
-
 .center {
 	text-align:center;
-
 }
 
+.no-padding {
+	padding:0px;
+}
 
+.knowledge-menu {
+	vertical-align:top;
+	width:29%;
+	border-right: 1px solid rgba(0, 0, 0, .12);
+	height:100%;
+
+}
+.knowledge-content {
+	vertical-align:top;
+	width:69%;
+
+}
 
 
 
