@@ -7,13 +7,8 @@
 #employees{
     text-align: center;
 }
-.employee{
-    display: inline-block;
-    width: 30%;
-
-}
 .about-left {
-	float:left; 
+	float:left;
 
 }
 .about-left, .about-right{
@@ -38,11 +33,56 @@ margin-top:0px;
 .row {
 	margin-bottom:32px;
 	width:100%;
-		display:inline-block;
+	display:inline-block;
 }
 .content_header_text {
 	text-align:left;
 }
+.about-left3 {
+	width: 33%;
+	float: left;
+	display:inline-block;
+
+}
+.about-right3 {
+	width: 33%;
+	float: right;
+	display:inline-block;
+}
+.about-middle3{
+	width: 33%;
+	float: right;
+	display:inline-block;
+}
+
+@media screen and (max-width: 840px) {
+
+
+.about-left3 {
+	width: 100%;
+	float: left;
+	margin-bottom: 64px;
+	display:block;
+    transition: 0.3s all;
+
+
+}
+.about-right3 {
+	width: 100%;
+	float: right;
+	display:block;
+	margin-bottom: 64px;
+    transition: 0.3s all;
+}
+.about-middle3{
+	width: 100%;
+	float: right;
+	display:block;
+	margin-top:-58px;
+    transition: 0.3s all;
+}
+
+
 </style>
 	<div class="page_container">
         <h3 class="page_header"></h3>
@@ -68,9 +108,10 @@ margin-top:0px;
 				</div>
 			</div>
 			<hr>
-			<div id="employees">
 				<h2>Employees</h2>
-				<div class="employee">
+                <hr>
+			<div class="row">
+				<div class="about-left3">
 					<img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
 					<h3>Employee Name</h3>
 					<div class="employee-age">
@@ -80,7 +121,7 @@ margin-top:0px;
 						<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
 					</div>
 				</div>
-				<div class="employee">
+				<div class="about-middle3">
 					<img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
 					<h3>Employee Name</h3>
 					<div class="employee-age">
@@ -90,7 +131,7 @@ margin-top:0px;
 						<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
 					</div>
 				</div>
-				<div class="employee">
+				<div class="about-right3">
 					<img src="{{url_for('static', filename='placeholder.png')}}" alt="Employee 1">
 					<h3>Employee Name</h3>
 					<div class="employee-age">
