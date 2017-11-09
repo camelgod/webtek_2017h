@@ -377,6 +377,7 @@ a {
 	transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 	color: #61AEA8;
 	outline:0;
+	padding:10px 20px 10px 20px;
 }
 .flat_button.small {
 	width:200px;
