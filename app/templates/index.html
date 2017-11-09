@@ -1,137 +1,29 @@
 {% include('nav.html') %}
-
-<style>
-#map {
- height:400px;
- width:100%;
-}
-
-#employees{
-    text-align: center;
-}
-.employee{
-    display: inline-block;
-    width: 30%;
-
-}
-.about-left {
-	float:left;
-
-}
-.about-left, .about-right{
-    text-align:left;
-margin-top:0px;
-	height:auto;
-		margin-bottom:32px;
-}
-.box_content {
-	padding:24px;
-}
-.about-right {
-	float:right;
-	text-align:center;
-	padding-top:16px;
-}
-.about-right p {
-	margin-left: 20%;
-	margin-right: 20%;
-}
-
-.row {
-	margin-bottom:32px;
-    margin-top: 32px;
-	width:100%;
-	display:inline-block;
-}
-.content_header_text {
-	text-align:left;
-}
-.left3 {
-	width: 33%;
-	float: left;
-	margin-top:-58px;
-	margin-bottom: 64px;
-	display:inline-block;
-
-}
-.right3 {
-	width: 33%;
-	float: right;
-	display:inline-block;
-	margin-top:-58px;
-	margin-bottom: 64px;
-}
-.middle3{
-	width: 33%;
-	float: right;
-	display:inline-block;
-	margin-top:-58px;
-	margin-bottom: 64px;
-}
-
-@media screen and (max-width: 840px) {
-
-
-.left3 {
-	width: 100%;
-	float: left;
-	margin-top:-58px;
-	margin-bottom: 64px;
-	display:block;
-    transition: 0.3s all;
-
-
-}
-.right3 {
-	width: 100%;
-	float: right;
-	display:block;
-	margin-top:-58px;
-	margin-bottom: 64px;
-    transition: 0.3s all;
-}
-.middle3{
-	width: 100%;
-	float: right;
-	display:block;
-	margin-top:-58px;
-	margin-bottom: 64px;
-    transition: 0.3s all;
-}
-
-
-
-
-
-}
-</style>
 <div class="page_container">
 	<div class="page_header">
 		<div class="socialButtons">
-
 		</div>
+		
 	</div>
 	<div class="full">
 		<div class="page_box big">
 			<div class="box_header">
 				<p>Dyresenteret</p>
 			</div>
-			<div class="box_content top-margin">
-                <div class="row">
-
-                    <div class="left">
-                        <ul>
-                            <li>Dyrebutikk Ålesund</li>
-                            <li>Kontaktinformasjon</li>
-                            <li>Lokasjon</li>
-                        </ul>
-                    </div>
-
-                <div class="right">
-                   <div id="map"></div>
-                </div>
-            </div>
-            </div>
+			<div class="box_content">
+				<div class="row two">
+					<div class="col">
+						<ul>
+							<li>Dyrebutikk Ålesund</li>
+							<li>Kontaktinformasjon</li>
+							<li>Lokasjon</li>
+						</ul>
+					</div>
+					<div class="col">
+						<div id="map"></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="page_box big">
 			<div class="box_header">
@@ -139,20 +31,19 @@ margin-top:0px;
 			</div>
 			<div class="box_content top-margin">
 
-				<div class="row">
-				    <div class="left3">
+				<div class="row three">
+				    <div class="col">
 				    	<h3><a href="/kunnskap">Kunnskapskatalog</a></h3>
 <p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
 				    </div>
-				    <div class="middle3">
+				    <div class="col">
 				    	<h3><a href="/om">Om oss</a></h3>
 <p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
 				    </div>
-				    <div class="right3">
+				    <div class="col">
 				    	<h3><a href="/nettbutikk">Nettbuikk</a></h3>
                         <p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
 				    </div>
-
 				</div>
 			</div>
 		</div>
