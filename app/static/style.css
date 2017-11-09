@@ -21,7 +21,7 @@ b {
 }
 .full {
 	margin-top:-58px;
-	margin-bottom: 36px;
+	padding-bottom:36px;
 
 }
 .right {
@@ -154,7 +154,6 @@ a {
 	list-style:none !important;
 }
 .box_content {
-	text-align:center;
 	padding:24px;
 }
 .content li a{
@@ -363,7 +362,6 @@ a {
 	text-decoration: none;
 	position: absolute;
 	width:100%;
-	margin-top: -50px;
 	color: #fff;
 }
 
@@ -509,17 +507,17 @@ input[type="submit"] {
 
 .col {
     display: inline-block;
+    position:relative;
+    transition: 0.3s all;
 }
 
 .three .col{
 	vertical-align:top;
-	min-width:27%;
-	max-width:33%;
+	width:32%;
 }
 .two .col {
 	vertical-align:top;
-	min-width:45%;
-	max-width:50%;
+	width:49%;
 }
 
 @media screen and (max-width: 920px) {
@@ -534,6 +532,10 @@ input[type="submit"] {
 }
 
 
+.center {
+	text-align:center;
+
+}
 
 
 
