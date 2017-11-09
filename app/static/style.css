@@ -77,6 +77,10 @@ b {
     max-width: 200px;
     margin:auto;
 }
+.fill-images img {
+    max-width: 100%;
+    margin:auto;
+}
 
 .top-margin {
 	margin-top: 20px;
@@ -275,7 +279,7 @@ a {
 	border-radius: 2px;
 	margin-bottom: 50px;
 	display: inline-table;
-	max-width: 90%;
+	width: 100%;
 	background:#fafafa;
 	border: 1px solid #ddd;
 }
