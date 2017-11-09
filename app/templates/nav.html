@@ -1,5 +1,6 @@
 <head>
 	<link rel="stylesheet" href="../static/style.css">
+	<script src="../static/navigation.js"></script>
 </head>
 <body>
 	<div class="header_bar">
@@ -24,23 +25,3 @@
 			<a href="/nettbutikk">Nettbutikk</a>
 		</ul>
 	</div>
-	<script>
-	window.onload = function() {
-		var button = document.getElementById("toggleNav");
-		var navbar = document.getElementById("navbar-dropdown");
-		var opened = false;
-
-		button.addEventListener('click', function() {
-			if(opened == false) {
-				navbar.className = "navbar-collapse";
-				button.className = "icon icon-open";
-				opened = true;
-			} else {
-				navbar.className = "navbar-collapse navbar-hide";
-				button.className = "icon icon-close";
-				opened = false;
-			};
-		});
-	}
-	</script>
-
