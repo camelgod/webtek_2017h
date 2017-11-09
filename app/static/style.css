@@ -31,7 +31,7 @@ b {
 }
 .full {
 	margin-top:-58px;
-	margin-bottom: 64px;
+	margin-bottom: 36px;
 
 }
 .wrapper {
@@ -130,6 +130,7 @@ b {
 	margin-left: 10%;
 	margin-right: 10%;
 	min-width: 60%;
+    padding-bottom:46px;
 }
 
 .page_box p {
@@ -574,7 +575,6 @@ a.delete, a.logout {
 	z-index:9;
 	width:100%;
 	background-color:#ccc;
-	height:100%;
 	display:block;
 	position:relative;
 }
@@ -588,14 +588,16 @@ a.delete, a.logout {
 	text-decoration: none;
     position: absolute;
     width:100%;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    color: #fff;
 }
 .footer_content li{
-	padding-bottom:5px;
 	border-bottom: 1px solid rgba(255,255,255,0.57);
 
 }
 footer h3{
-	color: rgba(66,66,66,0.87);
+	color: #fff;
 	font-size: 18px;
 	font-weight:400;
 	line-height:32px;
@@ -635,6 +637,7 @@ footer h3{
 	background:#2f7e79;
 	color:#fff;
     text-align:center;
+    margin-top:10px;
 }
 .button_label {
 	margin:0px;
