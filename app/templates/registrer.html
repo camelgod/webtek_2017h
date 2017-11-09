@@ -33,7 +33,7 @@
                             <td><label for="postnummer"><p class="nomargin_nopadding" id="postnummer_register">Postnummer</p></label><input type="number" name="postnummer" onblur="validate_postnummer_register()" required> </td>
                         </tr>
                         <th class="th-left-border" colspan="3">
-                            <button type="submit" class="flat_button" onclick="submit_register()">Registrer</button>
+                            <button type="button" class="flat_button" onclick="submit_register()">Registrer</button>
                         </th>
                     </table>
                 </form>
@@ -54,23 +54,29 @@
     /* Checks if email, tlf or postnummer is still invalid when trying to submit */
     function submit_register(){
         var error = "Ugyldige felter: ";
-        var alert = 0;
-        for(var i = 0; i < registrer_valid.length; i++){
-            if(registrer_valid[i] == 0){
-                error += "Email, ";
-                alert = 1;
-            }
-            else if (registrer_valid[i] == 0){
-                error += "Tlf, ";
-                alert = 1;
-            }
-            else if (registrer_valid[i] == 0){
-                error += "Postnummer, ";
-                alert = 1;
-            }
+        var stop = 0;
+
+        // Check array for invalid inputs
+        if(registrer_valid[0] == 0){
+            error += "Email, ";
+            stop = 1;
         }
-        if (alert)
+        if (registrer_valid[1] == 0){
+            error += "Tlf, ";
+            stop = 1;
+        }
+        if (registrer_valid[2] == 0){
+            error += "Postnummer, ";
+            stop = 1;
+        }
+
+        // if any of the three checked input fields in invalid, stop the form submission
+        if (stop == 1){
             alert(error);
+        }
+        else{
+            document.forms['registreringsskjema'].submit();
+        }
     }
 
     /* Checks validity of email input and displays error message if not valid*/
@@ -103,7 +109,13 @@
         if(tlf.toString().length != 8){
             // Appends error message to tlf label tag
             feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig nr</span>';
+            // sets valid-tlf to false
+            registrer_valid[1] = 0;
             setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
+        }
+        else{
+            // sets valid-tlf to true
+            registrer_valid[1] = 1;
         }
     }
 
@@ -112,12 +124,19 @@
         var form = document.forms['registreringsskjema'];
         var tlf = form['postnummer'].value;
         var feilmelding = document.getElementById('postnummer_register');
+        // sets valid-postnummer to false every
         var temp_tekst = "Postnummer";
 
-        if(tlf.toString().length != 8){
+        if(tlf.toString().length != 4){
             // Appends error message to postnummer label tag
             feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig postnr</span>';
+            // sets valid-tlf to false
+            registrer_valid[2] = 0;
             setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
+        }
+        else{
+            // sets valid-postnummer to true
+            registrer_valid[2] = 1;
         }
     }
 
