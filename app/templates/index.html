@@ -2,8 +2,9 @@ test
 {% include('nav.html') %}
 
 <style>
-.page_box img {
-    width:100%;
+#map {
+ height:400px;
+ width:100%;
 }
 
 #employees{
@@ -128,7 +129,7 @@ margin-top:0px;
                     </div>
 
                 <div class="right">
-                    <img src="../static/map.jpg">
+                   <div id="map"></div>
                 </div>
             </div>
             </div>
@@ -158,5 +159,21 @@ margin-top:0px;
 		</div>
 	</div>
 </div>
+   <script>
+      function initMap() {
+        var uluru = {lat: 62.471615, lng: 6.3610094};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8&callback=initMap">
+    </script>
 
 {% include('footer.html') %}
