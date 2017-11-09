@@ -34,31 +34,23 @@ b {
 }
 
 .page_container {
-	z-index:9;
 	width:100%;
 	background-color:#ccc;
-	display:block;
-	position:relative;
 }
 
 
 .page_header {
 	background:#92e0d9 url("dog.jpg");
 	background-attachment: fixed;
-	background-position: center center;
+	background-position: center -100px;
 	background-size: cover; 
-	margin:0px;
-	padding-top:100px;
-	padding-bottom:100px;
-	height:15%;
+	height:30%;
 }
 
 .page_box {
 	background:#eeeeee;
-	margin:20px;
-	position:relative;
+	margin:16px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 .small-images img {
@@ -73,8 +65,6 @@ b {
 .big {
 	margin-left: 10%;
 	margin-right: 10%;
-	min-width: 60%;
-	padding-bottom:46px;
 }
 
 .page_box p {
@@ -89,14 +79,12 @@ b {
 	padding:16px;
 	color:rgba(0,0,0,0.87);
 	border-bottom: 1px solid rgba(0, 0, 0, .12);
-	overflow:hidden;
-	list-style:none;
 }
 
 .page_box ol, ul {
 	list-style:none;
-	padding-left:0px;
-	display:inline;
+	padding:0px;
+	margin:0px;
 }
 
 .page_box hr {
@@ -107,14 +95,13 @@ b {
 }
 
 a {
-	color: #03A9F4;
-	text-decoration: none;
+	color: #61AEA8;
+	font-weight: 400;
 }
 .box_header {
 	background:#FFF;
 	padding:8px 24px 8px 24px;
 	border-bottom: 1px solid rgba(0, 0, 0, .12);
-	border-radius:2px 2px 0px 0px;
 }
 
 .box_header h3{
@@ -132,12 +119,6 @@ a {
 	line-height:24px;
 }
 
-.box_content li{
-	font-size:16px;
-	padding: 16px 16px 16px 16px;
-	text-align:left;
-	list-style:none !important;
-}
 .box_content {
 	padding:24px;
 	transition: 0.3s all;
@@ -241,6 +222,7 @@ a {
 	line-height: 56px;
 	font-weight: 400;
 	letter-spacing: 0.02em;
+	text-decoration:none;
 }
 
 .flashed_messages {
@@ -350,16 +332,11 @@ a {
 .footer_content {
 	margin-left: 10%;
 	margin-right: 10%;
-	min-width: 60%;
-	padding-bottom:46px;
 	padding-bottom:20px;
-	text-decoration: none;
-	color: #fff;
 }
 
 .footer_content h3{
 	color: #fff;
-	font-size: 18px;
 	font-weight:400;
 	line-height:32px;
 }
@@ -368,12 +345,8 @@ a {
 	width:100%;
 	height:56px;
 }
-.footer_left {
-	padding:10px;
-	width:25%;
-	padding-left:20px;
-	display:inline-block;
-    vertical-align:top;
+.footer_content li {
+	margin-bottom:10px;
 }
 
 /* Google maps widget front page */
@@ -487,12 +460,10 @@ input[type="submit"] {
 
 .row {
 	width:100%;
-	display:inline-block;
 }
 
 .col {
     display: inline-block;
-    position:relative;
 }
 
 .three .col{
