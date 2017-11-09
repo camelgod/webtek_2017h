@@ -65,6 +65,12 @@ button, input, submit {
     width: 100%;
     margin:auto;
 }
+.full-width {
+	max-width:100% !important;
+	width:100% !important;
+	height:400px;
+	border-radius: 5px;
+}
 
 .big {
 	margin-left: 10%;
@@ -487,6 +493,9 @@ input[type="submit"] {
 
 .no-padding {
 	padding:0px;
+}
+.no-padding-right {
+	padding-left:0px;
 }
 
 .knowledge-menu {
