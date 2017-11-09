@@ -41,8 +41,6 @@
 	</div>
 </div>
 <script>
-
-
     /* Checks validity of email parameter */
     function validate_email(email){
         var ret = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -57,9 +55,9 @@
         var temp_tekst = feilmelding.innerHTML;
 
         if(validate_email(email_address) == false){
-            feilmelding.innerHTML += '<span style=\"color:green\">Ugyldig adresse</span>';
+            feilmelding.innerHTML += '<span style=\"color:red; font-size:12px\"> - ugyldig adresse</span>';
 
-            setTimeout(function(){feilmelding.innerHTML = temp_tekst},1000);
+            setTimeout(function(){feilmelding.innerHTML = temp_tekst},1500);
         }
     }
 </script>

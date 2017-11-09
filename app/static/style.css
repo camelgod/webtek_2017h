@@ -864,6 +864,10 @@ input[type="submit"] {
 	margin: 0;
 }
 
+.hide_paragraph{
+	visibility: none;
+}
+
 /* Dynamic hamburger menu */
 @media screen and (max-width: 920px) {
 	.header_content a:not(:first-child) {
