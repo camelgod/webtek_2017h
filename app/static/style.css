@@ -97,6 +97,7 @@ b {
 a {
 	color: #61AEA8;
 	font-weight: 400;
+	outline:0;
 }
 .box_header {
 	background:#FFF;
