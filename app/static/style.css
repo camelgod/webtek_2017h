@@ -56,7 +56,10 @@ b {
 }
 
 .page_header {
-	background:#92e0d9 url("dog.jpg") no-repeat fixed center;
+	background:#92e0d9 url("dog.jpg");
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover; 
 	margin:0px;
 	padding-top:100px;
 	padding-bottom:100px;
