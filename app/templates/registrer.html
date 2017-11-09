@@ -18,21 +18,22 @@
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="navn">Fullt navn</label></th>
-                            <td><label for="fornavn">Fornavn</label><p></p><input type="text" name="fornavn" required> </td>
-                            <td><label for="etternavn">Etternavn</label><input type="text" name="etternavn" required> </td>
+                            <td><label for="fornavn"><p class="nomargin_nopadding">Fornavn</p></label><input type="text" name="fornavn" required> </td>
+                            <td><label for="etternavn"><p class="nomargin_nopadding">Etternavn</p></label><input type="text" name="etternavn" required> </td>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="kontakt">Kontakt</label></th>
-                            <td><label for="email"><p class="nomargin_nopadding" id="email_register">Email</p></label><input type="text" name="email" onblur="validate_email_register()" required></td>
-                            <td><label for="tlf">Tlf</label><input type="text" name="tlf" required> </td>
+                            <td><label for="email"><p class="nomargin_nopadding" id="email_register">Email</p></label>
+                                <input type="text" name="email" onblur="validate_email_register()" required></td>
+                            <td><label for="tlf"><p class="nomargin_nopadding" id="tlf_register">Tlf</p></label><input type="number" name="tlf" onblur="validate_tlf_register()" required> </td>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="navn">Adresse</label></th>
-                            <td><label for="adresse">Adresse</label><input type="text" name="adresse" required> </td>
-                            <td><label for="postnummer">Postnummer</label><input type="text" name="postnummer" required> </td>
+                            <td><label for="adresse"><p class="nomargin_nopadding">Adresse</p></label><input type="text" name="adresse" required> </td>
+                            <td><label for="postnummer"><p class="nomargin_nopadding" id="postnummer_register">Postnummer</p></label><input type="number" name="postnummer" onblur="validate_postnummer_register()" required> </td>
                         </tr>
                         <th class="th-left-border" colspan="3">
-                            <button type="submit" class="flat_button">Registrer</button>
+                            <button type="submit" class="flat_button" onclick="submit_register()">Registrer</button>
                         </th>
                     </table>
                 </form>
@@ -41,10 +42,35 @@
 	</div>
 </div>
 <script>
+    var registrer_valid = [0, 0, 0];
+    var kontakt_valid = [0, 0];
+
     /* Checks validity of email parameter */
     function validate_email(email){
         var ret = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return ret.test(email);
+    }
+
+    /* Checks if email, tlf or postnummer is still invalid when trying to submit */
+    function submit_register(){
+        var error = "Ugyldige felter: ";
+        var alert = 0;
+        for(var i = 0; i < registrer_valid.length; i++){
+            if(registrer_valid[i] == 0){
+                error += "Email, ";
+                alert = 1;
+            }
+            else if (registrer_valid[i] == 0){
+                error += "Tlf, ";
+                alert = 1;
+            }
+            else if (registrer_valid[i] == 0){
+                error += "Postnummer, ";
+                alert = 1;
+            }
+        }
+        if (alert)
+            alert(error);
     }
 
     /* Checks validity of email input and displays error message if not valid*/
@@ -52,13 +78,49 @@
         var form = document.forms['registreringsskjema'];
         var email_address = form['email'].value;
         var feilmelding = document.getElementById('email_register');
-        var temp_tekst = feilmelding.innerHTML;
+        var temp_tekst = "Email";
 
         if(validate_email(email_address) == false){
-            feilmelding.innerHTML += '<span style=\"color:red; font-size:12px\"> - ugyldig adresse</span>';
-
-            setTimeout(function(){feilmelding.innerHTML = temp_tekst},1500);
+            // Appends error message to email label tag
+            feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig adresse</span>';
+            // sets valid-email to false
+            registrer_valid[0] = 0;
+            setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
+        }
+        else{
+            // sets valid-email to true
+            registrer_valid[0] = 1;
         }
     }
+
+    /* Checks validity of tlf input and displays error message if not valid*/
+    function validate_tlf_register(){
+        var form = document.forms['registreringsskjema'];
+        var tlf = form['tlf'].value;
+        var feilmelding = document.getElementById('tlf_register');
+        var temp_tekst = "Tlf";
+
+        if(tlf.toString().length != 8){
+            // Appends error message to tlf label tag
+            feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig nr</span>';
+            setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
+        }
+    }
+
+    /* Checks validity of postnummer input and displays error message if not valid*/
+    function validate_postnummer_register(){
+        var form = document.forms['registreringsskjema'];
+        var tlf = form['postnummer'].value;
+        var feilmelding = document.getElementById('postnummer_register');
+        var temp_tekst = "Postnummer";
+
+        if(tlf.toString().length != 8){
+            // Appends error message to postnummer label tag
+            feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig postnr</span>';
+            setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
+        }
+    }
+
+
 </script>
 {% include('footer.html') %}
