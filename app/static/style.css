@@ -242,19 +242,15 @@ a {
 
 .product_table {
 	border-radius: 2px;
-	margin-bottom: 50px;
-	display: inline-table;
 	width: 100%;
 	background:#fafafa;
 	border: 1px solid #ddd;
+	font-weight: 400;
 }
 .product_table tr:last-child th, .product_table tr:last-child td{
 	border-bottom:none;
 }
 
-.product_table label {
-	font-weight: normal;
-}
 .product_table tr td {
 	border-bottom: 1px solid rgba(0,0,0, .12);
 }
@@ -266,21 +262,20 @@ a {
 }
 
 .product_table tr th {
-	text-align: left;
 	padding: 20px;
-	border:none;
 	border-bottom: 1px solid rgba(0,0,0, .12);
-	border-top: 1px solid rgba(0,0,0, .12);
 	background:#fff;
-	border-top: none;
-	font-weight:normal;
+}
 
+.product_table h3 {
+	font-size: 18px;
+	line-height:32px;
+	text-transform:none;
+	margin:0px;
+	font-weight: 400;
 }
 .product_table td {
-	text-align: left;
-	margin: 50px;
 	padding: 20px;
-	border:none;
 }
 .product_table li {
 	list-style: none;
@@ -383,12 +378,15 @@ a {
 	font-weight: 500;
 	font-size: 18px;
 	letter-spacing: .01em;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+	color: #61AEA8;
 }
 .flat_button.small {
 	width:200px;
 	font-size: 14px;
+	outline:0;
+	font-weight: 400;
 }
 .flat_button:hover {
 	background-color: #F5F5F5;
