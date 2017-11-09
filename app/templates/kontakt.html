@@ -1,48 +1,100 @@
 {% include('nav.html') %}
+
+<style>
+.page_box img {
+    max-width: 100%;
+}
+
+#employees{
+    text-align: center;
+}
+.employee{
+    display: inline-block;
+    width: 30%;
+
+}
+.about-left {
+	float:left;
+
+}
+.about-left, .about-right{
+    text-align:left;
+margin-top:0px;
+	height:auto;
+		margin-bottom:32px;
+}
+.box_content {
+	padding:24px;
+}
+.about-right {
+	float:right;
+	text-align:center;
+	padding-top:16px;
+}
+.about-right p {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.row {
+	margin-bottom:32px;
+	width:100%;
+		display:inline-block;
+}
+.content_header_text {
+	text-align:left;
+}
+.kontakt-img{
+
+}
+</style>
 <div class="page_container">
-	<div class="page_header">
-	</div>
+	<h3 class="page_header">
+	</h3>
 	<div class="full">
 		<div class="page_box big">
 			<div class="box_header">
 				<p>Kontakt Oss</p>
 			</div>
 			<div class="box_content">
-				<ul>
-					<li>På denne siden finner du kontaktinformasjon og mulighet for å sende oss en melding direkte.</li>
-					<li>
-						Plassering<br>
-						Epost<br>
-						Telefonnummer<br>
-					</li>
-					<li>Placeholder for kart - Må muligens bruke js</li>
-				</ul>
-				<br>
-				<form class="kontaktskjema" action="" method="post">
-					<table class="product_table">
-						<tr>
-							<th colspan="2"><p>Ta kontakt med oss ved å fylle ut dette skjemaet.</p></th>
-						</tr>
-						<tr>
-							<th class="th-left-border"><label for="navn">Navn</label></th>
-							<td><input type="text" placeholder="Navn" name="navn" required> </td>
-						</tr>
-						<tr>
-							<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-							<td><input type="text" placeholder="12345678" name="tlf" required> </td>
-						</tr>
-						<tr>
-							<th class="th-left-border"><label for="email">Epost-addresse</label></th>
-							<td><input type="text" placeholder="epost-addresse" name="email" required> </td>
-						</tr>
-						<tr>
-							<th class="th-left-border"><label for="message">Melding</label></th>
-                            <td><textarea name="message" required> </textarea></td>
-						</tr>
-						<tr><th class="th-left-border">Send inn</th><td><input type="submit" /></td>
-						</tr>
-					</table>
-				</form>
+                <div class="row"></div>
+				<div class="row">
+				    <div class="left">
+				        <form class="kontaktskjema" action="" method="post">
+				        	<table class="product_table">
+				        		<tr>
+				        			<th colspan="2"><p>Ta kontakt med oss ved å fylle ut dette skjemaet.</p></th>
+				        		</tr>
+				        		<tr>
+				        			<th class="th-left-border"><label for="navn">Navn</label></th>
+				        			<td><input type="text" placeholder="Navn" name="navn" required> </td>
+				        		</tr>
+				        		<tr>
+				        			<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
+				        			<td><input type="text" placeholder="12345678" name="tlf" required> </td>
+				        		</tr>
+				        		<tr>
+				        			<th class="th-left-border"><label for="email">Epost-addresse</label></th>
+				        			<td><input type="text" placeholder="epost-addresse" name="email" required> </td>
+				        		</tr>
+				        		<tr>
+				        			<th class="th-left-border"><label for="message">Melding</label></th>
+				                                <td><textarea name="message" required> </textarea></td>
+				        		</tr>
+				        		<tr><th class="th-left-border">Send inn</th><td><input type="submit" /></td>
+				        		</tr>
+				        	</table>
+				        </form>
+				    </div>
+				    <div class="right">
+				        <ul>
+                            <li><img class="kontakt-img" src="../static/map.jpg"></li>
+				        		<li>&#10143 Lerstadvegen 539, 6018 Ålesund</li>
+                                <li>&#9993 <a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
+                                <li>&#9990 <a href="tel: +47 930 36 330">+47 930 36 330</a></li>
+				        </ul>
+				    </div>
+				</div>
 			</div>
 
 		</div>
