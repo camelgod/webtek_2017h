@@ -1,0 +1,83 @@
+<html>
+{% include('header.html') %}
+{% include('nav.html') %}
+{% include('footer.html') %}
+	<head>
+		<link rel="stylesheet" href="../static/style.css">
+
+		<style type="text/css">
+			#picture {
+				width: 100%;
+			}
+
+			.leftpane {
+			    width: 33.33%;
+			    height: 100%;
+			    float: left;
+			}
+
+			.middlepane {
+			    width: 33.33%;
+			    height: 100%;
+			    float: left;
+			}
+
+			.rightpane {
+			  width: 33.33%;
+			  height: 100%;
+			  position: relative;
+			  float: right;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<div id="homepage">
+			<div id="navbar">
+			</div>
+			<div id="header">
+			</div>
+			<div id="picture">
+				<img src="../static/img/store-front.jpg" alt="placeholder">
+			</div>
+
+			<section id="page_box">
+				<h1>
+				<div id="map" style="width:400px;height:400px;background:yellow;float:right"></div>
+				Dyresenteret</h1>
+				<p>Dyrebutikk i Ålesund</p>
+				<p>Kontaktinformasjon</p>
+				<p>Lokasjon</p>	
+			</section>
+
+			<hr>
+
+			<section class="page_box">
+				<div class="leftpane">
+					<h1><a href="/knowledge-center.html">Knowledge Center</a></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="middlepane">
+					<h1><a href="/about-us.html">About</a></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+				<div class="rightpane">
+					<h1><a href="/store.html">Store</a></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</section>
+
+		<script>
+		function myMap() {
+		var mapOptions = {
+		    center: new google.maps.LatLng(62.47, 6.11),
+		    zoom: 13,
+		    mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+		}
+		</script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABH6xb_AsW4mzzlq5iTpVdM1Vx5_GS8Jk&callback=myMap"></script>
+	</body>
+</html>
