@@ -502,6 +502,21 @@ input[type="submit"] {
 
 }
 
+.header-media {
+	background-color:#FFF;
+	text-align:center;
+	margin-left:50%;
+	width:40%;
+	display:inline-block;
+	position:relative;
+	top:40%;
+}
+.social-buttons {
+
+	float:left;
+	padding-left:20px;
+}
+
 
 
 
