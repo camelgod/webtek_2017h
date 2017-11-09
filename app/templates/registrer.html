@@ -14,22 +14,22 @@
                 <form name="registreringsskjema" action="" method="post">
                     <table class="product_table registreringsskjema">
                         <tr>
-                            <th colspan="3">Kundeinformasjon</th>
+                            <th colspan="3">Kundeinformasjon - alle felter må fylles ut</th>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="navn">Fullt navn</label></th>
-                            <td><label for="fornavn"><h4>Fornavn</h4></label><input type="text" name="fornavn" required> </td>
-                            <td><label for="etternavn"><h4>Etternavn</h4></label><input type="text" name="etternavn" required> </td>
+                            <td><label for="fornavn">Fornavn</label><p></p><input type="text" name="fornavn" required> </td>
+                            <td><label for="etternavn">Etternavn</label><input type="text" name="etternavn" required> </td>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="kontakt">Kontakt</label></th>
-                            <td><label for="email"><h4>Email</h4></label><input type="text" name="email" required> </td>
-                            <td><label for="tlf"><h4>Tlf</h4></label><input type="text" name="tlf" required> </td>
+                            <td><label for="email"><p class="nomargin_nopadding" id="email_register">Email</p></label><input type="text" name="email" onblur="validate_email_register()" required></td>
+                            <td><label for="tlf">Tlf</label><input type="text" name="tlf" required> </td>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="navn">Adresse</label></th>
-                            <td><label for="adresse"><h4>Adresse</h4></label><input type="text" name="adresse" required> </td>
-                            <td><label for="postnummer"><h4>Postnummer</h4></label><input type="text" name="postnummer" required> </td>
+                            <td><label for="adresse">Adresse</label><input type="text" name="adresse" required> </td>
+                            <td><label for="postnummer">Postnummer</label><input type="text" name="postnummer" required> </td>
                         </tr>
                         <th class="th-left-border" colspan="3">
                             <button type="submit" class="flat_button">Registrer</button>
@@ -41,14 +41,26 @@
 	</div>
 </div>
 <script>
-    function validateEmail(email) {
-        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
+
+
+    /* Checks validity of email parameter */
+    function validate_email(email){
+        var ret = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return ret.test(email);
     }
 
-    function validate_email_registrer(){
+    /* Checks validity of email input and displays error message if not valid*/
+    function validate_email_register(){
         var form = document.forms['registreringsskjema'];
-        var email = form['email'].value;
+        var email_address = form['email'].value;
+        var feilmelding = document.getElementById('email_register');
+        var temp_tekst = feilmelding.innerHTML;
+
+        if(validate_email(email_address) == false){
+            feilmelding.innerHTML += '<span style=\"color:green\">Ugyldig adresse</span>';
+
+            setTimeout(function(){feilmelding.innerHTML = temp_tekst},1000);
+        }
     }
 </script>
 {% include('footer.html') %}

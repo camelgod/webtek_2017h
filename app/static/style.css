@@ -859,6 +859,11 @@ input[type="submit"] {
 	}
 }
 
+.nomargin_nopadding{
+	padding: 0;
+	margin: 0;
+}
+
 /* Dynamic hamburger menu */
 @media screen and (max-width: 920px) {
 	.header_content a:not(:first-child) {
