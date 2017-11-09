@@ -1,3 +1,82 @@
+<style>
+.page_box img {
+    max-width: 200px;
+}
+
+.store_button {
+	max-width: 200px;
+}
+
+.box_content {
+	padding:24px;
+}
+
+.row {
+	margin-bottom:32px;
+    margin-top: 32px;
+	width:100%;
+	display:inline-block;
+}
+.content_header_text {
+	text-align:left;
+}
+.store_left3 {
+	padding-left: 5%;
+	width: auto%;
+	float: left;
+	margin-bottom: 64px;
+	display:inline-block;
+
+}
+.store_right3 {
+	padding-right: 5%;
+	width: auto%;
+	float: right;
+	display:inline-block;
+	margin-bottom: 64px;
+}
+.store_middle3{
+	padding-left: 5%;
+	padding-right: 5%;
+	width: auto%;
+	float: right;
+	display:inline-block;
+	margin-bottom: 64px;
+}
+
+@media screen and (max-width: 840px) {
+
+
+.store_left3 {
+	width: 100%;
+	float: left;
+	margin-top:-58px;
+	margin-bottom: 64px;
+	display:block;
+    transition: 0.3s all;
+
+
+}
+.store_right3 {
+	width: 100%;
+	float: right;
+	display:block;
+	margin-top:-58px;
+	margin-bottom: 64px;
+    transition: 0.3s all;
+}
+.store_middle3{
+	width: 100%;
+	float: right;
+	display:block;
+	margin-top:-58px;
+	margin-bottom: 64px;
+    transition: 0.3s all;
+}
+
+
+</style>
+
 {% include('nav.html') %}
 <div class="page_container">
     <h3 class="page_header"></h3>
@@ -6,23 +85,26 @@
 			<div class="box_header">
 			<p>Nettbutikk</p>
 			</div>
-			<div id="categories">
-				<h2>Kategorier</h2>
-				<div class="category">
+			<div class="row">
+				<div class="store_left3">
 					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
 					<h3>Category Name</h3>
-					<form action="/category">
-						<input type="submit" class="flat_button" value="Vis kategori">
-					</form>
+					<div class="store_button">
+						<form action="/category">
+							<input type="submit" class="flat_button" value="Vis kategori">
+						</form>
+					</div>
 				</div>
-				<div class="category">
+				<div class="store_right3">
 					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
 					<h3>Category Name</h3>
-					<form action="/category">
-						<input type="submit" class="flat_button" value="Vis kategori">
-					</form>
+					<div class="store_button">
+						<form action="/category">
+							<input type="submit" class="flat_button" value="Vis kategori">
+						</form>
+					</div>
 				</div>
-				<div class="category">
+				<div class="store_middle3">
 					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
 					<h3>Category Name</h3>
 					<div class= "store_button">
