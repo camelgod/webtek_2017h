@@ -1,118 +1,35 @@
-<style>
-.page_box img {
-    max-width: 200px;
-        margin:auto;
-
-}
-
-.inside_row {
-	display: table;
-	width: 95%;
-	margin: 0 auto;
-	text-align: center;
-}
-
-.inside_row:after {
-	display: inline-block;
-}
-
-
-
-.box_content {
-	padding:24px;
-}
-
-.row {
-	margin-bottom:32px;
-    margin-top: 32px;
-	width:100%;
-	display:inline-block;
-}
-.content_header_text {
-	text-align:left;
-}
-.store_left3 {
-	display: table-cell;
-	max-width: 200px;
-	margin: auto 5;
-}
-.store_right3 {
-	display: table-cell;
-	max-width: 200px;
-	margin: auto 5;
-}
-.store_middle3{
-	display: table-cell;
-	max-width: 200px;
-	margin: auto 5;
-}
-
-.store_button {
-	max-width: 200px;
-	display: inline-block;
-}
-
-@media screen and (max-width: 840px) {
-
-
-.store_left3 {
-	max-width: 200px;
-	margin: auto;
-	display: block;
-    transition: 0.3s all;
-}
-.store_right3 {
-	max-width: 200px;
-	margin: auto;
-	display: block;
-    transition: 0.3s all;
-}
-.store_middle3{
-	max-width: 200px;
-	margin: auto;
-	display: block;
-    transition: 0.3s all;
-}
-</style>
-
 {% include('nav.html') %}
 <div class="page_container">
     <h3 class="page_header"></h3>
 	<div class="full">
 		<div class="page_box big">
 			<div class="box_header">
-			<p>Nettbutikk</p>
+				<p>Nettbutikk</p>
 			</div>
-			<div class="row">
-			<div class="inside_row">
-				<div class="store_left3">
-					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-					<h3>Category Name</h3>
-					<div class="store_button">
+			<div class="box_content">
+				<div class="row small-images category-table">
+					<div class="category">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<form action="/category">
+							<input type="submit" class="flat_button" value="Vis kategori">
+						</form>
+					</div>
+					<div class="category">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<form action="/category">
+							<input type="submit" class="flat_button" value="Vis kategori">
+						</form>
+					</div>
+					<div class="category">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
 						<form action="/category">
 							<input type="submit" class="flat_button" value="Vis kategori">
 						</form>
 					</div>
 				</div>
-				<div class="store_right3">
-					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-					<h3>Category Name</h3>
-					<div class="store_button">
-						<form action="/category">
-							<input type="submit" class="flat_button" value="Vis kategori">
-						</form>
-					</div>
-				</div>
-				<div class="store_middle3">
-					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-					<h3>Category Name</h3>
-					<div class= "store_button">
-						<form action="/category">
-							<input type="submit" class="flat_button" value="Vis kategori">
-						</form>
-					</div>
-				</div>
-			</div>
 			</div>
 		</div>
 	</div>
