@@ -80,21 +80,26 @@
 		function validate_email_cart() {
 			var email = document.forms['leveringsskjema']['email'].value;
 	    	var feilmelding = document.getElementById('invalid_email_levering');
+	    	alert("start email");
 	    	if (validate_email(email) == false) {
 	    		feilmelding.innerHTML = "Ugyldig e-post";
 	    		feilmelding.style.color = "red";
 	    		feilmelding.style.fontSize = "12px";
 	    		feilmelding.style.display = "inline";
 	    		cart_valid[0] = 0;
+	    		alert("if");
 	    		setTimeout(function(){feilmelding.style.display = "none"},2000);
 	    	}
 	  		else {
+	  			alert("else");
 	    		cart_valid[0] = 1;
 	    	}
 		}
 
 		function validate_tlf_cart() {
-			var tlf = document.forms['leveringsskjema']['tlf'].value;
+			var form = document.forms['leveringsskjema'];
+			var tlf = forms['tlf'].value;
+			alert("start tlf");
 			var feilmelding = document.getElementById('invalid_tlf_levering');
 			if tlf.toString().length != 8 {
 	    		feilmelding.innerHTML = "Ugyldig telefonnummer";
@@ -112,6 +117,7 @@
 		function validate_postnummer_cart() {
 			var postnummer = document.forms['leveringsskjema']['postnummer'].value;
 			var feilmelding = document.getElementById('invalid_postnummer_levering');
+			alert("start zip")
 			if postnummer.toString().length != 4 {
 	    		feilmelding.innerHTML = "Ugyldig postnummer";
 	    		feilmelding.style.color = "red";
