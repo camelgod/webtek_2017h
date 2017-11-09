@@ -5,9 +5,18 @@
 
 }
 
-.store_button {
-	max-width: 200px;
+.inside_row {
+	display: table;
+	width: 95%;
+	margin: 0 auto;
+	text-align: center;
 }
+
+.inside_row:after {
+	display: inline-block;
+}
+
+
 
 .box_content {
 	padding:24px;
@@ -23,56 +32,47 @@
 	text-align:left;
 }
 .store_left3 {
-	width: 25%;
-	float: left;
-	display:inline-block;
-    margin-left: 6%;
-
+	display: table-cell;
+	max-width: 200px;
+	margin: auto 5;
 }
 .store_right3 {
-	width: 25%;
-	float: left;
-	display:inline-block;
-        margin-left: 7%;
+	display: table-cell;
+	max-width: 200px;
+	margin: auto 5;
 }
 .store_middle3{
-    width: 25%;
-	float: left;
-	display:inline-block;
-     margin-left: 7%;
+	display: table-cell;
+	max-width: 200px;
+	margin: auto 5;
+}
+
+.store_button {
+	max-width: 200px;
+	display: inline-block;
 }
 
 @media screen and (max-width: 840px) {
 
 
 .store_left3 {
-	width: 100%;
-	float: left;
-	margin-top:-58px;
-	margin-bottom: 64px;
-	display:block;
+	max-width: 200px;
+	margin: auto;
+	display: block;
     transition: 0.3s all;
-
-
 }
 .store_right3 {
-	width: 100%;
-	float: right;
-	display:block;
-	margin-top:-58px;
-	margin-bottom: 64px;
+	max-width: 200px;
+	margin: auto;
+	display: block;
     transition: 0.3s all;
 }
 .store_middle3{
-	width: 100%;
-	float: right;
-	display:block;
-	margin-top:-58px;
-	margin-bottom: 64px;
+	max-width: 200px;
+	margin: auto;
+	display: block;
     transition: 0.3s all;
 }
-
-
 </style>
 
 {% include('nav.html') %}
@@ -84,6 +84,7 @@
 			<p>Nettbutikk</p>
 			</div>
 			<div class="row">
+			<div class="inside_row">
 				<div class="store_left3">
 					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
 					<h3>Category Name</h3>
@@ -111,6 +112,7 @@
 						</form>
 					</div>
 				</div>
+			</div>
 			</div>
 		</div>
 	</div>
