@@ -581,3 +581,11 @@ input[type=number] {
     margin:0px;
     float:left;
 }
+@media screen and (max-width: 650px) {
+	.fb_iframe_widget {
+		display: none !important;
+	}
+}
+.footer_icon {
+	width: 30px;
+}
