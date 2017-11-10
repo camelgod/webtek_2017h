@@ -582,3 +582,6 @@ input[type=number] {
 		display: none !important;
 	}
 }
+.footer_icon {
+	width: 30px;
+}
