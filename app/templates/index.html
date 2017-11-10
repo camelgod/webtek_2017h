@@ -40,7 +40,11 @@
 
 						<li><p>Lokasjon</p>
 
-							<div id="map"></div>
+					    <div>
+							<iframe id="map" frameborder="0" style="border:0"
+							src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvxBC65jFFkYRaDfZWfVagj0&key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8" allowfullscreen>
+							</iframe>
+						</div>
 
 
 							</li>
@@ -66,36 +70,27 @@
 				<div class="row three center">
 					<div class="col">
 						<h3><a href="/kunnskap">Kunnskapskatalog</a></h3>
-						<p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
+                    <p class="paragraph">
+                        Kunnskapskatalogen er en plass hvor du finner nyttig informasjon om dyrehold. Her finner du alt fra tips om ernæring, dyrestell og trening.
+                    </p>
+
 					</div>
 					<div class="col">
 						<h3><a href="/om">Om oss</a></h3>
-						<p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
+                        <p class="paragraph">
+                            Vi har drevet dyrebutikk siden 2002 men har drevet med dyr så og si hele livet. Dyr for oss er en lidenskap gjort om til levebrød. Les mer om oss <a href="/om">her.</a>
+                        </p>
 					</div>
 					<div class="col">
 						<h3><a href="/nettbutikk">Nettbuikk</a></h3>
-						<p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
+                        <p class="paragraph">
+                            Du kan bestille varer direkte hjem i Ålesundsområdet. Varene blir levert to ganger i uken.
+                        </p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-   <script>
-      function initMap() {
-        var uluru = {lat: 62.471615, lng: 6.3610094};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8&callback=initMap">
-    </script>
 
 {% include('footer.html') %}
