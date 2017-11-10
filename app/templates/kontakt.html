@@ -1,5 +1,4 @@
 {% include('nav.html') %}
-
 <div class="page_container">
 	<div class="page_header"></div>
 	<div class="full">
@@ -21,20 +20,20 @@
 								    <td><input type="text" placeholder="12345678" name="tlf" required> </td>
 							    </tr>
 							    <tr>
-								    <th class="th-left-border"><label for="email">Epost-addresse</label></th>
-								    <td><input type="text" placeholder="epost-addresse" name="email" required> </td>
+								    <th class="th-left-border"><label for="email">Epost-adresse</label></th>
+								    <td><input type="text" placeholder="epost-adresse" name="email" required> </td>
 							    </tr>
 							    <tr>
 								    <th class="th-left-border"><label for="message">Melding</label></th>
-								    <td><textarea name="message" required> </textarea></td>
+								    <td><textarea rows="8" name="message" required> </textarea></td>
 							    </tr>
-							    <tr><th class="th-left-border">Send inn</th><td><input type="submit" /></td>
+							    <tr><th class="th-left-border">Send inn</th><td><input class="flat_button" type="submit" /></td>
 							    </tr>
 						    </table>
 					    </form>
 				    </div>
 				    <div class="col fill-images">
-					    <img src="../static/map.jpg">
+					    <div id="map"></div>
 					    <ul>
 						    <li>&#10143 Lerstadvegen 539, 6018 Ålesund</li>
 						    <li>&#9993 <a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
@@ -46,4 +45,21 @@
 		</div>
 	</div>
 </div>
+
+   <script>
+      function initMap() {
+        var uluru = {lat: 62.471615, lng: 6.3610094};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8&callback=initMap">
+    </script>
 {% include('footer.html') %}
