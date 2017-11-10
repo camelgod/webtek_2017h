@@ -420,20 +420,38 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
-
 /* Registrer.html styling */
 .registreringsskjema{
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	transition: 1.5s all;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
 	.registreringsskjema{
-		left: 25%;
-		right: 25%;
 		margin-left: auto;
 		margin-right: auto;
+		width: 100%;
+		transition: 1.5s all;
 	}
+}
+
+.nomargin_nopadding{
+	padding: 0;
+	margin: 0;
+}
+
+.hide_paragraph{
+	display: none;
+}
+
+.label_nopadding{
+	padding: 0;
+	margin: 0;
+}
+.nodot{
+	list-style-type: none;
 }
 
 /* Dynamic hamburger menu */
