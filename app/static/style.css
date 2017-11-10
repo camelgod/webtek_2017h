@@ -425,7 +425,7 @@ input[type="submit"] {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
-	transition: 1.5s all;
+	transition: 1s all;
 }
 
 @media screen and (max-width: 1200px) {
@@ -433,7 +433,7 @@ input[type="submit"] {
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
-		transition: 1.5s all;
+		transition: 1s all;
 	}
 }
 
@@ -452,6 +452,17 @@ input[type="submit"] {
 }
 .nodot{
 	list-style-type: none;
+}
+
+/* Removes number spinner from number input fields */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
 }
 
 /* Dynamic hamburger menu */
