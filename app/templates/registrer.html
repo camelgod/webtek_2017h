@@ -3,43 +3,51 @@
 	<div class="page_header"></div>
 	<div class="full">
 		<div class="page_box big">
-			<div class="box_header">
-				<p>Registrering</p>
-			</div>
-			<div class="box_content top-margin">
-                <ul>
-					<li>Her kan du registrere informasjon om deg som kunde slik at vi kan lagre det lokalt i butikken.</li>
-				</ul>
-                <br>
-                <form name="registreringsskjema" action="" method="post">
+            <div class="box_header">
+                <h3>Registrering</h3>
+            </div>
+			<div class="box_content">
+                <div class="row center"
+                     <ul>
+                         <li class="nodot">Her kan du registrere informasjon om deg som kunde slik at vi kan lagre det lokalt i butikken.</li>
+                     </ul>
+                </div>
+                <div class="row">
+                    <form name="registreringsskjema" action="" method="post">
                     <table class="product_table registreringsskjema">
                         <tr>
-                            <th colspan="3">Kundeinformasjon - alle felter må fylles ut</th>
+                            <th colspan="3">Kontoinformasjon - alle felter må fylles ut</th>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="navn">Fullt navn</label></th>
-                            <td><label for="fornavn"><p class="nomargin_nopadding">Fornavn</p></label><input type="text" name="fornavn" required> </td>
-                            <td><label for="etternavn"><p class="nomargin_nopadding">Etternavn</p></label><input type="text" name="etternavn" required> </td>
+                            <td><label for="fornavn"><p class="nomargin_nopadding">Fornavn</p></label>
+                                <input type="text" name="fornavn"> </td>
+                            <td><label for="etternavn"><p class="nomargin_nopadding">Etternavn</p></label>
+                                <input type="text" name="etternavn"> </td>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="kontakt">Kontakt</label></th>
                             <td><label for="email"><p class="nomargin_nopadding" id="email_register">Email</p></label>
-                                <input type="text" name="email" onblur="validate_email_register()" required></td>
-                            <td><label for="tlf"><p class="nomargin_nopadding" id="tlf_register">Tlf</p></label><input type="number" name="tlf" onblur="validate_tlf_register()" required> </td>
+                                <input type="text" name="email" onblur="validate_email_register()"></td>
+                            <td><label for="tlf"><p class="nomargin_nopadding" id="tlf_register">Tlf</p></label>
+                                <input type="number" name="tlf" onblur="validate_tlf_register()"> </td>
                         </tr>
                         <tr>
                             <th class="th-left-border"><label for="navn">Adresse</label></th>
-                            <td><label for="adresse"><p class="nomargin_nopadding">Adresse</p></label><input type="text" name="adresse" required> </td>
-                            <td><label for="postnummer"><p class="nomargin_nopadding" id="postnummer_register">Postnummer</p></label><input type="number" name="postnummer" onblur="validate_postnummer_register()" required> </td>
+                            <td><label for="adresse"><p class="nomargin_nopadding">Adresse</p></label>
+                                <input type="text" name="adresse"> </td>
+                            <td><label for="postnummer"><p class="nomargin_nopadding" id="postnummer_register">Postnummer</p></label>
+                                <input type="number" name="postnummer" onblur="validate_postnummer_register()"> </td>
                         </tr>
                         <th class="th-left-border" colspan="3">
                             <button type="button" class="flat_button" onclick="submit_register()">Registrer</button>
                         </th>
                     </table>
                 </form>
+                </div>
             </div>
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
 <script>
     var registrer_valid = [0, 0, 0];
@@ -56,7 +64,7 @@
         var error = "Ugyldige felter: ";
         var stop = 0;
 
-        // Check array for invalid inputs
+        // Check array for invalid inputs (email, tlf and postnummer)
         if(registrer_valid[0] == 0){
             error += "Email, ";
             stop = 1;
@@ -75,7 +83,21 @@
             alert(error);
         }
         else{
-            document.forms['registreringsskjema'].submit();
+            // check if any fields are empty
+            var emptyfields = 0;
+            var fornavn = document.forms['registreringsskjema']['fornavn'].value;
+            var etternavn = document.forms['registreringsskjema']['etternavn'].value;
+            var adresse = document.forms['registreringsskjema']['adresse'].value;
+            if(fornavn == "" || etternavn == "" || adresse == ""){
+                emptyfields = 1;
+            }
+
+            if(emptyfields != 1){
+                document.forms['registreringsskjema'].submit();
+            }
+            else{
+                alert("Kan ikke registrere - tomme felter i skjema");
+            }
         }
     }
 
@@ -139,7 +161,6 @@
             registrer_valid[2] = 1;
         }
     }
-
-
 </script>
+</body>
 {% include('footer.html') %}

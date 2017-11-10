@@ -1,28 +1,92 @@
 {% include('nav.html') %}
 <div class="page_container">
 	<div class="page_header">
-		<div class="socialButtons">
-
+		<div class="header-media">
+			<div class="social-buttons">
+			<p>Følg oss på facebook - [F]</p>
+			</div>
+			
 		</div>
 	</div>
 	<div class="full">
 		<div class="page_box big">
 			<div class="box_header">
-				<p>Velkommen</p>
+				<h3>Dyresenteret - Mer enn bare en dyrebutikk</h3>
 			</div>
-			<div class="box_content top-margin">
-				<p>I vår dyrebutikk finner man det meste man trenger til hund, katt, gnager, kanin, reptil og innen akvaristikk. Vi har fått med oss Toril Dønheim som hundefrisør, og Harriet Havnegjerde som dyrekiropraktor. I tillegg til at vi er en vanlig dyrebutikk kan man da benytte seg av tjenester som klipp og pelsstell av hund eller få hunden behandlet hos vår dyktige dyrekiropraktor.</p>
+			<div class="box_content">
+				<div class="row two small-images">
+					<div class="col">
+						<ul>
+						<li>
+							<p>Vi har det du trenger</p>
+							<p class="paragraph no-padding-right">I vår dyrebutikk finner man det meste man trenger til hund, katt, gnager, kanin, reptil og innen akvaristikk.<br><br> I tillegg til at vi er en vanlig dyrebutikk kan man benytte seg av tjenester som klipp og pelsstell av hund eller få hunden behandlet hos vår dyktige dyrekiropraktor.</p>
+						</li>
+						<li><p>Kontaktinformasjon</p>
+						    <p>&#10143 Lerstadvegen 539, 6018 Ålesund</p>
+						    <p>&#9993 <a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></p>
+						    <p>&#9990 <a href="tel: +47 930 36 330">+47 930 36 330</a></p>
+						
+						
+						</li>
+
+						<li><p>Lokasjon</p>
+							
+							<div id="map"></div>
+							
+							
+							</li>
+						</ul>
+					</div>
+					<div class="col center">
+						<img class="full-width" src="../static/inside_store.jpg">
+					</div>
+				</div>
+				<div class="row two fill-images">
+					<div class="col">
+					</div>
+					<div class="col center">
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="page_box big">
 			<div class="box_header">
-				<p>Kom på besøk</p>
+				<h3>Kom på besøk</h3>
 			</div>
-			<div class="box_content top-margin">
-				<p>Blablabla</p>
+			<div class="box_content">
+				<div class="row three center">
+					<div class="col">
+						<h3><a href="/kunnskap">Kunnskapskatalog</a></h3>
+						<p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
+					</div>
+					<div class="col">
+						<h3><a href="/om">Om oss</a></h3>
+						<p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
+					</div>
+					<div class="col">
+						<h3><a href="/nettbutikk">Nettbuikk</a></h3>
+						<p> LOREM IPSUM LOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUMLOREM IPSUM</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+   <script>
+      function initMap() {
+        var uluru = {lat: 62.471615, lng: 6.3610094};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8&callback=initMap">
+    </script>
 
 {% include('footer.html') %}

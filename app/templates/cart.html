@@ -1,14 +1,21 @@
 {% include('nav.html') %}
-	
 	<div class="page_container">
 		<div class="page_header"></div>
 		<div class="full">
 			<form name="leveringsskjema" action="" method="post">
 				<div class="page_box big">
 					<div class="box_header">
-						<p>Leveringsinformasjon</p>
+						<h3>Leveringsinformasjon</h3>
 					</div>
 					<div class="box_content top-margin">
+                        <table class="product_table">
+							<tr>
+								<th>Bekreftelse</th>
+							</tr>
+							<tr>
+								<td>Lasdoihaofihaoishf oiahsf oiahsfoi asoifh aiohsfh asfo ahoisfi oahsfoiafhsioshf oiasfh aosfhi aiosfhaiosf ahosfh aoisfh aoihsd asdh oasdh aids hoias hfaoihs ha aio sh aoi ha </td>
+							</tr>
+						</table>
 						<table class="product_table">
 							<tr>
 								<th colspan="2">Kundeinformasjon</th>
@@ -40,15 +47,6 @@
 								<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
 								<td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_cart()" required> 
 								<p id="invalid_tlf_levering" class="nomargin_nopadding hide_paragraph"></p></td>
-								
-							</tr>
-						</table>
-						<table class="product_table">
-							<tr>
-								<th>Bekreftelse</th>
-							</tr>
-							<tr>
-								<td>Lasdoihaofihaoishf oiahsf oiahsfoi asoifh aiohsfh asfo ahoisfi oahsfoiafhsioshf oiasfh aosfhi aiosfhaiosf ahosfh aoisfh aoihsd asdh oasdh aids hoias hfaoihs ha aio sh aoi ha </td>
 							</tr>
 						</table>
 						<p>Ekstra forespørsler</p>
@@ -61,6 +59,7 @@
 						<table class="product_table">
 							<th class="th-left-border" colspan="2">
                             	<button type="submit" class="flat_button">Lever ordre</button>
+                            </th>
 						</table>
 					</div>		
 				</div>			
@@ -68,40 +67,35 @@
 		</div>
 	</div>
 	<script>
+        var cart_valid = [0, 0, 0];
 
-		    /* Checks validity of email parameter */
+        /* Checks validity of email parameter */
 	    function validate_email(email){
 	        var ret = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 	        return ret.test(email);
 	    }
-		
-		var cart_valid = [0, 0, 0];
 
 		function validate_email_cart() {
 			var email = document.forms['leveringsskjema']['email'].value;
 	    	var feilmelding = document.getElementById('invalid_email_levering');
-	    	alert("start email");
 	    	if (validate_email(email) == false) {
 	    		feilmelding.innerHTML = "Ugyldig e-post";
 	    		feilmelding.style.color = "red";
 	    		feilmelding.style.fontSize = "12px";
 	    		feilmelding.style.display = "inline";
 	    		cart_valid[0] = 0;
-	    		alert("if");
 	    		setTimeout(function(){feilmelding.style.display = "none"},2000);
 	    	}
 	  		else {
-	  			alert("else");
 	    		cart_valid[0] = 1;
 	    	}
 		}
 
 		function validate_tlf_cart() {
 			var form = document.forms['leveringsskjema'];
-			var tlf = forms['tlf'].value;
-			alert("start tlf");
+			var tlf = form['tlf'].value;
 			var feilmelding = document.getElementById('invalid_tlf_levering');
-			if tlf.toString().length != 8 {
+			if (tlf.toString().length != 8) {
 	    		feilmelding.innerHTML = "Ugyldig telefonnummer";
 	    		feilmelding.style.color = "red";
 	    		feilmelding.style.fontSize = "12px";
@@ -117,8 +111,7 @@
 		function validate_postnummer_cart() {
 			var postnummer = document.forms['leveringsskjema']['postnummer'].value;
 			var feilmelding = document.getElementById('invalid_postnummer_levering');
-			alert("start zip")
-			if postnummer.toString().length != 4 {
+			if (postnummer.toString().length != 4) {
 	    		feilmelding.innerHTML = "Ugyldig postnummer";
 	    		feilmelding.style.color = "red";
 	    		feilmelding.style.fontSize = "12px";
@@ -130,8 +123,6 @@
 	    		cart_valid[2] = 1;
 	    	}
 		}
-
-	</script>
-</body>
-
+    </script>
+    </body>
 {% include('footer.html') %}

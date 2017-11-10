@@ -31,7 +31,8 @@ def store():
 
 
 @app.route('/category', methods=['GET'])
-def category():
+@app.route('/category/<int:id>', methods=['GET'])
+def category(id=1):
     return render_template('dog.html')
 
 

@@ -1,37 +1,33 @@
 {% include('nav.html') %}
 <div class="page_container">
-    <h3 class="page_header"></h3>
+	<div class="page_header"></div>
 	<div class="full">
 		<div class="page_box big">
 			<div class="box_header">
-			<p>Nettbutikk</p>
+				<h3>Nettbutikk</h3>
 			</div>
-			<div id="categories">
-				<h2>Kategorier</h2>
-				<div class="category">
-					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-					<h3>Category Name</h3>
-					<form action="/category">
-						<input type="submit" value="Vis kategori">
-					</form>
-				</div>
-				<div class="category">
-					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-					<h3>Category Name</h3>
-					<form action="/category">
-						<input type="submit" value="Vis kategori">
-					</form>
-				</div>
-				<div class="category">
-					<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
-					<h3>Category Name</h3>
-					<form action="/category">
-						<input type="submit" value="Vis kategori">
-					</form>
+			<div class="box_content">
+				<div class="row three small-images center">
+					<div class="col">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<a href="/category/1" class="flat_button small">Vis kategori</a>
+					</div>
+					<div class="col">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<a href="/category/2" class="flat_button small">Vis kategori</a>
+					</div>
+					<div class="col">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Category Name</h3>
+						<a href="/category/3" class="flat_button small">Vis kategori</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
 {% include('footer.html') %}
 
