@@ -48,7 +48,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 	background:#92e0d9 url("dog.jpg");
 	background-attachment: fixed;
 	background-position: center -100px;
-	background-size: cover; 
+	background-size: cover;
 	height:30%;
 }
 
@@ -309,6 +309,22 @@ a {
 	supported by Chrome and Opera */
 }
 
+/* About-us specific CSS */
+
+.employee-img{
+    max-height: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+.about_main_img img {
+    max-width: 100%;
+    max-height: 400px;
+    margin:auto;
+}
+.about_h2{
+    margin-top: 30px;
+
+}
 
 @media screen and (max-width: 840px) {
 	.left {
@@ -333,6 +349,9 @@ a {
 	.box_content {
 		transition: 0.3s all;
 
+	}
+	.header-media {
+		display: none;
 	}
 }
 
@@ -513,11 +532,11 @@ input[type=number] {
 @media screen and (max-width: 920px) {
 	.three .col{
 		width:100%;
-		min-width:100%; 
+		min-width:100%;
 	}
 	.two .col {
 		width:100%;
-		min-width:100%; 
+		min-width:100%;
 	}
 }
 
@@ -554,16 +573,12 @@ input[type=number] {
 	position:relative;
 	top:40%;
 }
-.social-buttons {
 
-	float:left;
-	padding-left:20px;
+.fb-like {
+	float: right;
 }
-
-
-
-
-
-
-
-
+@media screen and (max-width: 650px) {
+	.fb_iframe_widget {
+		display: none !important;
+	}
+}
