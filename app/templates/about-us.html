@@ -1,82 +1,83 @@
 {% include('nav.html') %}
 <style>
-.employee-img{
-    max-height: 200px;
-    border-radius: 50%;
-
-
-}
-
 </style>
 <div class="page_container">
 	<div class="page_header"></div>
 	<div class="full">
 		<div class="page_box big">
 			<div class="box_header">
-				<h3>Om oss</h3>
+				<h2 class="center">Om oss</h2>
 			</div>
 			<div class="box_content">
-				<div class="row two fill-images">
+				<div class="row two about_main_img">
 					<div class="col">
 						<p class="paragraph">I vår dyrebutikk finner man det meste man trenger til hund, katt, gnager, kanin, reptil og innen akvaristikk.</p>
 						<p class="paragraph"> Vi har fått med oss Toril Dønheim som hundefrisør, og Harriet Havnegjerde som dyrekiropraktor.</p><p class="paragraph"> I tillegg til at vi er en vanlig dyrebutikk kan man da benytte seg av tjenester som klipp og pelsstell av hund eller få hunden behandlet hos vår dyktige dyrekiropraktor.</p>
 					</div>
 					<div class="col center">
-						<img src="{{url_for('static', filename='about_main.jpg')}}" alt="placeholder">
-						<p>Lorem ipsum dolor sit amet bla bla bla bla bla bla bla</p>
+						<img  src="{{url_for('static', filename='about_main.jpg')}}" alt="placeholder">
+						<p>Tone, Kjell og Mopsen Madde</p>
+					</div>
+				</div></div></div>
+				<div class="page_box big">
+					<div class="box_header">
+						<h2 class="center">Ansatte</h2>
+					</div>
+					<div class="box_content">
+					<div class="row three small-images center">
+						<div class="col">
+					                    <img class="employee-img" src="{{url_for('static', filename='kjell.jpg')}}" alt="Employee 1">
+							<h3>Kjell Torvik</h3>
+							<div class="employee-age">
+								<p>60 år</p>
+							</div>
+							<div class="employee-info">
+								<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+							</div>
+						</div>
+						<div class="col">
+							<img class="employee-img" src="{{url_for('static', filename='tone.jpg')}}" alt="Employee 1">
+							<h3>Tone M. Torvik</h3>
+							<div class="employee-age">
+								<p>50 år</p>
+							</div>
+							<div class="employee-info">
+								<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+							</div>
+						</div>
+						<div class="col">
+							<img class="employee-img" src="{{url_for('static', filename='ine.jpg')}}" alt="Employee 1">
+							<h3>Ine Torvik</h3>
+							<div class="employee-age">
+								<p>27 år</p>
+							</div>
+							<div class="employee-info">
+								<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<hr>
-				<div class="row">
-					<h3>Ansatte</h3>
 				</div>
-				<div class="row three small-images center">
-					<div class="col">
-                        <img class="employee-img" src="{{url_for('static', filename='kjell.jpg')}}" alt="Employee 1">
-						<h3>Kjell Torvik</h3>
-						<div class="employee-age">
-							<p>60 år</p>
-						</div>
-						<div class="employee-info">
-							<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
-						</div>
+				<div class="page_box big">
+					<div class="box_header">
+						<h2 class="center"> Samarbeidspartnere </h2>
 					</div>
-					<div class="col">
-						<img class="employee-img" src="{{url_for('static', filename='tone.jpg')}}" alt="Employee 1">
-						<h3>Tone M. Torvik</h3>
-						<div class="employee-age">
-							<p>50 år</p>
+				<div class="box_content">
+					<div class="row two">
+						<div class="col center">
+							<img class="employee-img" src="{{url_for('static', filename='hundefrisor')}}" alt="Torils Hundefrisør">
+					                    <h3>Torils Hundefrisør</h3>
+							<p class="paragraph">Toril Dønheim har mange års erfaring med hundeklipp og som hundefrisør.  </p>
 						</div>
-						<div class="employee-info">
-							<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
-						</div>
-					</div>
-					<div class="col">
-						<img class="employee-img" src="{{url_for('static', filename='ine.jpg')}}" alt="Employee 1">
-						<h3>Ine Torvik</h3>
-						<div class="employee-age">
-							<p>27 år</p>
-						</div>
-						<div class="employee-info">
-							<p>Lorem impsum dolor sit amet bla bla bla bla bla bla bla</p>
+						<div class="col center">
+							<img class="employee-img" src="{{url_for('static', filename='harriet.jpg')}}" alt="placeholder">
+					                    <h3>Dyrekiropraktor Harriet Havnegjerde</h3>
+							<p class="paragraph">  Harriet Havnegjerde har en master i kiropraktikk ved Anglo European College of Chiropractic i England. I tillegg har hun en etterutdannelse i dyrekiropraktikk gjennom International Academy of Veterinary Chiropractic (IAVC). For å kunne ta etterutdannelse i dyrekiropraktikk må man enten være veterinær eller kiropraktor.
+							</p>
 						</div>
 					</div>
 				</div>
-                <hr>
-				<div class="row two fill-images">
-                    <h3> Samarbeidspartnere </h3>
-					<div class="col">
-						<p class="paragraph">I vår dyrebutikk finner man det meste man trenger til hund, katt, gnager, kanin, reptil og innen akvaristikk.</p>
-						<p class="paragraph"> Vi har fått med oss Toril Dønheim som hundefrisør, og Harriet Havnegjerde som dyrekiropraktor.</p><p class="paragraph"> I tillegg til at vi er en vanlig dyrebutikk kan man da benytte seg av tjenester som klipp og pelsstell av hund eller få hunden behandlet hos vår dyktige dyrekiropraktor.</p>
-					</div>
-					<div class="col center">
-						<img src="{{url_for('static', filename='about_main.jpg')}}" alt="placeholder">
-						<p>Lorem ipsum dolor sit amet bla bla bla bla bla bla bla</p>
-					</div>
 				</div>
-				<hr>
-			</div>
-		</div>
-	    </div>
-	</div>
+</div>
+</div>
 {% include('footer.html') %}
