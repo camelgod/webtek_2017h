@@ -1,128 +1,170 @@
 {% include('nav.html') %}
-	<div class="page_container">
-		<div class="page_header"></div>
-		<div class="full">
-			<form name="leveringsskjema" action="" method="post">
-				<div class="page_box big">
-					<div class="box_header">
-						<h3>Leveringsinformasjon</h3>
-					</div>
-					<div class="box_content top-margin">
-                        <table class="product_table">
-							<tr>
-								<th>Bekreftelse</th>
-							</tr>
-							<tr>
-								<td>Lasdoihaofihaoishf oiahsf oiahsfoi asoifh aiohsfh asfo ahoisfi oahsfoiafhsioshf oiasfh aosfhi aiosfhaiosf ahosfh aoisfh aoihsd asdh oasdh aids hoias hfaoihs ha aio sh aoi ha </td>
-							</tr>
-						</table>
-						<table class="product_table">
-							<tr>
-								<th colspan="2">Kundeinformasjon</th>
-							</tr>
-							<tr> 
-								<th class="th-left-border"><label for="fornavn">Fornavn</label></th>
-								<td><input type="text" placeholder="Fornavn" name="fornavn" required> </td>
-							</tr>
-							<tr> 
-								<th class="th-left-border"><label for="etternavn">Etternavn</label></th>
-								<td><input type="text" placeholder="Etternavn" name="etternavn" required> </td>
-							</tr>
-							<tr> 
-								<th class="th-left-border"><label for="adresse">Adresse</label></th>
-								<td><input type="text" placeholder="Adresse" name="adresse" required> </td>
-							</tr>						
-							<tr> 
-								<th class="th-left-border"><label for="postnummer">Postnummer</label></th>
-								<td><input type="number" placeholder="Postnummer" name="postnummer" onblur="validate_postnummer_cart()" required> 
-								<p id="invalid_postnummer_levering" class="nomargin_nopadding hide_paragraph"></p></td>
-								
-							</tr>
-							<tr>
-								<th class="th-left-border"><label for="email">E-post-adresse</label></th>
-								<td><input type="text" placeholder="E-post-adresse" name="email" onblur="validate_email_cart()" required>
-								<p id="invalid_email_levering" class="nomargin_nopadding hide_paragraph"></p> </td>
-								
-							<tr>
-								<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-								<td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_cart()" required> 
-								<p id="invalid_tlf_levering" class="nomargin_nopadding hide_paragraph"></p></td>
-							</tr>
-						</table>
-						<p>Ekstra forespørsler</p>
-						<table class="product_table">
-							<tr>
-								<th class="th-left-border"><label for="message">Forespørsel</label></th>
-								<td><textarea name="message"> </textarea></td>
-							</tr>
-						</table>
-						<table class="product_table">
-							<th class="th-left-border" colspan="2">
-                            	<button type="submit" class="flat_button">Lever ordre</button>
-                            </th>
-						</table>
-					</div>		
-				</div>			
-			</form>
-		</div>
-	</div>
-	<script>
-        var cart_valid = [0, 0, 0];
+<div class="page_container">
+    <div class="page_header"></div>
+    <div class="full">
+        <form name="leveringsskjema" action="" method="post">
+            <div class="page_box big">
+                <div class="box_header">
+                    <h3>Leveringsinformasjon</h3>
+                </div>
+                <div class="box_content top-margin">
+                    <table class="product_table">
+                        <tr>
+                            <th>Bekreftelse</th>
+                        </tr>
+                        <tr>
+                            <td>Lasdoihaofihaoishf oiahsf oiahsfoi asoifh aiohsfh asfo ahoisfi oahsfoiafhsioshf oiasfh aosfhi aiosfhaiosf ahosfh aoisfh aoihsd asdh oasdh aids hoias hfaoihs ha aio sh aoi ha </td>
+                        </tr>
+                    </table>
+                    <table class="product_table">
+                        <tr>
+                            <th colspan="2">Kundeinformasjon</th>
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="fornavn">Fornavn</label></th>
+                            <td><input type="text" placeholder="Fornavn" name="fornavn"> </td>
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="etternavn">Etternavn</label></th>
+                            <td><input type="text" placeholder="Etternavn" name="etternavn"> </td>
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="adresse">Adresse</label></th>
+                            <td><input type="text" placeholder="Adresse" name="adresse"> </td>
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="postnummer">Postnummer</label></th>
+                            <td><input type="number" placeholder="Postnummer" name="postnummer" onblur="validate_postnummer_cart()">
+                            <p id="invalid_postnummer_levering" class="nomargin_nopadding hide_paragraph"></p></td>
 
-        /* Checks validity of email parameter */
-	    function validate_email(email){
-	        var ret = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	        return ret.test(email);
-	    }
+                        </tr>
+                        <tr>
+                            <th class="th-left-border"><label for="email">E-post-adresse</label></th>
+                            <td><input type="text" placeholder="E-post-adresse" name="email" onblur="validate_email_cart()">
+                            <p id="invalid_email_levering" class="nomargin_nopadding hide_paragraph"></p> </td>
 
-		function validate_email_cart() {
-			var email = document.forms['leveringsskjema']['email'].value;
-	    	var feilmelding = document.getElementById('invalid_email_levering');
-	    	if (validate_email(email) == false) {
-	    		feilmelding.innerHTML = "Ugyldig e-post";
-	    		feilmelding.style.color = "red";
-	    		feilmelding.style.fontSize = "12px";
-	    		feilmelding.style.display = "inline";
-	    		cart_valid[0] = 0;
-	    		setTimeout(function(){feilmelding.style.display = "none"},2000);
-	    	}
-	  		else {
-	    		cart_valid[0] = 1;
-	    	}
-		}
+                        <tr>
+                            <th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
+                            <td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_cart()">
+                            <p id="invalid_tlf_levering" class="nomargin_nopadding hide_paragraph"></p></td>
+                        </tr>
+                    </table>
+                    <p>Ekstra forespørsler</p>
+                    <table class="product_table">
+                        <tr>
+                            <th class="th-left-border"><label for="message">Forespørsel</label></th>
+                            <td><textarea name="message"> </textarea></td>
+                        </tr>
+                    </table>
+                    <table class="product_table">
+                        <th class="th-left-border" colspan="2">
+                            <button type="button" class="flat_button" onclick="submit_cart()">Lever ordre</button>
+                        </th>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    var cart_valid = [0, 0, 0];
 
-		function validate_tlf_cart() {
-			var form = document.forms['leveringsskjema'];
-			var tlf = form['tlf'].value;
-			var feilmelding = document.getElementById('invalid_tlf_levering');
-			if (tlf.toString().length != 8) {
-	    		feilmelding.innerHTML = "Ugyldig telefonnummer";
-	    		feilmelding.style.color = "red";
-	    		feilmelding.style.fontSize = "12px";
-	    		feilmelding.style.display = "inline";
-	    		cart_valid[1] = 0;
-	    		setTimeout(function(){feilmelding.style.display = "none"},2000);
-	    	}
-	    	else {
-	    		cart_valid[1] = 1;
-	    	}
-		}
+    /* Checks validity of email parameter */
+    function validate_email(email){
+        var ret = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return ret.test(email);
+    }
 
-		function validate_postnummer_cart() {
-			var postnummer = document.forms['leveringsskjema']['postnummer'].value;
-			var feilmelding = document.getElementById('invalid_postnummer_levering');
-			if (postnummer.toString().length != 4) {
-	    		feilmelding.innerHTML = "Ugyldig postnummer";
-	    		feilmelding.style.color = "red";
-	    		feilmelding.style.fontSize = "12px";
-	    		feilmelding.style.display = "inline";
-	    		cart_valid[2] = 0;
-	    		setTimeout(function(){feilmelding.style.display = "none"},2000);
-	    	}
-	    	else {
-	    		cart_valid[2] = 1;
-	    	}
-		}
-    </script>
-    </body>
+    /* Checks if email, tlf or postnummer is still invalid when trying to submit */
+    function submit_cart(){
+        var error = "Ugyldige felter: ";
+        var stop = 0;
+
+        // Check array for invalid inputs (email, tlf and postnummer)
+        if(cart_valid[0] == 0){
+            error += "Email, ";
+            stop = 1;
+        }
+        if (cart_valid[1] == 0){
+            error += "Tlf, ";
+            stop = 1;
+        }
+        if (cart_valid[2] == 0){
+            error += "Postnummer, ";
+            stop = 1;
+        }
+
+        // if any of the three checked input fields in invalid, stop the form submission
+        if (stop == 1){
+            alert(error);
+        }
+        else{
+            // check if any fields are empty
+            var emptyfields = 0;
+            var fornavn = document.forms['leveringsskjema']['fornavn'].value;
+            var etternavn = document.forms['leveringsskjema']['etternavn'].value;
+            var adresse = document.forms['leveringsskjema']['adresse'].value;
+            if(fornavn == "" || etternavn == "" || adresse == ""){
+                emptyfields = 1;
+            }
+
+            if(emptyfields != 1){
+                document.forms['leveringsskjema'].submit();
+            }
+            else{
+                alert("Kan ikke levere ordre - tomme felter i skjema");
+            }
+        }
+    }
+
+    function validate_email_cart() {
+        var email = document.forms['leveringsskjema']['email'].value;
+        var feilmelding = document.getElementById('invalid_email_levering');
+        if (validate_email(email) == false) {
+            feilmelding.innerHTML = "Ugyldig e-post";
+            feilmelding.style.color = "red";
+            feilmelding.style.fontSize = "12px";
+            feilmelding.style.display = "inline";
+            cart_valid[0] = 0;
+            setTimeout(function(){feilmelding.style.display = "none"},2000);
+        }
+        else {
+            cart_valid[0] = 1;
+        }
+    }
+
+    function validate_tlf_cart() {
+        var form = document.forms['leveringsskjema'];
+        var tlf = form['tlf'].value;
+        var feilmelding = document.getElementById('invalid_tlf_levering');
+        if (tlf.toString().length != 8) {
+            feilmelding.innerHTML = "Ugyldig telefonnummer";
+            feilmelding.style.color = "red";
+            feilmelding.style.fontSize = "12px";
+            feilmelding.style.display = "inline";
+            cart_valid[1] = 0;
+            setTimeout(function(){feilmelding.style.display = "none"},2000);
+        }
+        else {
+            cart_valid[1] = 1;
+        }
+    }
+
+    function validate_postnummer_cart() {
+        var postnummer = document.forms['leveringsskjema']['postnummer'].value;
+        var feilmelding = document.getElementById('invalid_postnummer_levering');
+        if (postnummer.toString().length != 4) {
+            feilmelding.innerHTML = "Ugyldig postnummer";
+            feilmelding.style.color = "red";
+            feilmelding.style.fontSize = "12px";
+            feilmelding.style.display = "inline";
+            cart_valid[2] = 0;
+            setTimeout(function(){feilmelding.style.display = "none"},2000);
+        }
+        else {
+            cart_valid[2] = 1;
+        }
+    }
+</script>
+</body>
 {% include('footer.html') %}
