@@ -9,25 +9,27 @@
 			<div class="box_content">
 				<div class="row two">
 				    <div class="col">
-					    <form action="" method="post">
+					    <form name="kontaktskjema" action="" method="post">
 						    <table class="product_table">
 							    <tr><th colspan="2"><p>Ta kontakt med oss ved å fylle ut dette skjemaet.</p></th></tr>
 							    <tr><th class="th-left-border"><label for="navn">Navn</label></th>
-								    <td><input type="text" placeholder="Navn" name="navn" required> </td>
+								    <td><input type="text" placeholder="Navn" name="navn"> </td>
 							    </tr>
 							    <tr>
 								    <th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-								    <td><input type="text" placeholder="12345678" name="tlf" required> </td>
+								    <td><input type="text" placeholder="12345678" name="tlf" onblur="validate_tlf_kontakt()">
+                                    <p id="invalid_tlf_kontakt" class="nomargin_nopadding hide_paragraph"></p></td>
 							    </tr>
 							    <tr>
 								    <th class="th-left-border"><label for="email">Epost-adresse</label></th>
-								    <td><input type="text" placeholder="epost-adresse" name="email" required> </td>
+								    <td><input type="text" placeholder="epost-adresse" name="email" onblur="validate_email_kontakt()">
+                                    <p id="invalid_email_kontakt" class="nomargin_nopadding hide_paragraph"></p></td>
 							    </tr>
 							    <tr>
 								    <th class="th-left-border"><label for="message">Melding</label></th>
-								    <td><textarea rows="8" name="message" required> </textarea></td>
+								    <td><textarea rows="8" name="message"> </textarea></td>
 							    </tr>
-							    <tr><th class="th-left-border">Send inn</th><td><input class="flat_button" type="submit" /></td>
+							    <tr><th class="th-left-border">Send inn</th><td><input class="flat_button" type="button" onclick="submit_kontakt()"></td>
 							    </tr>
 						    </table>
 					    </form>
@@ -45,21 +47,6 @@
 		</div>
 	</div>
 </div>
-
-   <script>
-      function initMap() {
-        var uluru = {lat: 62.471615, lng: 6.3610094};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8&callback=initMap">
-    </script>
+<script type="text/javascript" src="../static/formValidation.js"></script>
+</body>
 {% include('footer.html') %}
