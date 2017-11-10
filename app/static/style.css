@@ -334,6 +334,9 @@ a {
 		transition: 0.3s all;
 
 	}
+	.header-media {
+		display: none;
+	}
 }
 
 
@@ -543,16 +546,12 @@ input[type="submit"] {
 	position:relative;
 	top:40%;
 }
-.social-buttons {
 
-	float:left;
-	padding-left:20px;
+.fb-like {
+	float: right;
 }
-
-
-
-
-
-
-
-
+@media screen and (max-width: 650px) {
+	.fb_iframe_widget {
+		display: none !important;
+	}
+}
