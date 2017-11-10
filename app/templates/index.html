@@ -1,11 +1,22 @@
 {% include('nav.html') %}
+
+<!-- Javascript for like-button -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/nb_NO/sdk.js#xfbml=1&version=v2.11&appId=141143236230931';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="page_container">
 	<div class="page_header">
 		<div class="header-media">
-			<div class="social-buttons">
-			<p>Følg oss på facebook - [F]</p>
-			</div>
-			
+			<p class="social-buttons">
+			Følg oss på facebook <div class="fb-like" style="padding-top:13px" data-href="https://www.facebook.com/dyresenteret.aalesund/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+			</p>
+
 		</div>
 	</div>
 	<div class="full">
@@ -25,15 +36,15 @@
 						    <p>&#10143 Lerstadvegen 539, 6018 Ålesund</p>
 						    <p>&#9993 <a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></p>
 						    <p>&#9990 <a href="tel: +47 930 36 330">+47 930 36 330</a></p>
-						
-						
+
+
 						</li>
 
 						<li><p>Lokasjon</p>
-							
+
 							<div id="map"></div>
-							
-							
+
+
 							</li>
 						</ul>
 					</div>
