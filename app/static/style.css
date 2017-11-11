@@ -582,3 +582,19 @@ input[type=number] {
 		display: none !important;
 	}
 }
+
+/* stepper_cart */
+.stepper{
+	position: fixed;
+}
+
+.box_steps {
+	padding:24px;
+	transition: 0.3s all;
+	width: 80%;
+	margin-left: 15%;
+}
+
+#step_1 {
+
+}
