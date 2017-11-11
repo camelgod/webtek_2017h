@@ -723,3 +723,11 @@ input[type=number] {
 	padding-bottom:-20px;
 }
 
+.white-box {
+	background-color: #FFF;
+	margin-left:20%;
+	margin-right:20%;
+	padding-top:20px;
+	padding-bottom:20px;
+	border-radius:5px;
+}
