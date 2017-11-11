@@ -489,7 +489,6 @@ display: block;
     }
 }
 
-
 /* Registrer.html styling */
 .registreringsskjema{
 	margin-left: auto;
@@ -560,6 +559,7 @@ display: block;
 	padding: 0;
 	margin: 0;
 }
+
 .nodot{
 	list-style-type: none;
 }
@@ -571,9 +571,11 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 0;
 }
 
+/* Makes number fields look like text-fields i mozilla */
 input[type=number] {
     -moz-appearance:textfield;
 }
+/* End styling for forms */
 
 /* Dynamic hamburger menu */
 @media screen and (max-width: 920px) {
@@ -709,6 +711,68 @@ input[type=number] {
 		display: none !important;
 	}
 }
+
+.step {
+	display:inline-block;
+	float:left;
+	padding-right:24px;
+}
+.step-content {
+	width:89%;
+	display:inline-block;
+}
+.step-content h2 {
+	line-height:80px;
+	margin:10px;
+}
+.step-col {
+	width:100%;
+}
+/* stepper_cart */
+
+#content-2, #content-3 {
+	opacity: 0.2;
+}
+
+/* For the stepper overview */
+.active_step {
+	display: inline-block;
+	border-radius: 50%;
+	width:80px;
+	height:80px;
+
+	background: #2196F3;
+	color: #FFF;
+	text-align: center;
+	line-height: 80px;
+
+	font-size: 32px;
+	margin: 10px auto;
+}
+
+.inactive_step {
+	display: inline-block;
+	border-radius: 50%;
+	width:80px;
+	height:80px;
+
+	background: #000000;
+	opacity: 0.38;
+	color: #FFF;
+	text-align: center;
+	line-height: 80px;
+
+	font-size: 32px;
+	margin: 10px auto;
+}
+
+.step_connector {
+	border-left: 2px solid #BDBDBD;
+	margin-left: 50%;
+}
+
+/* End stepper styling */
+
 .footer_icon {
 	width: 30px;
 }

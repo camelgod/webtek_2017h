@@ -53,61 +53,42 @@ function submit_register() {
 
 /* Checks validity of email input and displays error message if not valid*/
 function validate_email_register() {
-    var form = document.forms['registreringsskjema'];
-    var email_address = form['email'].value;
-    var feilmelding = document.getElementById('email_register');
-    var temp_tekst = "Email";
-
-    if(validate_email(email_address) == false) {
-        // Appends error message to email label tag
-        feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig</span>';
-        // sets valid-email to false
+    var email = document.forms['registreringsskjema']['email'].value;
+    var temp = window.getComputedStyle(document.forms['registreringsskjema']['email'], null).border;
+    if(validate_email(email) == false) {
+        document.forms['registreringsskjema']['email'].style.border = "1px solid #d66";
         registrer_valid[0] = 0;
-        setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
     }
     else {
-        // sets valid-email to true
+        document.forms['registreringsskjema']['email'].style.border = temp;
         registrer_valid[0] = 1;
     }
 }
 
 /* Checks validity of tlf input and displays error message if not valid*/
 function validate_tlf_register() {
-    var form = document.forms['registreringsskjema'];
-    var tlf = form['tlf'].value;
-    var feilmelding = document.getElementById('tlf_register');
-    var temp_tekst = "Tlf";
-
+    var tlf = document.forms['registreringsskjema']['tlf'].value;
+    var temp = window.getComputedStyle(document.forms['registreringsskjema']['email'], null).border;
     if(tlf.toString().length != 8) {
-        // Appends error message to tlf label tag
-        feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig</span>';
-        // sets valid-tlf to false
+        document.forms['registreringsskjema']['tlf'].style.border = "1px solid #d66";
         registrer_valid[1] = 0;
-        setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
     }
     else {
-        // sets valid-tlf to true
+        document.forms['registreringsskjema']['tlf'].style.border = temp;
         registrer_valid[1] = 1;
     }
 }
 
 /* Checks validity of postnummer input and displays error message if not valid*/
 function validate_postnummer_register() {
-    var form = document.forms['registreringsskjema'];
-    var tlf = form['postnummer'].value;
-    var feilmelding = document.getElementById('postnummer_register');
-    // sets valid-postnummer to false every
-    var temp_tekst = "Postnummer";
-
-    if(tlf.toString().length != 4) {
-        // Appends error message to postnummer label tag
-        feilmelding.innerHTML = temp_tekst + '<span style=\"color:red; font-size:12px\"> ugyldig</span>';
-        // sets valid-tlf to false
+    var postnummer = document.forms['registreringsskjema']['postnummer'].value;
+    var temp = window.getComputedStyle(document.forms['registreringsskjema']['postnummer'], null).border;
+    if(postnummer.toString().length != 4) {
+        document.forms['registreringsskjema']['postnummer'].style.border = "1px solid #d66";
         registrer_valid[2] = 0;
-        setTimeout(function(){feilmelding.innerHTML = temp_tekst},2000);
     }
     else {
-        // sets valid-postnummer to true
+        document.forms['registreringsskjema']['postnummer'].style.border = temp;
         registrer_valid[2] = 1;
     }
 }
@@ -141,7 +122,7 @@ function submit_kontakt() {
         var emptyfields = 0;
         var navn = document.forms['kontaktskjema']['navn'].value;
         var message = document.forms['kontaktskjema']['message'].value;
-        if(navn == "" || message == " ") {
+        if(navn == "" || message == " " || message == "") {
             emptyfields = 1;
         }
 
@@ -156,33 +137,26 @@ function submit_kontakt() {
 
 function validate_email_kontakt() {
     var email = document.forms['kontaktskjema']['email'].value;
-    var feilmelding = document.getElementById('invalid_email_kontakt');
+    var temp = window.getComputedStyle(document.forms['kontaktskjema']['email'], null).border;
     if(validate_email(email) == false) {
-        feilmelding.innerHTML = "Ugyldig e-post";
-        feilmelding.style.color = "red";
-        feilmelding.style.fontSize = "12px";
-        feilmelding.style.display = "inline";
+        document.forms['kontaktskjema']['email'].style.border = "1px solid #d66";
         kontakt_valid[0] = 0;
-        setTimeout(function(){feilmelding.style.display = "none"},2000);
     }
     else {
+        document.forms['kontaktskjema']['email'].style.border = temp;
         kontakt_valid[0] = 1;
     }
 }
 
 function validate_tlf_kontakt() {
-    var form = document.forms['kontaktskjema'];
-    var tlf = form['tlf'].value;
-    var feilmelding = document.getElementById('invalid_tlf_kontakt');
+    var tlf = document.forms['kontaktskjema']['tlf'].value;
+    var temp = window.getComputedStyle(document.forms['kontaktskjema']['tlf'], null).border;
     if(tlf.toString().length != 8) {
-        feilmelding.innerHTML = "Ugyldig telefonnummer";
-        feilmelding.style.color = "red";
-        feilmelding.style.fontSize = "12px";
-        feilmelding.style.display = "inline";
+        document.forms['kontaktskjema']['tlf'].style.border = "1px solid #d66";
         kontakt_valid[1] = 0;
-        setTimeout(function(){feilmelding.style.display = "none"},2000);
     }
     else {
+        document.forms['kontaktskjema']['tlf'].style.border = temp;
         kontakt_valid[1] = 1;
     }
 }
@@ -193,7 +167,7 @@ function validate_tlf_kontakt() {
 var cart_valid = [0, 0, 0];
 
 /* Checks if email, tlf or postnummer is still invalid when trying to submit */
-function submit_cart(){
+function validate_cart(){
     var error = "Ugyldige felter: ";
     var stop = 0;
 
@@ -226,26 +200,24 @@ function submit_cart(){
         }
 
         if(emptyfields != 1) {
-            document.forms['leveringsskjema'].submit();
+            validated_info = 1;
+            change_step(3);
         }
         else {
-            alert("Kan ikke levere ordre - tomme felter i skjema");
+            alert("Kan ikke gå til neste steg - tomme felter i skjema");
         }
     }
 }
 
 function validate_email_cart() {
     var email = document.forms['leveringsskjema']['email'].value;
-    var feilmelding = document.getElementById('invalid_email_levering');
+    var temp = window.getComputedStyle(document.forms['leveringsskjema']['email'], null).border;
     if(validate_email(email) == false) {
-        feilmelding.innerHTML = "Ugyldig e-post";
-        feilmelding.style.color = "red";
-        feilmelding.style.fontSize = "12px";
-        feilmelding.style.display = "inline";
+        document.forms['leveringsskjema']['email'].style.border = "1px solid #d66";
         cart_valid[0] = 0;
-        setTimeout(function(){feilmelding.style.display = "none"},2000);
     }
     else {
+        document.forms['leveringsskjema']['email'].style.border = temp;
         cart_valid[0] = 1;
     }
 }
@@ -253,32 +225,26 @@ function validate_email_cart() {
 function validate_tlf_cart() {
     var form = document.forms['leveringsskjema'];
     var tlf = form['tlf'].value;
-    var feilmelding = document.getElementById('invalid_tlf_levering');
+    var temp = window.getComputedStyle(document.forms['leveringsskjema']['tlf'], null).border;
     if(tlf.toString().length != 8) {
-        feilmelding.innerHTML = "Ugyldig telefonnummer";
-        feilmelding.style.color = "red";
-        feilmelding.style.fontSize = "12px";
-        feilmelding.style.display = "inline";
+        document.forms['leveringsskjema']['tlf'].style.border = "1px solid #d66";
         cart_valid[1] = 0;
-        setTimeout(function(){feilmelding.style.display = "none"},2000);
     }
     else {
+        document.forms['leveringsskjema']['tlf'].style.border = temp;
         cart_valid[1] = 1;
     }
 }
 
 function validate_postnummer_cart() {
     var postnummer = document.forms['leveringsskjema']['postnummer'].value;
-    var feilmelding = document.getElementById('invalid_postnummer_levering');
-    if (postnummer.toString().length != 4) {
-        feilmelding.innerHTML = "Ugyldig postnummer";
-        feilmelding.style.color = "red";
-        feilmelding.style.fontSize = "12px";
-        feilmelding.style.display = "inline";
+    var temp = window.getComputedStyle(document.forms['leveringsskjema']['postnummer'], null).border;
+    if(postnummer.toString().length != 4) {
+        document.forms['leveringsskjema']['postnummer'].style.border = "1px solid #d66";
         cart_valid[2] = 0;
-        setTimeout(function(){feilmelding.style.display = "none"},2000);
     }
     else {
+        document.forms['leveringsskjema']['postnummer'].style.border = temp;
         cart_valid[2] = 1;
     }
 }

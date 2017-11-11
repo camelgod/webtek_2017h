@@ -7,65 +7,104 @@
                 <div class="box_header">
                     <h3>Leveringsinformasjon</h3>
                 </div>
-                <div class="box_content top-margin">
-                    <table class="product_table">
-                        <tr>
-                            <th>Bekreftelse</th>
-                        </tr>
-                        <tr>
-                            <td>Lasdoihaofihaoishf oiahsf oiahsfoi asoifh aiohsfh asfo ahoisfi oahsfoiafhsioshf oiasfh aosfhi aiosfhaiosf ahosfh aoisfh aoihsd asdh oasdh aids hoias hfaoihs ha aio sh aoi ha </td>
-                        </tr>
-                    </table>
-                    <table class="product_table">
-                        <tr>
-                            <th colspan="2">Kundeinformasjon</th>
-                        </tr>
-                        <tr>
-                            <th class="th-left-border"><label for="fornavn">Fornavn</label></th>
-                            <td><input type="text" placeholder="Fornavn" name="fornavn"> </td>
-                        </tr>
-                        <tr>
-                            <th class="th-left-border"><label for="etternavn">Etternavn</label></th>
-                            <td><input type="text" placeholder="Etternavn" name="etternavn"> </td>
-                        </tr>
-                        <tr>
-                            <th class="th-left-border"><label for="adresse">Adresse</label></th>
-                            <td><input type="text" placeholder="Adresse" name="adresse"> </td>
-                        </tr>
-                        <tr>
-                            <th class="th-left-border"><label for="postnummer">Postnummer</label></th>
-                            <td><input type="number" placeholder="Postnummer" name="postnummer" onblur="validate_postnummer_cart()">
-                            <p id="invalid_postnummer_levering" class="nomargin_nopadding hide_paragraph"></p></td>
+                <div class="box_content">
+                    <div class="row">
+                        <div class="col step-col">
+                            <div class="step">
+                                <div class="active_step" id="visual_step1">1</div>
+                                <div class="step_connector" id="connector-1"></div>
+                            </div>
+                            <div class="step-content" id="content-1">
+                                <h2>Bekreft produkter</h2>
+                                <table class="product_table">
+                                    <tr>
+                                        <th class="th-left-border" colspan="2">
+                                            <button type="button" class="flat_button" onclick="change_step(2)" id="2from1">Bekreft</button>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col step-col">
+                            <div class="step">
+                                <div class="inactive_step" id="visual_step2">2</div>
+                                <div class="step_connector" id="connector-2"></div>
+                            </div>
+                            <div class="step-content" id="content-2">
+                                <h2>Kundeinformasjon</h2>
+                                <table class="product_table">
+                                    <tr>
+                                        <th class="th-left-border"><label for="fornavn">Fornavn</label></th>
+                                        <td><input type="text" placeholder="Fornavn" name="fornavn" disabled> </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left-border"><label for="etternavn">Etternavn</label></th>
+                                        <td><input type="text" placeholder="Etternavn" name="etternavn" disabled> </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left-border"><label for="adresse">Adresse</label></th>
+                                        <td><input type="text" placeholder="Adresse" name="adresse" disabled> </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left-border"><label for="postnummer">Postnummer</label></th>
+                                        <td><input type="number" placeholder="Postnummer" name="postnummer" onblur="validate_postnummer_cart()" disabled></td>
 
-                        </tr>
-                        <tr>
-                            <th class="th-left-border"><label for="email">E-post-adresse</label></th>
-                            <td><input type="text" placeholder="E-post-adresse" name="email" onblur="validate_email_cart()">
-                            <p id="invalid_email_levering" class="nomargin_nopadding hide_paragraph"></p> </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="th-left-border"><label for="email">E-post-adresse</label></th>
+                                        <td><input type="text" placeholder="E-post-adresse" name="email" onblur="validate_email_cart()" disabled></td>
 
-                        <tr>
-                            <th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-                            <td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_cart()">
-                            <p id="invalid_tlf_levering" class="nomargin_nopadding hide_paragraph"></p></td>
-                        </tr>
-                    </table>
-                    <p>Ekstra forespørsler</p>
-                    <table class="product_table">
-                        <tr>
-                            <th class="th-left-border"><label for="message">Forespørsel</label></th>
-                            <td><textarea name="message"> </textarea></td>
-                        </tr>
-                    </table>
-                    <table class="product_table">
-                        <th class="th-left-border" colspan="2">
-                            <button type="button" class="flat_button" onclick="submit_cart()">Lever ordre</button>
-                        </th>
-                    </table>
+                                    <tr>
+                                        <th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
+                                        <td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_cart()" disabled></td>
+                                    </tr>
+                                </table>
+                                <table class="product_table">
+                                    <th class="th-left-border" colspan="2">
+                                        <button type="button" class="flat_button" onclick="change_step(1)" id="1from2" disabled>Tilbake</button>
+                                        <button type="button" class="flat_button" onclick="validate_cart()" id="3from2" disabled>Send</button>
+                                    </th>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row">
+                            <div class="col step-col">
+                                <div class="step">
+                                    <div class="inactive_step" id="visual_step3">3</div>
+                                </div>
+                                <div class="step-content" id="content-3">
+                                    <h2>Ekstra forespørsler</h2>
+                                    <table class="product_table">
+                                        <tr>
+                                            <th class="th-left-border"><label for="message">Forespørsel</label></th>
+                                            <td><textarea name="message" disabled> </textarea></td>
+                                        </tr>
+                                    </table>
+                                    <table class="product_table">
+                                        <th class="th-left-border" colspan="2">
+                                            <button type="button" class="flat_button" onclick="change_step(2)" id="2from3" disabled>Tilbake</button>
+                                            <button type="submit" class="flat_button" name="submit" disabled>Lever ordre</button>
+                                        </th>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </form>
     </div>
 </div>
+<script type="text/javascript" src="../static/stepperCart.js"></script>
 <script type="text/javascript" src="../static/formValidation.js"></script>
 </body>
 {% include('footer.html') %}
+
+blsbls = getelementbyid(asdf)
+
+blabla.addEventListener('onChange', function() {
+
+}
