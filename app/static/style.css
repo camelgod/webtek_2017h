@@ -64,13 +64,12 @@ button.flat_button, input.flat_button, submit.flat_button {
 }
 .fill-images img {
     max-width: 100%;
-    width: 100%;
+    text-align: right;
     margin:auto;
 }
 .full-width {
 	max-width:100% !important;
-	width:100% !important;
-	height:400px;
+	max-height:400px;
 	border-radius: 5px;
 }
 
