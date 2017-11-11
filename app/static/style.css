@@ -32,6 +32,11 @@ h3 {
 	font-weight:400;
 }
 
+a {
+	color: #61AEA8;
+	font-weight: 400;
+	outline:0;
+}
 button.flat_button, input.flat_button, submit.flat_button {
 	border: none;
 }
@@ -126,11 +131,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 	margin:0px;
 }
 
-a {
-	color: #61AEA8;
-	font-weight: 400;
-	outline:0;
-}
 .box_header {
 	background:#FFF;
 	padding:8px 24px 8px 24px;
@@ -179,6 +179,7 @@ a {
 	display:inline-block;
 	float:right;
 	height:100%;
+	width:70%;
 	margin:0px;
 	line-height:56px;
 }
@@ -381,6 +382,9 @@ a {
 		padding:0px !important;
 	}
 	.header-media {
+		display:none !important;
+	}
+	#toggleResources {
 		display:none !important;
 	}
 }
@@ -608,6 +612,11 @@ input[type=number] {
 	cursor:pointer;
 	transition: color 0.3s ease, background-color 0.3s ease, transform 0.4s ease;
 }
+.nav-icon {
+	padding-top:15px;
+	padding-bottom:15px;
+	height:26px;
+}
 
 .navbar-hide {
 	display:none;
@@ -730,4 +739,68 @@ input[type=number] {
 	padding-top:20px;
 	padding-bottom:20px;
 	border-radius:5px;
+}
+
+.nav-dropdown:hover .navbar-resources {
+	display:block;
+	position:fixed;
+	background-color:#fff;
+	z-index:3;
+	top:56px;
+	right:0;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.nav-dropdown:hover .cart-items {
+	max-height:100%;
+	overflow-y:scroll;
+}
+
+.nav-dropdown:hover .navbar-resources a{
+	border-bottom: 1px solid rgba(0,0,0,.12);
+	float:none;
+	letter-spacing:none;
+	text-decoration: underline;
+	font-size:18px !important;
+	display:block;
+	color: #61AEA8;
+	font-weight: 400;
+	outline:0;
+}
+.nav-dropdown:hover .navbar-resources li{
+	border-bottom: 1px solid rgba(0,0,0,.12);
+	float:none;
+	letter-spacing:none;
+	text-decoration: underline;
+	font-size:18px !important;
+	display:block;
+	color: #61AEA8;
+	font-weight: 400;
+	outline:0;
+}
+
+.nav-dropdown:hover .navbar-resources a:hover{
+	background-color:#ddd !important;
+}
+.navbar-resources {
+	display:none;
+}
+.cart-items {
+	width:40%;
+}
+.cart-items li {
+	display:inline-block !important;
+	width:100%;
+	height:100%;
+}
+.cart-items img {
+	width:20%;
+	height:100px;
+	float:left;
+}
+.cart-items a {
+	width:79%;
+}
+.nav-dropdown:hover .cart-items a:hover{
+	margin:auto;
+	background-color:#fff !important;
 }

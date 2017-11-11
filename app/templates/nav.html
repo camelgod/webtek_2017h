@@ -11,13 +11,27 @@
 		</a>
 		</div>
 		<div id="navbar" class="header_content">
-			<a href="#/"class="icon" id="toggleNav">&#9776;</a>
-
-			<a href="/kunnskap">Kunnskapskatalog</a>
-
+			<div class="nav-dropdown">
+				<a href="/cart"><img class="nav-icon" src="../static/shop-icon.png"></a>
+					<ul class="navbar-resources cart-items">
+						<li>
+							<img src="../static/product2.jpg">
+							<a href="/product">Item</a>
+						</li>
+						<li><img src="../static/product2.jpg"><a href="/product">Item</a></li>
+						<li><img src="../static/product2.jpg"><a href="/product">Item</a></li>
+					</ul>
+			</div>
+			<a href="#/" class="icon" id="toggleNav">&#9776;</a>
+			<div class="nav-dropdown">
+				<a href="#/">Ressurser</a>
+				<ul class="navbar-resources">
+					<li><a href="/bruker/registrer">Registrer Bruker</a></li>
+					<li><a href="/kunnskap">Kunnskapskatalog</a></li>
+				</ul>
+			</div>
 			<a href="/om">Om Oss</a>
 			<a href="/kontakt">Kontakt</a>
-			<a href="/bruker/registrer">Registrer Bruker</a>
 			<a href="/nettbutikk">Nettbutikk</a>
 		</div>
 		<ul id="navbar-dropdown" class="navbar-collapse navbar-hide">
@@ -26,5 +40,6 @@
 			<a href="/kontakt">Kontakt</a>
 			<a href="/bruker/registrer">Registrer Bruker</a>
 			<a href="/nettbutikk">Nettbutikk</a>
+			<a href="/cart">Handlevogn</a>
 		</ul>
 	</div>
