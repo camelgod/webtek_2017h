@@ -384,7 +384,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 	.header-media {
 		display:none !important;
 	}
-	#toggleResources {
+.nav-dropdown {
 		display:none !important;
 	}
 }
