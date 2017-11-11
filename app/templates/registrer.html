@@ -4,55 +4,48 @@
 	<div class="full">
 		<div class="page_box big">
             <div class="box_header">
-                <h3>Registrering</h3>
+                <h1>Registrering</h1>
             </div>
-			<div class="box_content">
-                <div class="row center"
-                   <p class="paragraph"> Her kan du registrere deg som kunde slik og du blir lagt til i vårt kassasystem</p>
-                </div>
-
-                <div class="row">
-                    <form name="registreringsskjema" action="" method="post">
-                        <table class="product_table registreringsskjema">
-                            <tr>
-                                <th colspan="3">Kontoinformasjon</th>
-                            </tr>
-                            <div class="reg_row">
-                                <tr>
-                                    <th class="th-left-border"><label for="navn">Fullt navn</label></th>
-                                    <td><label for="fornavn"><p class="nomargin_nopadding">Fornavn</p></label>
-                                        <input type="text" name="fornavn"> </td>
-                                    <td><label for="etternavn"><p class="nomargin_nopadding">Etternavn</p></label>
-                                        <input type="text" name="etternavn"> </td>
-                                </tr>
-                            </div>
-                            <div class="reg_row">
-                                <tr>
-                                    <th class="th-left-border"><label for="kontakt">Kontakt</label></th>
-                                    <td><label for="email"><p class="nomargin_nopadding" id="email_register">Email</p></label>
-                                        <input type="text" name="email" onblur="validate_email_register()"></td>
-                                    <td><label for="tlf"><p class="nomargin_nopadding" id="tlf_register">Tlf</p></label>
-                                        <input type="number" name="tlf" onblur="validate_tlf_register()"> </td>
-                                </tr>
-                            </div>
-                            <div class="reg_row">
-                                <tr>
-                                    <th class="th-left-border"><label for="navn">Adresse</label></th>
-                                    <td><label for="adresse"><p class="nomargin_nopadding">Adresse</p></label>
-                                        <input type="text" name="adresse"> </td>
-                                    <td><label for="postnummer"><p class="nomargin_nopadding" id="postnummer_register">Postnummer</p></label>
-                                        <input type="number" name="postnummer" onblur="validate_postnummer_register()"> </td>
-                                </tr>
-                            </div>
-                            <th class="th-left-border" colspan="3">
-                                <button type="button" class="flat_button th-left-border" onclick="submit_register()">Registrer</button>
-                            </th>
-                        </table>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+	    <div class="box_content">
+		    <div class="row center">
+			    <p class="paragraph">Her kan du registrere deg som kunde slik og du blir lagt til i vårt kassasystem</p>
+		    </div>
+		    <div class="row">
+			    <form name="registreringsskjema" action="" method="post">
+				    <table class="product_table registreringsskjema">
+					    <tr><th colspan="3">Kontoinformasjon</th></tr> <div class="reg_row">
+								<tr><th class="th-left-border"><label for="navn">Fullt navn</label></th> <td><label for="fornavn"><p class="nomargin_nopadding">Fornavn</p></label> <input type="text" name="fornavn"> </td>
+									<td><label for="etternavn"><p class="nomargin_nopadding">Etternavn</p></label>
+										<input type="text" name="etternavn"> </td>
+								</tr>
+							</div>
+							<div class="reg_row">
+								<tr>
+									<th class="th-left-border"><label for="kontakt">Kontakt</label></th>
+									<td><label for="email"><p class="nomargin_nopadding" id="email_register">Email</p></label>
+										<input type="text" name="email" onblur="validate_email_register()"></td>
+									<td><label for="tlf"><p class="nomargin_nopadding" id="tlf_register">Tlf</p></label>
+										<input type="number" name="tlf" onblur="validate_tlf_register()"> </td>
+								</tr>
+							</div>
+							<div class="reg_row">
+								<tr>
+									<th class="th-left-border"><label for="navn">Adresse</label></th>
+									<td><label for="adresse"><p class="nomargin_nopadding">Adresse</p></label>
+										<input type="text" name="adresse"> </td>
+									<td><label for="postnummer"><p class="nomargin_nopadding" id="postnummer_register">Postnummer</p></label>
+										<input type="number" name="postnummer" onblur="validate_postnummer_register()"> </td>
+								</tr>
+							</div>
+							<th class="th-left-border" colspan="3">
+								<button type="button" class="flat_button th-left-border" onclick="submit_register()">Registrer</button>
+							</th>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <script type="text/javascript" src="../static/formValidation.js"></script>
 </body>
