@@ -141,7 +141,7 @@ function submit_kontakt() {
         var emptyfields = 0;
         var navn = document.forms['kontaktskjema']['navn'].value;
         var message = document.forms['kontaktskjema']['message'].value;
-        if(navn == "" || message == " ") {
+        if(navn == "" || message == " " || message == "") {
             emptyfields = 1;
         }
 
@@ -193,7 +193,7 @@ function validate_tlf_kontakt() {
 var cart_valid = [0, 0, 0];
 
 /* Checks if email, tlf or postnummer is still invalid when trying to submit */
-function submit_cart(){
+function validate_cart(){
     var error = "Ugyldige felter: ";
     var stop = 0;
 
@@ -226,10 +226,11 @@ function submit_cart(){
         }
 
         if(emptyfields != 1) {
-            document.forms['leveringsskjema'].submit();
+            validated_info = 1;
+            change_step(3);
         }
         else {
-            alert("Kan ikke levere ordre - tomme felter i skjema");
+            alert("Kan ikke gå til neste steg - tomme felter i skjema");
         }
     }
 }
