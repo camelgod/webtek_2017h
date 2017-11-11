@@ -1,13 +1,8 @@
 {% include('nav.html') %}
-
-<!-- Javascript for like-button -->
-<div id="fb-root"></div>
-
 <div class="page_container">
 	<div class="page_header">
 		<a href="https://www.facebook.com/dyresenteret.aalesund/">
 		<div class="header-media">
-
 			<p>Følg oss på Facebook</p>
 			<img class="social-buttons" src="../static/facebook_icon.svg"/>
 		</div>
@@ -15,52 +10,51 @@
 	</div>
 	<div class="full">
 		<div class="page_box big">
-			<div class="box_header center">
+			<div class="box_header">
 				<h1>Dyresenteret - Mer enn bare en dyrebutikk</h1>
 			</div>
 			<div class="box_content">
 				<div class="row two">
-					<div class="col center">
-							<p>Vi har det du trenger</p>
-							<p class="paragraph no-padding-right">I vår dyrebutikk finner man det meste man trenger til hund, katt, gnager, kanin, reptil og innen akvaristikk.<br><br> I tillegg til at vi er en vanlig dyrebutikk kan man benytte seg av tjenester som klipp og pelsstell av hund eller få hunden behandlet hos vår dyktige dyrekiropraktor.</p>
+					<div class="col">
+							<h2 class="center">Vi har det du trenger!</h2>
+							<p class="paragraph no-padding-right left-border">I vår dyrebutikk finner man det meste man trenger til hund, katt, gnager, kanin, reptil og innen akvaristikk.<br><br> I tillegg til at vi er en vanlig dyrebutikk kan man benytte seg av tjenester som klipp og pelsstell av hund eller få hunden behandlet hos vår dyktige dyrekiropraktor.</p>
 					</div>
-					<div class="col center">
+					<div class="col">
 						<img class="full-width" src="../static/front.png">
-                    </div>
+					</div>
 				</div>
-			<div class="box_header center margin-top36">
-				<h3>Utforsk siden</h3>
-			</div>
+				<div class="spacer">
+					<hr>
+				</div>
+				<div class="row center">
+					<h1>Utforsk siden</h1>
+				</div>
 				<div class="row three center">
 					<div class="col">
-						<h3><a href="/kunnskap">Kunnskapskatalog</a></h3>
-                    <p class="paragraph">
-                        Kunnskapskatalogen er en plass hvor du finner nyttig informasjon om dyrehold. Her finner du alt fra tips om ernæring, dyrestell og trening.
-                    </p>
-
+						<a href="/kunnskap"><img class="col-image" src="../static/book-icon.png"></a>
+						<p class="paragraph center"><a href="/kunnskap">Kunnskapskatalogen</a> er en nettside hvor du finner nyttig informasjon om dyrehold. Her finner du alt fra tips om ernæring, dyrestell og trening.</p>
 					</div>
 					<div class="col">
-						<h3><a href="/om">Om oss</a></h3>
-                        <p class="paragraph">
-                            Vi har drevet dyrebutikk siden 2002 men har drevet med dyr så og si hele livet. Dyr for oss er en lidenskap gjort om til levebrød. Les mer om oss <a href="/om">her.</a>
-                        </p>
+						<a href="/om"><img class="col-image" src="../static/help-icon.png"></a>
+						<p class="paragraph center">
+						Vi har drevet dyrebutikk siden 2002 men har drevet med dyr så og si hele livet. Dyr for oss er en lidenskap gjort om til levebrød. Les mer om oss <a href="/om">her.</a>
+						</p>
 					</div>
 					<div class="col">
-						<h3><a href="/nettbutikk">Nettbuikk</a></h3>
-                        <p class="paragraph">
-                            Du kan bestille varer direkte hjem i Ålesundsområdet. Varene blir levert to ganger i uken.
-                        </p>
+						<a href="/nettbutikk"><img class="col-image" src="../static/shop-icon.png"></a>
+						<p class="paragraph center">Du kan bestille varer direkte hjem i Ålesundsområdet. Varene blir levert to ganger i uken. Ta en titt på vår <a href="/nettbutikk">nettbutikk</a></p>
 					</div>
 				</div>
-                <div class="row">
-                    <div class="box_header margin-top36 center">
-                        <h3>Her finner du oss</h3>
-                    </div>
-
-                        <iframe id="map" frameborder="0" style="border:0"
-                        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvxBC65jFFkYRaDfZWfVagj0&key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8" allowfullscreen>
-                        </iframe>
-                </div>
+				<div class="spacer">
+					<hr>
+				</div>
+				<div class="row center">
+					<h1>Her finner du oss</h1>
+				</div>
+				<div class="row no-box-padding">
+					<iframe id="map" frameborder="0" border="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvxBC65jFFkYRaDfZWfVagj0&key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8" allowfullscreen>
+					</iframe>
+				</div>
 			</div>
 		</div>
 	</div>
