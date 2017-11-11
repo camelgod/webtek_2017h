@@ -597,24 +597,66 @@ input[type=number] {
 	}
 }
 
+.step {
+	display:inline-block;
+	float:left;
+	padding-right:24px;
+}
+.step-content {
+	width:89%;
+	display:inline-block;
+}
+.step-content h2 {
+	line-height:80px;
+	margin:10px;
+}
+.step-col {
+	width:100%;
+}
 /* stepper_cart */
-.stepper{
-	position: fixed;
-}
 
-.box_steps {
-	padding:24px;
-	transition: 0.3s all;
-	width: 80%;
-	margin-left: 15%;
-}
-
-#step_2, #step_3{
+#content-2, #content-3 {
 	opacity: 0.2;
 }
 
-/* End stepper styling */
+/* For the stepper overview */
+.active_step {
+	display: inline-block;
+	border-radius: 50%;
+	width:80px;
+	height:80px;
 
+	background: #2196F3;
+	color: #FFF;
+	text-align: center;
+	line-height: 80px;
+
+	font-size: 32px;
+	margin: 10px auto;
+}
+
+.inactive_step {
+	display: inline-block;
+	border-radius: 50%;
+	width:80px;
+	height:80px;
+
+	background: #000000;
+	opacity: 0.38;
+	color: #FFF;
+	text-align: center;
+	line-height: 80px;
+
+	font-size: 32px;
+	margin: 10px auto;
+}
+
+.step_connector {
+	border-left: 2px solid #BDBDBD;
+	margin-left: 50%;
+}
+
+/* End stepper styling */
 
 .footer_icon {
 	width: 30px;
