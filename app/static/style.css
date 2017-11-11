@@ -224,9 +224,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 }
 
 /* For navbar hamburger ikon */
-.icon-open {
-	transform: rotate(90deg);
-}
+
 .icon-open {
 	transform: rotate(-90deg);
 }
@@ -800,6 +798,7 @@ input[type=number] {
 .cart-items a {
 	width:79%;
 }
+
 .nav-dropdown:hover .cart-items a:hover{
 	margin:auto;
 	background-color:#fff !important;
