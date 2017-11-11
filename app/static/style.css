@@ -315,6 +315,7 @@ a {
     max-height: 200px;
     max-height: 200px;
     border-radius: 50%;
+    margin-top: 30px;
 }
 .about_main_img img {
     max-width: 100%;
@@ -323,6 +324,12 @@ a {
 }
 .about_h2{
     margin-top: 30px;
+
+}
+.employee-info{
+    padding-bottom: 50px;
+    width: 80%;
+    margin: auto;
 
 }
 
@@ -569,13 +576,17 @@ input[type=number] {
 	text-align:center;
 	margin-left:50%;
 	width:40%;
+  height:50px;
 	display:inline-block;
 	position:relative;
 	top:40%;
 }
 
-.fb-like {
-	float: right;
+.social-buttons {
+    width:50px;
+    height:50px;
+    margin:0px;
+    float:left;
 }
 @media screen and (max-width: 650px) {
 	.fb_iframe_widget {
@@ -597,4 +608,8 @@ input[type=number] {
 
 #step_1 {
 
+}
+
+.footer_icon {
+	width: 30px;
 }
