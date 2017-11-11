@@ -429,6 +429,34 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+/* Kontakt specific styling */
+
+
+@media screen and (max-width:600px) {
+.kontaktskjema tr {
+display: block;
+float: left;
+width:100%;
+		transition: 0.5s all;
+}
+
+.kontaktskjema th, .kontaktskjema td {
+display: block;
+		transition: 0.5s all;
+}
+.th-left-border{
+    min-width:80%;
+    margin: auto;
+		transition: 0.5s all;
+}
+
+    .kontaktskjema button{
+        min-width:80%;
+		transition: 0.5s all;
+    }
+}
+
+
 /* Registrer.html styling */
 .registreringsskjema{
 	margin-left: auto;
@@ -620,22 +648,17 @@ input[type=number] {
 	text-align:center;
 	margin-left:50%;
 	width:40%;
-	height:50px;
+  height:50px;
 	display:inline-block;
 	position:relative;
 	top:40%;
 }
-.header-media p {
-	display:inline;
-	line-height:50px;
-}
 
 .social-buttons {
-    display:inline;
     width:50px;
     height:50px;
     margin:0px;
-    float:right;
+    float:left;
 }
 @media screen and (max-width: 650px) {
 	.fb_iframe_widget {

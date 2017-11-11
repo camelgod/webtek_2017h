@@ -10,7 +10,7 @@
 				<div class="row two">
 				    <div class="col">
 					    <form name="kontaktskjema" action="" method="post">
-						    <table class="product_table">
+						    <table class="product_table kontaktskjema">
 							    <tr><th colspan="2"><p>Ta kontakt med oss ved å fylle ut dette skjemaet.</p></th></tr>
 							    <tr><th class="th-left-border"><label for="navn">Navn</label></th>
 								    <td><input type="text" placeholder="Navn" name="navn"> </td>
@@ -29,8 +29,12 @@
 								    <th class="th-left-border"><label for="message">Melding</label></th>
 								    <td><textarea rows="8" name="message"> </textarea></td>
 							    </tr>
-							    <tr><th class="th-left-border">Send inn</th><td><input class="flat_button" type="button" onclick="submit_kontakt()"></td>
+							    <tr>
+							    <td colspan="2">
+							        <input class="flat_button" type="button" value="Send melding" onclick="submit_kontakt()">
+							    </td>
 							    </tr>
+
 						    </table>
 					    </form>
 				    </div>
