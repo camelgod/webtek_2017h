@@ -433,17 +433,57 @@ input[type="submit"] {
 .registreringsskjema{
 	margin-left: auto;
 	margin-right: auto;
-	width: 50%;
+	width: 60%;
 	transition: 0.5s all;
 }
 
+@media screen and (max-width: 1600px) {
+	.registreringsskjema{
+		margin-left: auto;
+		margin-right: auto;
+		width: 75%;
+		transition: 0.5s all;
+	}
+    .registreringsskjema button{
+        min-width:30%;
+		transition: 0.5s all;
+    }
+}
 @media screen and (max-width: 1200px) {
 	.registreringsskjema{
 		margin-left: auto;
 		margin-right: auto;
-		width: 100%;
+		width: 90%;
 		transition: 0.5s all;
 	}
+    .registreringsskjema button{
+        min-width:50%;
+		transition: 0.5s all;
+    }
+}
+
+@media screen and (max-width:600px) {
+.registreringsskjema tr {
+display: block;
+float: left;
+width:100%;
+		transition: 0.5s all;
+}
+
+.registreringsskjema th, .registreringsskjema td {
+display: block;
+		transition: 0.5s all;
+}
+.th-left-border{
+    min-width:80%;
+    margin: auto;
+		transition: 0.5s all;
+}
+
+    .registreringsskjema button{
+        min-width:80%;
+		transition: 0.5s all;
+    }
 }
 
 .nomargin_nopadding{
@@ -555,6 +595,11 @@ input[type=number] {
 }
 .no-padding-right {
 	padding-left:0px;
+}
+.margin-top36{
+    margin-top: 30px;
+
+
 }
 
 .knowledge-menu {
