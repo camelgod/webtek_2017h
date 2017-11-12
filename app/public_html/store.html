@@ -1,0 +1,40 @@
+{% include('nav.html') %}
+<div class="page_container">
+	<div class="page_header"></div>
+	<div class="full">
+		<div class="page_box big">
+			<div class="box_header">
+				<h1>Nettbutikk</h1>
+			</div>
+			<div class="box_content">
+				<div class="row">
+					<p class="paragraph">
+					På denne siden finner du forskjellige kategorier som vi har tilgjengelig for hjemmelevering.<br>Trykk på "Vis kategori" for å vise alle produktene i kategorien, og for å gå videre til bestilling.
+					</p>
+				</div>
+				<div class="spacer"><hr></div>
+				<div class="row center">
+					<h1>Velg en kategori</h1>
+				</div>
+				<div class="row three small-images center">
+					<div class="col">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 1">
+						<h3>Hund</h3>
+						<a href="/category/1" class="flat_button small">Vis kategori</a>
+					</div>
+					<div class="col">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 2">
+						<h3>Katt</h3>
+						<a href="/category/2" class="flat_button small">Vis kategori</a>
+					</div>
+					<div class="col">
+						<img src="{{url_for('static', filename='catprod.jpg')}}" alt="Category 3">
+						<h3>Gnager</h3>
+						<a href="/category/3" class="flat_button small">Vis kategori</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% include('footer.html') %}

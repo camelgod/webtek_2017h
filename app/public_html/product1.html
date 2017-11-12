@@ -1,0 +1,28 @@
+{% include('nav.html') %}
+
+<div class="page_container">
+	<div class="page_header"></div>
+	<div class="full">
+		<div class="page_box big">
+			<div class="box_header">
+				<h3>Flask Product Title</h3>
+			</div>
+			<div class="box_content">
+				<div class="row two fill-images">
+					<div class="col">
+						<img class="product_img" src="{{url_for('static', filename='catprod.jpg')}}" alt="product 1">
+					</div>
+					<div class="col center">
+						<h3 class="content_header_text">Royal Canin Medium Adult</h3>
+						<p class="product_size">15 kg</p>
+						<p class="product_price">777,-</p>
+						<a class="flat_button small" type="submit">
+							Legg til i handlekurv
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% include('footer.html') %}
