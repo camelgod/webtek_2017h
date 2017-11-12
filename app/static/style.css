@@ -863,6 +863,10 @@ input[type=number] {
 	width:79%;
 }
 
+.nav-dropdown:hover #cart-icon {
+	background-color:#ddd !important;
+
+}
 .nav-dropdown:hover .cart-items a:hover{
 	margin:auto;
 	background-color:#fff !important;
