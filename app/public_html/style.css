@@ -50,11 +50,12 @@ button.flat_button, input.flat_button, submit.flat_button {
 
 }
 .full {
-	margin-top:-58px;
+	/* Clip the page_box over into the page_header with -45px (height of the line-height box_header */
+	margin-top:-45px;
 	padding-bottom:36px;
 	width:100%;
 	position:relative;
-
+	background-color:#DDD;
 }
 .right {
 	width: 50%;
@@ -67,6 +68,10 @@ button.flat_button, input.flat_button, submit.flat_button {
 
 .page_container {
 	width:100%;
+	height:100%;
+	position:absolute;
+	/* Make room for banner on top outside floating while scroll */
+	padding-top:56px;
 	background-color:#ccc;
 }
 
@@ -76,14 +81,18 @@ button.flat_button, input.flat_button, submit.flat_button {
 	background-attachment: fixed;
 	background-position: center -100px;
 	background-size: cover;
+	position:relative;
 	height:30%;
+	width:100%;
+	padding-bottom:45px;
+	z-index:5;
 }
 
 .page_box {
 	background:#eeeeee;
-	margin:16px;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	overflow:hidden;
+	display:grid;
 }
 
 .small-images img {
@@ -135,6 +144,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 	background:#FFF;
 	padding:8px 24px 8px 24px;
 	border-bottom: 1px solid rgba(0, 0, 0, .12);
+	z-index:6;
 }
 
 .box_header h4{
