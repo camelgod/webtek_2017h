@@ -275,6 +275,11 @@ button.flat_button, input.flat_button, submit.flat_button {
 	transition: all 1s cubic-bezier(.25, .8, .25, 1);
 }
 
+.product_img{
+    max-height: 500px;
+    margin: auto;
+
+}
 .product_table {
 	border-radius: 2px;
 	width: 100%;
@@ -285,6 +290,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 .product_table tr:last-child th, .product_table tr:last-child td{
 	border-bottom:none;
 }
+
 
 .product_table tr td {
 	border-bottom: 1px solid rgba(0,0,0, .12);
