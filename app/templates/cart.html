@@ -14,8 +14,13 @@
                                 <div class="active_step" id="visual_step1">1</div>
                                 <div class="step_connector" id="connector-1"></div>
                             </div>
-                            <div class="step-content" id="content-1">
+                            <div class="step-content cart-items" id="content-1">
                                 <h2>Bekreft produkter</h2>
+						<img src="{{url_for('static', filename='product1.jpg')}}" alt="Product">
+                        <h3>Chihuahua Junior</h3>
+                        <p>1.5 kg</p>
+                        <p>299,-</p>
+
                                 <table class="product_table">
                                     <tr>
                                         <th class="th-left-border" colspan="2">
@@ -32,9 +37,9 @@
                                 <div class="inactive_step" id="visual_step2">2</div>
                                 <div class="step_connector" id="connector-2"></div>
                             </div>
-                            <div class="step-content" id="content-2">
+                            <div class="step-content  " id="content-2">
                                 <h2>Kundeinformasjon</h2>
-                                <table class="product_table">
+                                <table class="product_table step-table">
                                     <tr>
                                         <th class="th-left-border"><label for="fornavn">Fornavn</label></th>
                                         <td><input type="text" placeholder="Fornavn" name="fornavn" disabled> </td>
@@ -61,10 +66,10 @@
                                         <td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_cart()" disabled></td>
                                     </tr>
                                 </table>
-                                <table class="product_table">
+                                <table class="product_table step-table">
                                     <th class="th-left-border" colspan="2">
                                         <button type="button" class="flat_button" onclick="change_step(1)" id="1from2" disabled>Tilbake</button>
-                                        <button type="button" class="flat_button" onclick="validate_cart()" id="3from2" disabled>Send</button>
+                                        <button type="button" class="flat_button" onclick="validate_cart()" id="3from2" disabled>Neste</button>
                                     </th>
                                 </table>
                             </div>
@@ -77,10 +82,10 @@
                                 </div>
                                 <div class="step-content" id="content-3">
                                     <h2>Ekstra forespørsler</h2>
-                                    <table class="product_table">
+                                    <table class="product_table step-table">
                                         <tr>
                                             <th class="th-left-border"><label for="message">Forespørsel</label></th>
-                                            <td><textarea name="message" disabled> </textarea></td>
+                                            <td><textarea rows="6" name="message" disabled> </textarea></td>
                                         </tr>
                                     </table>
                                     <table class="product_table">
@@ -102,9 +107,3 @@
 <script type="text/javascript" src="../static/formValidation.js"></script>
 </body>
 {% include('footer.html') %}
-
-blsbls = getelementbyid(asdf)
-
-blabla.addEventListener('onChange', function() {
-
-}
