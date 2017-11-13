@@ -9,10 +9,13 @@ PURPOSE: Overview over shopping cart
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<script src="scripts/navigation.js"></script>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <title>Nettbutikk</title>
+	<script type="text/javascript" src="scripts/stepperCart.js"></script>
+	<script type="text/javascript" src="scripts/formValidation.js"></script>
+	<script src="scripts/formValidationCart.js"></script>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+	<title>Handlekurv</title>
 </head>
 <body>
 	<div class="header_bar">
@@ -53,12 +56,12 @@ PURPOSE: Overview over shopping cart
 <div class="page_container">
     <div class="page_header"></div>
     <div class="full">
-        <form name="leveringsskjema" action="" method="post">
             <div class="page_box">
                 <div class="box_header">
                     <h1>Handlevogn - Fullfør Kjøp</h1>
                 </div>
                 <div class="box_content">
+			<form name="leveringsskjema" action="" method="post">
                     <div class="row">
                         <div class="col step-col">
                             <div class="step">
@@ -75,7 +78,7 @@ PURPOSE: Overview over shopping cart
                                 <table class="product_table">
                                     <tr>
                                         <th class="th-left-border" colspan="2">
-                                            <button type="button" class="flat_button" onclick="change_step(2)" id="2from1">Bekreft</button>
+                                            <button type="button" class="flat_button" id="2from1">Bekreft</button>
                                         </th>
                                     </tr>
                                 </table>
@@ -88,7 +91,7 @@ PURPOSE: Overview over shopping cart
                                 <div class="inactive_step" id="visual_step2">2</div>
                                 <div class="step_connector" id="connector-2"></div>
                             </div>
-                            <div class="step-content  " id="content-2">
+                            <div class="step-content" id="content-2">
                                 <h2>Kundeinformasjon</h2>
                                 <table class="product_table step-table">
                                     <tr>
@@ -105,22 +108,22 @@ PURPOSE: Overview over shopping cart
                                     </tr>
                                     <tr>
                                         <th class="th-left-border"><label for="postnummer">Postnummer</label></th>
-                                        <td><input type="number" placeholder="Postnummer" name="postnummer" onblur="validate_postnummer_cart()" disabled></td>
+					<td><input type="number" placeholder="Postnummer" name="postnummer" id="postnummer" disabled></td>
 
                                     </tr>
                                     <tr>
                                         <th class="th-left-border"><label for="email">E-post-adresse</label></th>
-                                        <td><input type="text" placeholder="E-post-adresse" name="email" onblur="validate_email_cart()" disabled></td>
+                                        <td><input type="text" placeholder="E-post-adresse" name="email" id="email" disabled></td>
 
                                     <tr>
                                         <th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-                                        <td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_cart()" disabled></td>
+                                        <td><input type="number" placeholder="12345678" name="tlf" id="tlf" disabled></td>
                                     </tr>
                                 </table>
                                 <table class="product_table step-table">
                                     <th class="th-left-border" colspan="2">
-                                        <button type="button" class="flat_button" onclick="change_step(1)" id="1from2" disabled>Tilbake</button>
-                                        <button type="button" class="flat_button" onclick="validate_cart()" id="3from2" disabled>Neste</button>
+                                        <button type="button" class="flat_button" id="1from2" disabled>Tilbake</button>
+                                        <button type="button" class="flat_button" id="3from2" disabled>Neste</button>
                                     </th>
                                 </table>
                             </div>
@@ -141,7 +144,7 @@ PURPOSE: Overview over shopping cart
                                     </table>
                                     <table class="product_table">
                                         <th class="th-left-border" colspan="2">
-                                            <button type="button" class="flat_button" onclick="change_step(2)" id="2from3" disabled>Tilbake</button>
+                                            <button type="button" class="flat_button" id="2from3" disabled>Tilbake</button>
                                             <button type="submit" class="flat_button" name="submit" disabled>Lever ordre</button>
                                         </th>
                                     </table>
@@ -150,8 +153,8 @@ PURPOSE: Overview over shopping cart
                         </div>
                     </div>
                 </div>
-            </div>
         </form>
+            </div>
 <footer>
 	<div class="row three footer_content">
 		<div class="col">
@@ -185,7 +188,5 @@ PURPOSE: Overview over shopping cart
 	</div>
 </footer>
 </div>
-<script type="text/javascript" src="../static/stepperCart.js"></script>
-<script type="text/javascript" src="../static/formValidation.js"></script>
 </body>
 </html>
