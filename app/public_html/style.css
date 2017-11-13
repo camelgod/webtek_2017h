@@ -281,8 +281,10 @@ footer {
 	-khtml-user-select: none; /* Konqueror HTML */
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently
-	supported by Chrome and Opera */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.navbar-collapse {
+	display: none;
 }
 
 /* For small devices */
@@ -326,10 +328,10 @@ footer {
 		padding-left: 20px;
 		display: inline-block !important;
 	}
-
 	.navbar-collapse {
-		display: none;
+		display: block;
 	}
+
 }
 
 .footer_content {
@@ -521,11 +523,7 @@ input[type=number] {
     height:50px;
     float:right;
 }
-@media screen and (max-width: 650px) {
-	.fb_iframe_widget {
-		display: none !important;
-	}
-}
+
 /*  Stepper  */
 .step {
 	display:inline-block;
@@ -558,7 +556,6 @@ input[type=number] {
 	border-radius: 50%;
 	width:80px;
 	height:80px;
-
 	background: #2196F3;
 	color: #FFF;
 	text-align: center;
@@ -592,90 +589,37 @@ input[type=number] {
 }
 
 @media screen and (max-width:740px) {
+	.step {
+		display:inline-block;
+		float:left;
+		padding-right:10px;
+		transition: 0.5s all;
+	}
+
+	.active_step {
+		width:40px;
+		height:40px;
+		line-height: 40px;
+		font-size: 16px;
+	}
+
+	.inactive_step {
+		width:40px;
+		height:40px;
+		line-height: 40px;
+		font-size: 16px;
+	}
+}
+
 .step {
 	display:inline-block;
-	float:left;
-	padding-right:10px;
-    transition: 0.5s all;
-}
-.step-content {
-	width:80%;
-	display:inline-block;
-    float: left;
-	transition: 0.5s all;
-
-}
-.step-table tr {
-    display: block;
-    float: left;
-    width:100%;
-    transition: 0.5s all;
-    text-align: left;
-}
-
-.step-table th, .kontaktskjema td {
-    display: block;
-    transition: 0.5s all;
-}
-.th-left-border{
-    min-width:80%;
-    margin: auto;
-	transition: 0.5s all;
-}
-
-.step-table button{
-    width:90%;
-    transition: 0.5s all;
-    display: block;
-	transition: 0.5s all;
-
-    }
-.active_step {
-	display: inline-block;
-	border-radius: 50%;
-	width:40px;
-	height:40px;
-
-	background: #2196F3;
-	color: #FFF;
-	text-align: center;
-	line-height: 40px;
-
-	font-size: 16px;
-	margin: 10px auto;
-	transition: 0.5s all;
-}
-
-.inactive_step {
-	display: inline-block;
-	border-radius: 50%;
-	width:40px;
-	height:40px;
-
-	background: #000000;
-	opacity: 0.38;
-	color: #FFF;
-	text-align: center;
-	line-height: 40px;
-
-	font-size: 16px;
-	margin: 10px auto;
-	transition: 0.5s all;
-}
-}
-@media screen and (max-width:1260px) {
-.step {
-	display:inline-block;
-	float:left;
 	padding-right:10px;
 	transition: 0.5s all;
 }
 .step-content {
 	width:70%;
 	display:inline-block;
-    float: left;
 	transition: 0.5s all;
-}
 }
 /* End stepper styling */
 
