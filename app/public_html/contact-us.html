@@ -9,10 +9,12 @@ PURPOSE: Contact information for the store
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<script src="scripts/navigation.js"></script>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <title>Kontakt Oss</title>
+	<script type="text/javascript" src="scripts/formValidationContact.js"></script>
+	<script type="text/javascript" src="scripts/formValidation.js"></script>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+	<title>Kontakt Oss</title>
 </head>
 <body>
 	<div class="header_bar">
@@ -71,11 +73,11 @@ PURPOSE: Contact information for the store
 								</tr>
 								<tr>
 									<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-									<td><input type="number" placeholder="12345678" name="tlf" onblur="validate_tlf_kontakt()"></td>
+									<td><input type="number" placeholder="12345678" name="tlf" id="tlf_contact"></td>
 							    </tr>
 							    <tr>
 								    <th class="th-left-border"><label for="email">Epost-adresse</label></th>
-								    <td><input type="text" placeholder="epost-adresse" name="email" onblur="validate_email_kontakt()"></td>
+								    <td><input type="text" placeholder="epost-adresse" name="email" id="email_contact"></td>
 							    </tr>
 							    <tr>
 								    <th class="th-left-border"><label for="message">Melding</label></th>
@@ -83,7 +85,7 @@ PURPOSE: Contact information for the store
 							    </tr>
 							    <tr>
 							    <td colspan="2">
-							        <input class="flat_button" type="button" value="Send melding" onclick="submit_kontakt()">
+							        <input id="submit_contact" class="flat_button" type="button" value="Send melding">
 							    </td>
 							    </tr>
 
@@ -106,39 +108,38 @@ PURPOSE: Contact information for the store
 			</div>
 		</div>
 	</div>
-<script type="text/javascript" src="scripts/formValidation.js"></script>
-<footer>
-	<div class="row three footer_content">
-		<div class="col">
-			<h3>Kontakt</h3>
-			<ul>
-				<li><a href="tel:+4793036330">+47 930 36 330</a></li>
-				<li>Lerstadvegen 539, 6018 Ålesund</li>
-				<li><a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
-			</ul>
+	<footer>
+		<div class="row three footer_content">
+			<div class="col">
+				<h3>Kontakt</h3>
+				<ul>
+					<li><a href="tel:+4793036330">+47 930 36 330</a></li>
+					<li>Lerstadvegen 539, 6018 Ålesund</li>
+					<li><a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<h3>Sider</h3>
+				<ul>
+					<li><a href="about-us.html">Om</a></li>
+					<li><a href="knowledge-center.html">Kunnskapssenter</a></li>
+					<li><a href="store.html">Nettbutikk</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<h3>Sosiale medier</h3>
+				<ul>
+					<li><a target="_blank" href="https://www.facebook.com/dyresenteret.aalesund/"><img class="footer_icon" style="background-color:white;" src="images/facebook-icon2.png" alt="facebook-icon"></a></li>
+					<li><a target="_blanK" href="https://www.instagram.com/dyresenteret/"><img class="footer_icon" src="images/instagram_icon.svg" alt="instagram-icon"></a></li>
+				</ul>
+			</div>
 		</div>
-		<div class="col">
-			<h3>Sider</h3>
-			<ul>
-				<li><a href="about-us.html">Om</a></li>
-				<li><a href="knowledge-center.html">Kunnskapssenter</a></li>
-				<li><a href="store.html">Nettbutikk</a></li>
-			</ul>
+		<div class="row">
+			<div class="footer_copyright">
+				<p class="footer_copyright_text">© Dyresenteret 2017</p>
+			</div>
 		</div>
-        <div class="col">
-			<h3>Sosiale medier</h3>
-			<ul>
-				<li><a target="_blank" href="https://www.facebook.com/dyresenteret.aalesund/"><img class="footer_icon" style="background-color:white;" src="images/facebook-icon2.png" alt="facebook-icon"></a></li>
-				<li><a target="_blanK" href="https://www.instagram.com/dyresenteret/"><img class="footer_icon" src="images/instagram_icon.svg" alt="instagram-icon"></a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="footer_copyright">
-			<p class="footer_copyright_text">© Dyresenteret 2017</p>
-		</div>
-	</div>
-</footer>
+	</footer>
 </div>
 </body>
 </html>
