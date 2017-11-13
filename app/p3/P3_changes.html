@@ -27,7 +27,6 @@
                 <p>We worked this whole project under workshop-like condition, so while everyone had responsibility of their html/javascript task we all helped each others when we got stuck. Some of the tasks got shuffled around since it became appareant while we worked that some enjoyed specific tasks more than others.
                 Every member did their respective HTML-task and css. Edvard implemented hamburgernavigation and the knowledge center javascript and Simen implemented the stepperCart and form validation javascript.
                 Since we worked together the majority of the time, we all wrote some javascript and had input when the others encountered problems.
-                We all wrote CSS and HTML, and did internal testing.
 				</p>
             </div>
         </section>
@@ -40,8 +39,9 @@
                 <h4>Navigation bar and header</h4>
 					<p> We changed the header so it would contain more space. We removed home because it had the same function as the logo (to go to the homepage). We also compiled knowledge center and registration under the dropdown "resources". </p>
 					<p> The map in  the footer was "too much" and was replaced by social media buttons. </p>
-					<p> As we mentioned was a possibility in P2 we decided to have a static background image below the header</p>
+					<p> As we mentioned was a possibility in P2 we decided to have a static background image below the header. We also included a social media button here.</p>
                     <p> It was decided against having the cart in javascript in the header, because we had to hardcode the items in the cart for this project. We have replaced this javascript requirement with a javascript in knowledge-center that handles the articles.</p>
+                    <p> We also did not include breadcrumbs because our client thought it was "too much" and took focus away from the rest of the page </p>
 				<h4>homepage.html</h4>
 					<p>The site-wide picture of the storefront was removed because of the lack of a high quality photo to make it representable. Other than that the content is the same. We also added icons for the knowledge center, about and store to make the page more intuitiv.</p>
 					<p>The initial map placement was replaced with a photo of the store owners to make the page "homely" aswell as professional. The map is therefore placed in the bottom of the page.</p>
@@ -89,11 +89,8 @@
                         <li>registration.html</li>
                         <li>favicon.ico</li>
                         <li>css/
-                        <ul>
-                            <li>styling.css</li>
-                        </ul>
+                        <li>styling.css</li>
                        <ul> scripts/
-
                             <li>formValidation.js</li>
                             <li><span class="old">hamburgerNavigation.js</span><span class="new"> navigation.js</span></li>
                             <li>stepperCart.js</li>
@@ -136,8 +133,11 @@
                 <h2>Modularity</h2>
 			</div>
 			<div class="box-content">
-                <p>Indicate  how  the  modularity  requirement  was  handled  (where  and  how  either  Server  Side Includes  (SSI)  or  JavaScript  were  used  for  modularity,  and who  was  responsible  for  the implementation).	</p>
-                <p>    </p>
+                <p>We use alot of </p>
+                <p>We use alot of classes in CSS which handles all of the global design components and the general set up of the page.
+                Examples where we use CSS-modularity in our page: Header, footer, page container, page content, buttons. Edvard was in charge of implementing this and when the page was nearly done.</p>
+                <p>Our form validation is also modular for all our forms.  </p>
+                <p>Much of our modularity will in be handled by the flask extension to python we have the global components (header.html, footer.html) in seperate files that gets injected in every page with an include function. Flask will also handle modularities as products, categories etc.. For the delivery we have hardcoded the header and footer in the HTML documents. </p>
             </div>
         </section>
     </div>
