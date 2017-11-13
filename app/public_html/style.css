@@ -706,12 +706,6 @@ input[type=number] {
 .knowledge-content {
 	vertical-align:top;
 	width:69%;
-
-}
-.knowledge-content img{
-    float:left;
-    margin: 26px;
-
 }
 
 .header-media {

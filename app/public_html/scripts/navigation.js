@@ -1,4 +1,4 @@
-window.onload = function() {
+window.addEventListener('load', function() {
 	var button = document.getElementById("toggleNav");
 	var navbar = document.getElementById("navbar-dropdown");
 	var opened = false;
@@ -14,4 +14,4 @@ window.onload = function() {
 			opened = false;
 		};
 	});
-}
+});

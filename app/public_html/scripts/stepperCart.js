@@ -1,5 +1,5 @@
 // sets step connectors as correct height according to size of step content boxes
-window.onload = function() {
+window.addEventListener('load', function() {
     connector1 = document.getElementById('connector-1');
     connector2 = document.getElementById('connector-2');
 
