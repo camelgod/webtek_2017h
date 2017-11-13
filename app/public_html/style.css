@@ -138,13 +138,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 	z-index:6;
 }
 
-.box_header h4{
-	color:rgb(66,66,66);
-	font-size:14px;
-	font-weight:400;
-	line-height:24px;
-}
-
 .box_content {
 	padding:24px;
 	transition: 0.3s all;
@@ -175,17 +168,14 @@ button.flat_button, input.flat_button, submit.flat_button {
 	position:fixed;
 	overflow: hidden;
 }
+
 .header_content {
-	display:inline-block;
 	float:right;
 	height:100%;
 	width:70%;
-	margin:0px;
-	line-height:56px;
 }
 
 .header_content a {
-	color: rgba(66,66,66,0.87);
 	float: right;
 	padding-right: 20px;
 	padding-left:20px;
@@ -210,13 +200,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 .navbar-collapse a{
 	padding: 20px 42px 20px 24px;
 	display:block;
-}
-
-.navbar-collapse a{
-	background-color:#fff;
-	overflow:hidden;
-	width:100%;
-	list-style: none;
 	border-bottom: 1px solid rgba(0,0,0,.12);
 }
 .navbar-collapse a:hover{
@@ -224,7 +207,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 }
 
 /* For navbar hamburger ikon */
-
 .icon-open {
 	transform: rotate(-90deg);
 }
@@ -237,7 +219,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 	position:absolute;
 }
 
-#logo_img {
+.header_logo img {
 	height:100%;
 	min-width:40%;
 }
