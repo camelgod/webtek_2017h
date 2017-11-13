@@ -24,20 +24,15 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-	color:rgba(0,0,0,0.87);
 	font-size:24px;
 	line-height:40px;
 }
 h2 {
-	color:rgba(0,0,0,0.87);
 	font-size:18px;
-	font-weight:400;
 	line-height:40px;
 }
 h3 {
-	color:rgba(0,0,0,0.87);
 	font-size:16px;
-	font-weight:400;
 }
 
 a {
@@ -54,6 +49,9 @@ hr {
 }
 button.flat_button, input.flat_button, submit.flat_button {
 	border: none;
+}
+footer {
+	background-color:#61aea8;
 }
 
 .full {
@@ -287,35 +285,10 @@ button.flat_button, input.flat_button, submit.flat_button {
 	supported by Chrome and Opera */
 }
 
-/* About-us specific CSS */
-
-
+/* For small devices */
 @media screen and (max-width: 920px) {
-	.left {
-		width: 100%;
-		margin-top:-58px;
-		display:block;
-		margin-bottom:48px;
-		transition: 0.3s all;
-	}
-	.right {
-		width: 100%;
-		float: right;
-		display:block;
-		margin-top:0px;
-		margin-bottom:48px;
-		transition: 0.3s all;
-	}
-	.full {
-		margin-top:-58px;
-		margin-bottom: 64px;
-	}
-	.box_content {
-		transition: 0.3s all;
-
-	}
 	.header-media {
-		display: none;
+		display:none !important;
 	}
 	.paragraph {
 		text-align:center !important;
@@ -324,21 +297,41 @@ button.flat_button, input.flat_button, submit.flat_button {
 		border:0px none !important;
 		padding:0px !important;
 	}
-	.header-media {
+	.nav-dropdown {
 		display:none !important;
 	}
-.nav-dropdown {
+	.product_table th, .product_table td {
+		padding:0px;
+		display: block;
+		transition: 0.5s all;
+		width:100%;
+		text-align:center;
+	}
+	.product_table input, .product_table textarea {
+		width:80% !important;
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+	.compact tr:not(:first-child):not(:last-child) th {
 		display:none !important;
+	}
+
+	/* Hide all but hamburger icon */
+	.header_content a:not(:first-child) {
+		display: none;
+	}
+	.header_content a.icon {
+		float:right;
+		padding-right: 20px;
+		padding-left: 20px;
+		display: inline-block !important;
+	}
+
+	.navbar-collapse {
+		display: none;
 	}
 }
 
-
-
-footer {
-
-	background-color:#61aea8;
-
-}
 .footer_content {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -367,6 +360,7 @@ footer {
 	height:400px;
 	width:100%;
 }
+
 .no-box-padding {
 	/* This change is only to hide unchangeable google maps background-color. We push it outside the container and hide it with overflow:hidden in page_box. */
 	width:unset !important;
@@ -376,143 +370,48 @@ footer {
 
 
 .footer_copyright {
-	background:#2f7e79;
-	color:#fff;
+	background-color:#2f7e79;
 	width:100%;
 }
 .footer_copyright_text {
 	margin-bottom:0px;
 	margin-left: 10%;
 	margin-right: 10%;
-	min-width: 60%;
 	background:#2f7e79;
 	color:#fff;
 }
 
 .flat_button {
 	background-color: #fff;
-	border-radius:5px;
-	line-height: 46px;
+	border-radius:3px;
 	text-transform: uppercase;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 	color: #61AEA8;
 	outline:0;
-	padding:10px 20px 10px 20px;
+	padding:20px 60px 20px 60px;
+	text-decoration: underline;
+	cursor: pointer;
 }
 .flat_button.small {
 	width:200px;
+	padding:10px 30px 10px 30px;
 }
 .flat_button:hover {
-	background-color: #F5F5F5;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16), 0 2px 2px rgba(0, 0, 0, 0.23);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.flat_button:focus {
+	background-color: #eee;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-input[type="submit"] {
-	cursor: pointer;
-}
 
-/* Kontakt specific styling */
-
-
-@media screen and (max-width:768px) {
-.kontaktskjema tr {
-display: block;
-float: left;
-width:100%;
-		transition: 0.5s all;
-}
-
-.kontaktskjema th, .kontaktskjema td {
-display: block;
-		transition: 0.5s all;
-}
-.th-left-border{
-    min-width:80%;
-    margin: auto;
-		transition: 0.5s all;
-}
-
-    .kontaktskjema button{
-        min-width:80%;
-		transition: 0.5s all;
-    }
-}
-
-/* Registrer.html styling */
-.registreringsskjema{
-	margin-left: auto;
-	margin-right: auto;
-	width: 60%;
-	transition: 0.5s all;
-}
-
-@media screen and (max-width: 1600px) {
-	.registreringsskjema{
-		margin-left: auto;
-		margin-right: auto;
-		width: 75%;
-		transition: 0.5s all;
-	}
-    .registreringsskjema button{
-        min-width:30%;
-		transition: 0.5s all;
-    }
-}
-@media screen and (max-width: 1200px) {
-	.registreringsskjema{
-		margin-left: auto;
-		margin-right: auto;
-		width: 90%;
-		transition: 0.5s all;
-	}
-    .registreringsskjema button{
-        min-width:50%;
-		transition: 0.5s all;
-    }
-}
-
-@media screen and (max-width:768px) {
-.registreringsskjema tr {
-display: block;
-float: left;
-width:100%;
-		transition: 0.5s all;
-}
-
-.registreringsskjema th, .registreringsskjema td {
-display: block;
-		transition: 0.5s all;
-}
-.th-left-border{
-    min-width:80%;
-    margin: auto;
-		transition: 0.5s all;
-}
-
-    .registreringsskjema button{
-        min-width:80%;
-		transition: 0.5s all;
-    }
-}
-
-.nomargin_nopadding{
+/* Compact tables, showing only first th */
+.compact p{
 	padding: 0;
 	margin: 0;
 }
 
-.hide_paragraph{
-	display: none;
-}
-
-.label_nopadding{
-	padding: 0;
-	margin: 0;
-}
-
-.nodot{
-	list-style-type: none;
-}
 
 /* Removes number spinner from number input fields */
 input[type=number]::-webkit-outer-spin-button,
@@ -527,35 +426,6 @@ input[type=number] {
 }
 /* End styling for forms */
 
-/* Dynamic hamburger menu */
-@media screen and (max-width: 920px) {
-	.header_content a:not(:first-child) {
-		display: none;
-	}
-	.header_content a.icon {
-		float:right;
-		padding-right: 20px;
-		padding-left: 20px;
-		display: inline-block !important;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.header_content.responsive {
-		position: relative;
-	}
-
-	.header_content.responsive li.a.icon {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-}
-@media screen and (min-width: 920px) {
-	.navbar-collapse {
-		display: none;
-	}
-}
 
 .header_content a.icon {
 	display: none;
@@ -572,20 +442,12 @@ input[type=number] {
 	display:none;
 }
 
-#categories{
-    text-align: center;
-}
-
 .row {
 	width:100%;
 }
 
 .col {
     display: inline-block;
-}
-
-.img30{
-    width: 30%!important;
 }
 
 .three .col{
