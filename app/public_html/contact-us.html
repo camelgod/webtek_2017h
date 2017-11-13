@@ -1,145 +1,145 @@
 <!DOCTYPE HTML>
 <!--
-FILE NAME: contact-us.html
-WRITTEN BY: Simen Olavesen
-WHEN: October 2017
-PURPOSE: Contact information for the store
+	FILE NAME: contact-us.html
+	WRITTEN BY: Simen Olavesen
+	WHEN: October 2017
+	PURPOSE: Contact information for the store
 -->
 
 <html>
-<head>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="UTF-8">
-	<script src="scripts/navigation.js"></script>
-	<script type="text/javascript" src="scripts/formValidationContact.js"></script>
-	<script type="text/javascript" src="scripts/formValidation.js"></script>
-	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-	<title>Kontakt Oss</title>
-</head>
-<body>
-	<div class="header_bar">
-		<div id="logo" class="header_logo">
-		<a href="homepage.html">
-				<img src="images/logo.png" alt="dyresenteret-logo"/>
-		</a>
-		</div>
-		<div id="navbar" class="header_content">
-			<div class="nav-dropdown">
-				<a id="cart-icon" href="cart.html"><img class="nav-icon" src="images/shop-icon.png" alt="shopicon"></a>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="UTF-8">
+		<script src="scripts/navigation.js"></script>
+		<script type="text/javascript" src="scripts/formValidationContact.js"></script>
+		<script type="text/javascript" src="scripts/formValidation.js"></script>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+		<title>Kontakt Oss</title>
+	</head>
+	<body>
+		<div class="header_bar">
+			<div id="logo" class="header_logo">
+				<a href="homepage.html">
+					<img src="images/logo.png" alt="dyresenteret-logo"/>
+				</a>
+			</div>
+			<div id="navbar" class="header_content">
+				<div class="nav-dropdown">
+					<a id="cart-icon" href="cart.html"><img class="nav-icon" src="images/shop-icon.png" alt="shopicon"></a>
 					<ul class="navbar-resources cart-items">
 						<li><img src="images/product1.jpg" alt="product1"><a href="product1.html">Item</a></li>
 						<li><img src="images/product1.jpg" alt="product1"><a href="product1.html">Item</a></li>
 					</ul>
+				</div>
+				<a href="#/" class="icon" id="toggleNav">&#9776;</a>
+				<div class="nav-dropdown">
+					<a href="#/">Ressurser</a>
+					<ul class="navbar-resources">
+						<li><a href="registration.html">Registrer Bruker</a></li>
+						<li><a href="knowledge-center.html">Kunnskapskatalog</a></li>
+					</ul>
+				</div>
+				<a href="about-us.html">Om Oss</a>
+				<a href="contact-us.html">Kontakt</a>
+				<a href="store.html">Nettbutikk</a>
 			</div>
-			<a href="#/" class="icon" id="toggleNav">&#9776;</a>
-			<div class="nav-dropdown">
-				<a href="#/">Ressurser</a>
-				<ul class="navbar-resources">
-					<li><a href="registration.html">Registrer Bruker</a></li>
-					<li><a href="knowledge-center.html">Kunnskapskatalog</a></li>
-				</ul>
+			<div id="navbar-dropdown" class="navbar-collapse navbar-hide">
+				<a href="knowledge-center.html">Kunnskapskatalog</a>
+				<a href="about-us.html">Om Oss</a>
+				<a href="contact-us.html">Kontakt</a>
+				<a href="registration.html">Registrer Bruker</a>
+				<a href="store.html">Nettbutikk</a>
+				<a href="cart.html">Handlevogn</a>
 			</div>
-			<a href="about-us.html">Om Oss</a>
-			<a href="contact-us.html">Kontakt</a>
-			<a href="store.html">Nettbutikk</a>
 		</div>
-		<div id="navbar-dropdown" class="navbar-collapse navbar-hide">
-			<a href="knowledge-center.html">Kunnskapskatalog</a>
-			<a href="about-us.html">Om Oss</a>
-			<a href="contact-us.html">Kontakt</a>
-			<a href="registration.html">Registrer Bruker</a>
-			<a href="store.html">Nettbutikk</a>
-			<a href="cart.html">Handlevogn</a>
-		</div>
-	</div>
-<div class="page_container">
-	<div class="page_header"></div>
-	<div class="full">
-		<div class="page_box">
-			<div class="box_header">
-				<h1>Kontakt Oss</h1>
-			</div>
-			<div class="box_content">
-				<div class="row two">
-					<div class="row">
-						<p>På denne siden finner du et skjema som sendes direkte til oss på Dyresenteret. Du finner også øvrig kontaktinformasjon.</p>
+		<div class="page_container">
+			<div class="page_header"></div>
+			<div class="full">
+				<div class="page_box">
+					<div class="box_header">
+						<h1>Kontakt Oss</h1>
 					</div>
-					<div class="col">
-						<form name="kontaktskjema" action="" method="post">
-							<table class="product_table">
-								<tr><th colspan="2"><p>Ta kontakt med oss ved å fylle ut dette skjemaet.</p></th></tr>
-								<tr><th class="th-left-border"><label for="navn">Navn</label></th>
-									<td><input type="text" placeholder="Navn" name="navn"> </td>
-								</tr>
-								<tr>
-									<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-									<td><input type="number" placeholder="12345678" name="tlf" id="tlf_contact"></td>
-							    </tr>
-							    <tr>
-								    <th class="th-left-border"><label for="email">Epost-adresse</label></th>
-								    <td><input type="text" placeholder="epost-adresse" name="email" id="email_contact"></td>
-							    </tr>
-							    <tr>
-								    <th class="th-left-border"><label for="message">Melding</label></th>
-								    <td><textarea rows="8" name="message"> </textarea></td>
-							    </tr>
-							    <tr>
-							    <td colspan="2">
-							        <input id="submit_contact" class="flat_button" type="button" value="Send melding">
-							    </td>
-							    </tr>
-
-						    </table>
-					    </form>
-				    </div>
-				    <div class="col fill-images">
-					    <div>
-							<iframe id="map" style="border:0"
-							src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvxBC65jFFkYRaDfZWfVagj0&key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8" allowfullscreen>
-							</iframe>
+					<div class="box_content">
+						<div class="row">
+							<p>På denne siden finner du et skjema som sendes direkte til oss på Dyresenteret. Du finner også øvrig kontaktinformasjon.</p>
 						</div>
-					    <ul>
-						    <li>&#10143; Lerstadvegen 539, 6018 Ålesund</li>
-						    <li>&#9993; <a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
-						    <li>&#9990; <a href="tel:+4793036330">+47 930 36 330</a></li>
-					    </ul>
-				    </div>
+						<div class="row two">
+							<div class="col">
+								<form name="kontaktskjema" id="kontaktskjema" method="post">
+									<table class="product_table">
+										<tr><th colspan="2"><p>Ta kontakt med oss ved å fylle ut dette skjemaet.</p></th></tr>
+										<tr><th class="th-left-border"><label for="navn">Navn</label></th>
+											<td><input id="navn" type="text" placeholder="Navn" name="navn"> </td>
+										</tr>
+										<tr>
+											<th class="th-left-border"><label for="tlf_contact">Telefonnummer</label></th>
+											<td><input type="number" placeholder="12345678" name="tlf" id="tlf_contact"></td>
+										</tr>
+										<tr>
+											<th class="th-left-border"><label for="email_contact">Epost-adresse</label></th>
+											<td><input type="text" placeholder="epost-adresse" name="email" id="email_contact"></td>
+										</tr>
+										<tr>
+											<th class="th-left-border"><label for="message">Melding</label></th>
+											<td><textarea id="message" rows="8" name="message"> </textarea></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="submit_contact" class="flat_button" type="button" value="Send melding">
+											</td>
+										</tr>
+
+									</table>
+								</form>
+							</div>
+							<div class="col fill-images">
+								<div>
+									<iframe id="map" style="border:0"
+			  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvxBC65jFFkYRaDfZWfVagj0&key=AIzaSyAVYS7BGR9CCT2dG8zubQR_FoYAO2Gt5I8" allowfullscreen>
+									</iframe>
+								</div>
+								<ul>
+									<li>&#10143; Lerstadvegen 539, 6018 Ålesund</li>
+									<li>&#9993; <a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
+									<li>&#9990; <a href="tel:+4793036330">+47 930 36 330</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
+			<footer>
+				<div class="row three footer_content">
+					<div class="col">
+						<h3>Kontakt</h3>
+						<ul>
+							<li><a href="tel:+4793036330">+47 930 36 330</a></li>
+							<li>Lerstadvegen 539, 6018 Ålesund</li>
+							<li><a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3>Sider</h3>
+						<ul>
+							<li><a href="about-us.html">Om</a></li>
+							<li><a href="knowledge-center.html">Kunnskapssenter</a></li>
+							<li><a href="store.html">Nettbutikk</a></li>
+						</ul>
+					</div>
+					<div class="col">
+						<h3>Sosiale medier</h3>
+						<ul>
+							<li><a target="_blank" href="https://www.facebook.com/dyresenteret.aalesund/"><img class="footer_icon" style="background-color:white;" src="images/facebook-icon2.png" alt="facebook-icon"></a></li>
+							<li><a target="_blanK" href="https://www.instagram.com/dyresenteret/"><img class="footer_icon" src="images/instagram_icon.svg" alt="instagram-icon"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row">
+					<div class="footer_copyright">
+						<p class="footer_copyright_text">© Dyresenteret 2017</p>
+					</div>
+				</div>
+			</footer>
 		</div>
-	</div>
-	<footer>
-		<div class="row three footer_content">
-			<div class="col">
-				<h3>Kontakt</h3>
-				<ul>
-					<li><a href="tel:+4793036330">+47 930 36 330</a></li>
-					<li>Lerstadvegen 539, 6018 Ålesund</li>
-					<li><a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
-				</ul>
-			</div>
-			<div class="col">
-				<h3>Sider</h3>
-				<ul>
-					<li><a href="about-us.html">Om</a></li>
-					<li><a href="knowledge-center.html">Kunnskapssenter</a></li>
-					<li><a href="store.html">Nettbutikk</a></li>
-				</ul>
-			</div>
-			<div class="col">
-				<h3>Sosiale medier</h3>
-				<ul>
-					<li><a target="_blank" href="https://www.facebook.com/dyresenteret.aalesund/"><img class="footer_icon" style="background-color:white;" src="images/facebook-icon2.png" alt="facebook-icon"></a></li>
-					<li><a target="_blanK" href="https://www.instagram.com/dyresenteret/"><img class="footer_icon" src="images/instagram_icon.svg" alt="instagram-icon"></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="row">
-			<div class="footer_copyright">
-				<p class="footer_copyright_text">© Dyresenteret 2017</p>
-			</div>
-		</div>
-	</footer>
-</div>
-</body>
+	</body>
 </html>

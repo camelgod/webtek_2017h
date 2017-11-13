@@ -1,6 +1,7 @@
 var current_step = 1;
 // sets step connectors as correct height according to size of step content boxes
 window.addEventListener('load', function() {
+	form = document.getElementById('leveringsskjema');
 
 	button1 = document.getElementById('2from1');
 	button1.addEventListener('click', function() {
@@ -10,10 +11,15 @@ window.addEventListener('load', function() {
 	button2.addEventListener('click', function() {
 		change_step(1);
 	});
+	button3 = document.getElementById('3from2');
+	button3.addEventListener('click', function() {
+		change_step(3);
+	});
 	button4 = document.getElementById('2from3');
 	button4.addEventListener('click', function() {
 		change_step(2);
 	});
+	submit_button = document.getElementById('submit_button');
 
 
 	connector1 = document.getElementById('connector-1');
@@ -77,20 +83,33 @@ window.addEventListener('load', function() {
 			if (current_step == 3)
 				return;
 			else {
-				if(validated_info == 0) {
-					alert("Send inn kundeinformasjon på nytt for å forhindre feil");
-					return;
+				var navn = form['fornavn'].value;
+				var etternavn = form['etternavn'].value;
+				var adresse = form['adresse'].value;
+				var po = form['postnummer'].value;
+				var tlf = form['tlf'].value;
+				var email = form['email'].value;
+
+				console.log(navn, etternavn, adresse, po, tlf, email);
+
+				if(navn == "" || etternavn == "" || adresse == "" || po == "" || tlf == "" || email == "") {
+					validated_info = 0;
+				} else {
+					validated_info = 1;
 				}
+				if(validated_info == 0) {
+					alert("Du har tomme felter");
+				} else {
+					// disable 1 and 2, enable 3 and change current step
+					change_opacity(1, 2, 3);
+					enable_disable_elements(3);
+					current_step = 3;
 
-				// disable 1 and 2, enable 3 and change current step
-				change_opacity(1, 2, 3);
-				enable_disable_elements(3);
-				current_step = 3;
-
-				// smoothly scrolls to the step
-				document.querySelector('#content-3').scrollIntoView({
-					behavior: 'smooth'
-				});
+					// smoothly scrolls to the step
+					document.querySelector('#content-3').scrollIntoView({
+						behavior: 'smooth'
+					});
+				}
 			}
 		}
 	}
@@ -138,11 +157,6 @@ let change_step = function(jump_to) {
 		if (current_step == 3)
 			return;
 		else {
-			if(validated_info == 0) {
-				alert("Send inn kundeinformasjon på nytt for å forhindre feil");
-				return;
-			}
-
 			// disable 1 and 2, enable 3 and change current step
 			change_opacity(1, 2, 3);
 			enable_disable_elements(3);
@@ -234,7 +248,7 @@ function enable_disable_elements(step){
 		document.getElementById('1from2').disabled = true;
 		document.getElementById('3from2').disabled = true;
 		document.getElementById('2from3').disabled = false;
-		document.forms['leveringsskjema']['submit'].disabled = false;
+		submit_button.disabled = false;
 
 		// disable/enable relevant input fields
 		document.forms['leveringsskjema']['fornavn'].disabled = true;
