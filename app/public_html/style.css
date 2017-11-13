@@ -6,6 +6,7 @@ PURPOSE: Styling for the website
 */
 
 body, html {
+	color:rgba(0,0,0,0.87);
 	margin: 0px;
 	width:100%;
 	font-family: 'Roboto', sans-serif;
@@ -54,7 +55,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 	margin-bottom: 64px;
 	display:inline-block;
 	transition: 0.3s all;
-
 }
 .full {
 	/* Clip the page_box over into the page_header with -45px (height of the line-height box_header */
@@ -113,6 +113,8 @@ button.flat_button, input.flat_button, submit.flat_button {
 }
 .full-width {
 	max-width:100% !important;
+	max-height:400px;
+	margin:auto;
 }
 
 .big {
@@ -292,27 +294,26 @@ button.flat_button, input.flat_button, submit.flat_button {
 .product_table tr:last-child th, .product_table tr:last-child td{
 	border-bottom:none;
 }
-
-.product_table tr td {
-	border-bottom: 1px solid rgba(0,0,0, .12);
+.product_table label {
+	font-weight:400;
+	color:rgba(0,0,0,0.87);
 }
+
 .product_table tr td input, .product_table tr td textarea {
 	box-sizing: border-box;
 	width:100%;
 }
 
-.product_table tr th {
+.product_table th {
 	padding-left: 10px;
 	padding-right: 10px;
-	border-bottom: 1px solid rgba(0,0,0, .12);
 	background-color:#fff;
+	border-bottom: 1px solid rgba(0,0,0, .12);
 }
 
 .product_table td {
 	padding: 20px;
-}
-.product_table li {
-	list-style: none;
+	border-bottom: 1px solid rgba(0,0,0, .12);
 }
 
 .th-left-border {
@@ -332,16 +333,11 @@ button.flat_button, input.flat_button, submit.flat_button {
 
 /* About-us specific CSS */
 
-.employee-img{
+.employee-img {
     max-height: 200px;
     max-height: 200px;
     border-radius: 50%;
     margin-top: 30px;
-}
-.about_main_img img {
-    max-width: 100%;
-    max-height: 400px;
-    margin:auto;
 }
 .about_h2{
     margin-top: 30px;
