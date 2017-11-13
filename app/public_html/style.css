@@ -6,6 +6,7 @@ PURPOSE: Styling for the website
 */
 
 body, html {
+	color:rgba(0,0,0,0.87);
 	margin: 0px;
 	width:100%;
 	font-family: 'Roboto', sans-serif;
@@ -44,18 +45,17 @@ a {
 	font-weight: 400;
 	outline:0;
 }
+
+hr {
+	color:#ddd;
+	opacity: 0.30;
+	padding:0px;
+	margin:0px;
+}
 button.flat_button, input.flat_button, submit.flat_button {
 	border: none;
 }
-.left {
-	width: 50%;
-	float: left;
-	margin-top:-58px;
-	margin-bottom: 64px;
-	display:inline-block;
-	transition: 0.3s all;
 
-}
 .full {
 	/* Clip the page_box over into the page_header with -45px (height of the line-height box_header */
 	margin-top:-45px;
@@ -63,14 +63,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 	width:100%;
 	position:relative;
 	background-color:#DDD;
-}
-.right {
-	width: 50%;
-	float: right;
-	display:inline-block;
-	margin-top:-58px;
-	margin-bottom: 64px;
-	transition: 0.3s all;
 }
 
 .page_container {
@@ -82,23 +74,26 @@ button.flat_button, input.flat_button, submit.flat_button {
 	background-color:#ccc;
 }
 
-
 .page_header {
 	background:#92e0d9 url("images/dog.jpg");
 	background-attachment: fixed;
-	background-position: center -100px;
+	background-position: center;
 	background-size: cover;
 	position:relative;
 	height:30%;
 	width:100%;
 	padding-bottom:45px;
+	/* for clipping over box_header */
 	z-index:5;
 }
 
 .page_box {
+	margin-left: 10%;
+	margin-right: 10%;
 	background:#eeeeee;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	overflow:hidden;
+	/* only display to get the clip effect */
 	display:grid;
 }
 
@@ -111,18 +106,22 @@ button.flat_button, input.flat_button, submit.flat_button {
     text-align: right;
     margin:auto;
 }
-.full-width {
-	max-width:100% !important;
+
+.circle-images img {
+    max-height: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
 }
 
-.big {
-	margin-left: 10%;
-	margin-right: 10%;
+
+
+.full-width {
+	max-width:100% !important;
+	max-height:400px;
+	margin:auto;
 }
 
 .page_box p {
-	opacity: 0.87;
-	color: rgba(0,0,0,0.87);
 	font-size: 16px;
 	font-weight:400;
 	line-height:32px;
@@ -140,25 +139,12 @@ button.flat_button, input.flat_button, submit.flat_button {
 	margin:0px;
 }
 
-.page_box hr {
-	color:#ddd;
-	opacity: 0.30;
-	padding:0px;
-	margin:0px;
-}
 
 .box_header {
 	background:#FFF;
 	padding:8px 24px 8px 24px;
 	border-bottom: 1px solid rgba(0, 0, 0, .12);
 	z-index:6;
-}
-
-.box_header h4{
-	color:rgb(66,66,66);
-	font-size:14px;
-	font-weight:400;
-	line-height:24px;
 }
 
 .box_content {
@@ -170,7 +156,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 	cursor:pointer;
 }
 .paragraph {
-	color: rgb(66,66,66) !important;
 	margin:0px;
 	display:block;
 	margin-bottom:15px;
@@ -192,22 +177,26 @@ button.flat_button, input.flat_button, submit.flat_button {
 	position:fixed;
 	overflow: hidden;
 }
+
 .header_content {
-	display:inline-block;
 	float:right;
 	height:100%;
 	width:70%;
-	margin:0px;
-	line-height:56px;
 }
 
 .header_content a {
-	color: rgba(66,66,66,0.87);
 	float: right;
 	padding-right: 20px;
 	padding-left:20px;
+	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	color: rgba(66,66,66,0.87);
+	line-height: 56px;
+	font-weight: 400;
 	font-size: 18px;
+	letter-spacing: 0.02em;
+	text-decoration:none;
 }
+
 .header_content a:hover {
 	background-color:#61aea8;
 	cursor:pointer;
@@ -227,13 +216,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 .navbar-collapse a{
 	padding: 20px 42px 20px 24px;
 	display:block;
-}
-
-.navbar-collapse a{
-	background-color:#fff;
-	overflow:hidden;
-	width:100%;
-	list-style: none;
 	border-bottom: 1px solid rgba(0,0,0,.12);
 }
 .navbar-collapse a:hover{
@@ -241,7 +223,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 }
 
 /* For navbar hamburger ikon */
-
 .icon-open {
 	transform: rotate(-90deg);
 }
@@ -254,32 +235,9 @@ button.flat_button, input.flat_button, submit.flat_button {
 	position:absolute;
 }
 
-#logo_img {
+.header_logo img {
 	height:100%;
 	min-width:40%;
-}
-
-.header_content a {
-	font-family: "Roboto","Helvetica","Arial",sans-serif;
-	color: rgba(66,66,66,0.87);
-	line-height: 56px;
-	font-weight: 400;
-	letter-spacing: 0.02em;
-	text-decoration:none;
-}
-
-.flashed_messages {
-	text-align: center;
-	font-weight: normal;
-	width:100%;
-	position:relative;
-	display:inline-block;
-	z-index: 2;
-	margin-top:4px;
-	background:#fafafa;
-	padding:8px;
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-	transition: all 1s cubic-bezier(.25, .8, .25, 1);
 }
 
 .product_table {
@@ -292,36 +250,26 @@ button.flat_button, input.flat_button, submit.flat_button {
 .product_table tr:last-child th, .product_table tr:last-child td{
 	border-bottom:none;
 }
-
-
-.product_table tr td {
-	border-bottom: 1px solid rgba(0,0,0, .12);
+.product_table label {
+	font-weight:400;
+	color:rgba(0,0,0,0.87);
 }
-.product_table tr td input {
+
+.product_table tr td input, .product_table tr td textarea {
+	box-sizing: border-box;
 	width:100%;
 }
-.product_table tr td textarea {
-	width:100%;
-}
 
-.product_table tr th {
-	padding: 20px;
+.product_table th {
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color:#fff;
 	border-bottom: 1px solid rgba(0,0,0, .12);
-	background:#fff;
 }
 
-.product_table h3 {
-	font-size: 18px;
-	line-height:32px;
-	text-transform:none;
-	margin:0px;
-	font-weight: 400;
-}
 .product_table td {
 	padding: 20px;
-}
-.product_table li {
-	list-style: none;
+	border-bottom: 1px solid rgba(0,0,0, .12);
 }
 
 .th-left-border {
@@ -341,27 +289,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 
 /* About-us specific CSS */
 
-.employee-img{
-    max-height: 200px;
-    max-height: 200px;
-    border-radius: 50%;
-    margin-top: 30px;
-}
-.about_main_img img {
-    max-width: 100%;
-    max-height: 400px;
-    margin:auto;
-}
-.about_h2{
-    margin-top: 30px;
-
-}
-.employee-info{
-    padding-bottom: 50px;
-    width: 80%;
-    margin: auto;
-
-}
 
 @media screen and (max-width: 920px) {
 	.left {
