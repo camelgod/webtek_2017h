@@ -488,7 +488,7 @@ input[type="submit"] {
 /* Kontakt specific styling */
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
 .kontaktskjema tr {
 display: block;
 float: left;
@@ -545,7 +545,7 @@ display: block;
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
 .registreringsskjema tr {
 display: block;
 float: left;
@@ -655,6 +655,10 @@ input[type=number] {
 
 .col {
     display: inline-block;
+}
+
+.img30{
+    width: 30%!important;
 }
 
 .three .col{
