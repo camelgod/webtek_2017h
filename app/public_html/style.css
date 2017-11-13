@@ -282,11 +282,6 @@ button.flat_button, input.flat_button, submit.flat_button {
 	transition: all 1s cubic-bezier(.25, .8, .25, 1);
 }
 
-.product_img{
-    max-height: 500px;
-    margin: auto;
-
-}
 .product_table {
 	border-radius: 2px;
 	width: 100%;
@@ -412,6 +407,11 @@ button.flat_button, input.flat_button, submit.flat_button {
 
 
 
+footer {
+
+	background-color:#61aea8;
+
+}
 .footer_content {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -441,10 +441,10 @@ button.flat_button, input.flat_button, submit.flat_button {
 	width:100%;
 }
 .no-box-padding {
+	/* This change is only to hide unchangeable google maps background-color. We push it outside the container and hide it with overflow:hidden in page_box. */
 	width:unset !important;
 	margin-left:-25px;
 	margin-right:-27px;
-	/* This change is only to hide unchangeable google maps background-color. We push it outside the container and hide it with overflow:hidden in page_box. */
 }
 
 
