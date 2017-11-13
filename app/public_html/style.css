@@ -293,30 +293,21 @@ button.flat_button, input.flat_button, submit.flat_button {
 	border-bottom:none;
 }
 
-
 .product_table tr td {
 	border-bottom: 1px solid rgba(0,0,0, .12);
 }
-.product_table tr td input {
-	width:100%;
-}
-.product_table tr td textarea {
+.product_table tr td input, .product_table tr td textarea {
+	box-sizing: border-box;
 	width:100%;
 }
 
 .product_table tr th {
-	padding: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 	border-bottom: 1px solid rgba(0,0,0, .12);
-	background:#fff;
+	background-color:#fff;
 }
 
-.product_table h3 {
-	font-size: 18px;
-	line-height:32px;
-	text-transform:none;
-	margin:0px;
-	font-weight: 400;
-}
 .product_table td {
 	padding: 20px;
 }
