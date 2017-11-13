@@ -1,3 +1,10 @@
+/*
+FILE NAME: knowledgeCenter.js
+WRITTEN BY: Edvard Nordstrøm Ødegaard, Simen Olavesen
+WHEN: November 2017
+PURPOSE: Hamburger menu
+*/
+
 window.addEventListener('load', function() {
 	var button = document.getElementById("toggleNav");
 	var navbar = document.getElementById("navbar-dropdown");

@@ -1,3 +1,10 @@
+/*
+FILE NAME: formValidationCart.js
+WRITTEN BY: Edvard Nordstrøm Ødegaard, Simen Olavesen
+WHEN: November 2017
+PURPOSE: Form validation for the shopping cart
+*/
+
 window.addEventListener('load', function() {
 	form = document.getElementById('leveringsskjema');
 

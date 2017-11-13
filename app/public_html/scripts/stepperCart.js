@@ -1,3 +1,10 @@
+/*
+FILE NAME: stepperCart.js
+WRITTEN BY: Edvard Nordstrøm Ødegaard, Simen Olavesen
+WHEN: November 2017
+PURPOSE: Navigate through the shopping cart step by step
+*/
+
 var current_step = 1;
 // sets step connectors as correct height according to size of step content boxes
 window.addEventListener('load', function() {

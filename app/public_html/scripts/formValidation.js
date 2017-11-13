@@ -1,3 +1,10 @@
+/*
+FILE NAME: formValidation.js
+WRITTEN BY: Edvard Nordstrøm Ødegaard, Simen Olavesen
+WHEN: November 2017
+PURPOSE: Form validation
+*/
+
 /* Checks validity of email parameter */
 
 let check_email = function(email) {

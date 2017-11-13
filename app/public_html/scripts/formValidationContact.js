@@ -1,3 +1,10 @@
+/*
+FILE NAME: formValidationContact.js
+WRITTEN BY: Edvard Nordstrøm Ødegaard, Simen Olavesen
+WHEN: November 2017
+PURPOSE: Form validation for contact-us
+*/
+
 /* For contact form */
 window.addEventListener('load', function() {
 	form = document.getElementById('kontaktskjema');

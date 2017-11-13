@@ -1,3 +1,10 @@
+/*
+FILE NAME: formValidationRegister.js
+WRITTEN BY: Edvard Nordstrøm Ødegaard, Simen Olavesen
+WHEN: November 2017
+PURPOSE: Form validation for customer registration
+*/
+
 window.addEventListener('load', function() {
 	form = document.getElementById('registreringsskjema');
 
