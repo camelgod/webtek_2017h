@@ -77,7 +77,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 
 
 .page_header {
-	background:#92e0d9 url("dog.jpg");
+	background:#92e0d9 url("images/dog.jpg");
 	background-attachment: fixed;
 	background-position: center -100px;
 	background-size: cover;
