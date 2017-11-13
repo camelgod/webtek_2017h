@@ -73,7 +73,7 @@ footer {
 .page_header {
 	background:#92e0d9 url("images/dog.jpg");
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center -50px;
 	background-size: cover;
 	position:relative;
 	height:30%;
