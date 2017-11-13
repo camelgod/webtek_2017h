@@ -277,14 +277,6 @@ footer {
 	border-right:1px solid #ddd !important;
 }
 
-.noselect {
-	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none; /* Safari */
-	-khtml-user-select: none; /* Konqueror HTML */
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* Internet Explorer/Edge */
-	user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-}
 .navbar-collapse {
 	display: none;
 }
@@ -367,7 +359,7 @@ footer {
 
 .no-box-padding {
 	/* This change is only to hide unchangeable google maps background-color. We push it outside the container and hide it with overflow:hidden in page_box. */
-	width:unset !important;
+	width:initial !important;
 	margin-left:-25px;
 	margin-right:-27px;
 }
@@ -643,7 +635,6 @@ input[type=number] {
 .left-border {
 	border-left: 3px solid #61AEA8;
 	padding-left:10px;
-	padding-bottom:-20px;
 }
 
 .white-box {
@@ -672,7 +663,6 @@ input[type=number] {
 .nav-dropdown:hover .navbar-resources a{
 	border-bottom: 1px solid rgba(0,0,0,.12);
 	float:none;
-	letter-spacing:none;
 	text-decoration: underline;
 	font-size:18px !important;
 	display:block;
@@ -683,7 +673,6 @@ input[type=number] {
 .nav-dropdown:hover .navbar-resources li{
 	border-bottom: 1px solid rgba(0,0,0,.12);
 	float:none;
-	letter-spacing:none;
 	text-decoration: underline;
 	font-size:18px !important;
 	display:block;
