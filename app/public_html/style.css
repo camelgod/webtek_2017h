@@ -52,6 +52,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 }
 footer {
 	background-color:#61aea8;
+	overflow:hidden;
 }
 
 .full {
