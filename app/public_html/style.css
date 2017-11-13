@@ -720,4 +720,32 @@ input[type=number] {
 .nav-dropdown:hover .cart-items a:hover{
 	margin:auto;
 	background-color:#fff !important;
+} 
+
+
+/* fix jitter bug in IE. Credits to user twicejr https://stackoverflow.com/questions/27966735/why-background-image-is-moving-when-scroll-at-ie */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+{
+	html{
+		overflow: hidden;
+		height: 100%;    
+	}
+	body{
+		overflow: auto;
+		height: 100%;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
