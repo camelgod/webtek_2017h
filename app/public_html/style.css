@@ -52,6 +52,7 @@ button.flat_button, input.flat_button, submit.flat_button {
 }
 footer {
 	background-color:#61aea8;
+	overflow:hidden;
 }
 
 .full {
@@ -70,11 +71,13 @@ footer {
 }
 
 .page_header {
+	background-color:transparent;
 	background:#92e0d9 url("images/dog.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	position:relative;
+	overflow:hidden;
 	height:30%;
 	width:100%;
 	padding-bottom:45px;
@@ -717,4 +720,4 @@ input[type=number] {
 .nav-dropdown:hover .cart-items a:hover{
 	margin:auto;
 	background-color:#fff !important;
-}
+} 
