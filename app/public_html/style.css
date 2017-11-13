@@ -701,6 +701,11 @@ input[type=number] {
 	width:69%;
 
 }
+.knowledge-content img{
+    float:left;
+    margin: 26px;
+
+}
 
 .header-media {
 	background-color:#FFF;
