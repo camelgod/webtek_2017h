@@ -1,192 +1,197 @@
 <!DOCTYPE HTML>
 <!--
-FILE NAME: cart.html
-WRITTEN BY: Edvard Nordstrøm Ødegaard
-WHEN: October 2017
-PURPOSE: Overview over shopping cart
+	FILE NAME: cart.html
+	WRITTEN BY: Edvard Nordstrøm Ødegaard
+	WHEN: October 2017
+	PURPOSE: Overview over shopping cart
 -->
 
 <html>
-<head>
-	<link rel="stylesheet" href="style.css">
-	<meta charset="UTF-8">
-	<script src="scripts/navigation.js"></script>
-	<script type="text/javascript" src="scripts/stepperCart.js"></script>
-	<script type="text/javascript" src="scripts/formValidation.js"></script>
-	<script src="scripts/formValidationCart.js"></script>
-	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-	<title>Handlekurv</title>
-</head>
-<body>
-	<div class="header_bar">
-		<div id="logo" class="header_logo">
-		<a href="homepage.html">
-				<img src="images/logo.png" alt="dyresenteret-logo"/>
-		</a>
-		</div>
-		<div id="navbar" class="header_content">
-			<div class="nav-dropdown">
-				<a id="cart-icon" href="cart.html"><img class="nav-icon" src="images/shop-icon.png" alt="shopicon"></a>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<meta charset="UTF-8">
+		<script src="scripts/navigation.js"></script>
+		<script type="text/javascript" src="scripts/stepperCart.js"></script>
+		<script src="scripts/formValidationCart.js"></script>
+		<script type="text/javascript" src="scripts/formValidation.js"></script>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+		<title>Handlekurv</title>
+	</head>
+	<body>
+		<div class="header_bar">
+			<div id="logo" class="header_logo">
+				<a href="homepage.html">
+					<img src="images/logo.png" alt="dyresenteret-logo"/>
+				</a>
+			</div>
+			<div id="navbar" class="header_content">
+				<div class="nav-dropdown">
+					<a id="cart-icon" href="cart.html"><img class="nav-icon" src="images/shop-icon.png" alt="shopicon"></a>
 					<ul class="navbar-resources cart-items">
 						<li><img src="images/product1.jpg" alt="product1"><a href="product1.html">Item</a></li>
 						<li><img src="images/product1.jpg" alt="product1"><a href="product1.html">Item</a></li>
 					</ul>
+				</div>
+				<a href="#/" class="icon" id="toggleNav">&#9776;</a>
+				<div class="nav-dropdown">
+					<a href="#/">Ressurser</a>
+					<ul class="navbar-resources">
+						<li><a href="registration.html">Registrer Bruker</a></li>
+						<li><a href="knowledge-center.html">Kunnskapskatalog</a></li>
+					</ul>
+				</div>
+				<a href="about-us.html">Om Oss</a>
+				<a href="contact-us.html">Kontakt</a>
+				<a href="store.html">Nettbutikk</a>
 			</div>
-			<a href="#/" class="icon" id="toggleNav">&#9776;</a>
-			<div class="nav-dropdown">
-				<a href="#/">Ressurser</a>
-				<ul class="navbar-resources">
-					<li><a href="registration.html">Registrer Bruker</a></li>
-					<li><a href="knowledge-center.html">Kunnskapskatalog</a></li>
-				</ul>
+			<div id="navbar-dropdown" class="navbar-collapse navbar-hide">
+				<a href="knowledge-center.html">Kunnskapskatalog</a>
+				<a href="about-us.html">Om Oss</a>
+				<a href="contact-us.html">Kontakt</a>
+				<a href="registration.html">Registrer Bruker</a>
+				<a href="store.html">Nettbutikk</a>
+				<a href="cart.html">Handlevogn</a>
 			</div>
-			<a href="about-us.html">Om Oss</a>
-			<a href="contact-us.html">Kontakt</a>
-			<a href="store.html">Nettbutikk</a>
 		</div>
-		<div id="navbar-dropdown" class="navbar-collapse navbar-hide">
-			<a href="knowledge-center.html">Kunnskapskatalog</a>
-			<a href="about-us.html">Om Oss</a>
-			<a href="contact-us.html">Kontakt</a>
-			<a href="registration.html">Registrer Bruker</a>
-			<a href="store.html">Nettbutikk</a>
-			<a href="cart.html">Handlevogn</a>
-		</div>
-	</div>
-<div class="page_container">
-    <div class="page_header"></div>
-    <div class="full">
-            <div class="page_box">
-                <div class="box_header">
-                    <h1>Handlevogn - Fullfør Kjøp</h1>
-                </div>
-                <div class="box_content">
-			<form name="leveringsskjema" action="" method="post">
-                    <div class="row">
-                        <div class="col step-col">
-                            <div class="step">
-                                <div class="active_step" id="visual_step1">1</div>
-                                <div class="step_connector" id="connector-1"></div>
-                            </div>
-                            <div class="step-content cart-items" id="content-1">
-                                <h2>Bekreft produkter</h2>
-						<img src="images/product1.jpg" alt="Product">
-                        <h3>Chihuahua Junior</h3>
-                        <p>1.5 kg</p>
-                        <p>299,-</p>
+		<div class="page_container">
+			<div class="page_header"></div>
+			<div class="full">
+				<form name="leveringsskjema" id="leveringsskjema" method="post">
+					<div class="page_box">
+						<div class="box_header">
+							<h1>Handlevogn - Fullfør Kjøp</h1>
+						</div>
+						<div class="box_content">
+							<div class="row">
+								<div class="col step-col">
+									<div class="step">
+										<div class="active_step" id="visual_step1">1</div>
+										<div class="step_connector" id="connector-1"></div>
+									</div>
+									<div class="step-content cart-items" id="content-1">
+										<h2>Bekreft produkter</h2>
+										<img src="images/product1.jpg" alt="Product">
+										<h3>Chihuahua Junior</h3>
+										<p>1.5 kg</p>
+										<p>299,-</p>
+										<table class="product_table">
+											<tr>
+												<th class="th-left-border">
+													<div>
+														<button type="button" class="flat_button" id="2from1">Bekreft</button>
+													</div>
+												</th>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col step-col">
+									<div class="step">
+										<div class="inactive_step" id="visual_step2">2</div>
+										<div class="step_connector" id="connector-2"></div>
+									</div>
+									<div class="step-content" id="content-2">
+										<h2>Kundeinformasjon</h2>
+										<table class="product_table step-table">
+											<tr>
+												<th class="th-left-border"><label for="fornavn">Fornavn</label></th>
+												<td><input id="fornavn" type="text" placeholder="Fornavn" name="fornavn" disabled> </td>
+											</tr>
+											<tr>
+												<th class="th-left-border"><label for="etternavn">Etternavn</label></th>
+												<td><input type="text" id="etternavn" placeholder="Etternavn" name="etternavn" disabled> </td>
+											</tr>
+											<tr>
+												<th class="th-left-border"><label for="adresse">Adresse</label></th>
+												<td><input type="text" id="adresse" placeholder="Adresse" name="adresse" disabled> </td>
+											</tr>
+											<tr>
+												<th class="th-left-border"><label for="postnummer">Postnummer</label></th>
+												<td><input type="number" placeholder="Postnummer" name="postnummer" id="postnummer" disabled></td>
 
-                                <table class="product_table">
-                                    <tr>
-                                        <th class="th-left-border" colspan="2">
-                                            <button type="button" class="flat_button" id="2from1">Bekreft</button>
-                                        </th>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col step-col">
-                            <div class="step">
-                                <div class="inactive_step" id="visual_step2">2</div>
-                                <div class="step_connector" id="connector-2"></div>
-                            </div>
-                            <div class="step-content" id="content-2">
-                                <h2>Kundeinformasjon</h2>
-                                <table class="product_table step-table">
-                                    <tr>
-                                        <th class="th-left-border"><label for="fornavn">Fornavn</label></th>
-                                        <td><input type="text" placeholder="Fornavn" name="fornavn" disabled> </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="th-left-border"><label for="etternavn">Etternavn</label></th>
-                                        <td><input type="text" placeholder="Etternavn" name="etternavn" disabled> </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="th-left-border"><label for="adresse">Adresse</label></th>
-                                        <td><input type="text" placeholder="Adresse" name="adresse" disabled> </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="th-left-border"><label for="postnummer">Postnummer</label></th>
-					<td><input type="number" placeholder="Postnummer" name="postnummer" id="postnummer" disabled></td>
+											</tr>
+											<tr>
+												<th class="th-left-border"><label for="email">E-post-adresse</label></th>
+												<td><input type="text" placeholder="E-post-adresse" name="email" id="email" disabled></td>
 
-                                    </tr>
-                                    <tr>
-                                        <th class="th-left-border"><label for="email">E-post-adresse</label></th>
-                                        <td><input type="text" placeholder="E-post-adresse" name="email" id="email" disabled></td>
-
-                                    <tr>
-                                        <th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
-                                        <td><input type="number" placeholder="12345678" name="tlf" id="tlf" disabled></td>
-                                    </tr>
-                                </table>
-                                <table class="product_table step-table">
-                                    <th class="th-left-border" colspan="2">
-                                        <button type="button" class="flat_button" id="1from2" disabled>Tilbake</button>
-                                        <button type="button" class="flat_button" id="3from2" disabled>Neste</button>
-                                    </th>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                        <div class="row">
-                            <div class="col step-col">
-                                <div class="step">
-                                    <div class="inactive_step" id="visual_step3">3</div>
-                                </div>
-                                <div class="step-content" id="content-3">
-                                    <h2>Ekstra forespørsler</h2>
-                                    <table class="product_table step-table">
-                                        <tr>
-                                            <th class="th-left-border"><label for="message">Forespørsel</label></th>
-                                            <td><textarea rows="6" name="message" disabled> </textarea></td>
-                                        </tr>
-                                    </table>
-                                    <table class="product_table">
-                                        <th class="th-left-border" colspan="2">
-                                            <button type="button" class="flat_button" id="2from3" disabled>Tilbake</button>
-                                            <button type="submit" class="flat_button" name="submit" disabled>Lever ordre</button>
-                                        </th>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </form>
-            </div>
-<footer>
-	<div class="row three footer_content">
-		<div class="col">
-			<h3>Kontakt</h3>
-			<ul>
-				<li><a href="tel:+4793036330">+47 930 36 330</a></li>
-				<li>Lerstadvegen 539, 6018 Ålesund</li>
-				<li><a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
-			</ul>
+												<tr>
+													<th class="th-left-border"><label for="tlf">Telefonnummer</label></th>
+													<td><input type="number" placeholder="12345678" name="tlf" id="tlf" disabled></td>
+												</tr>
+										</table>
+										<table class="product_table step-table">
+											<tr>
+												<th class="th-left-border">
+													<button type="button" class="flat_button" id="1from2" disabled>Tilbake</button>
+													<button type="button" class="flat_button" id="3from2" disabled>Neste</button>
+												</th>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col step-col">
+									<div class="step">
+										<div class="inactive_step" id="visual_step3">3</div>
+									</div>
+									<div class="step-content" id="content-3">
+										<h2>Ekstra forespørsler</h2>
+										<table class="product_table step-table">
+											<tr>
+												<th class="th-left-border"><label for="message">Forespørsel</label></th>
+												<td><textarea rows="6" id="message" name="message" disabled> </textarea></td>
+											</tr>
+										</table>
+										<table class="product_table">
+											<tr>
+												<th class="th-left-border">
+													<button type="button" class="flat_button" id="2from3" disabled>Tilbake</button>
+													<button type="submit" id="submit_button" class="flat_button" name="send" disabled>Lever ordre</button>
+												</th>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<footer>
+					<div class="row three footer_content">
+						<div class="col">
+							<h3>Kontakt</h3>
+							<ul>
+								<li><a href="tel:+4793036330">+47 930 36 330</a></li>
+								<li>Lerstadvegen 539, 6018 Ålesund</li>
+								<li><a href="mailto:post@dyresenteret.no">post@dyresenteret.no</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h3>Sider</h3>
+							<ul>
+								<li><a href="about-us.html">Om</a></li>
+								<li><a href="knowledge-center.html">Kunnskapssenter</a></li>
+								<li><a href="store.html">Nettbutikk</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<h3>Sosiale medier</h3>
+							<ul>
+								<li><a target="_blank" href="https://www.facebook.com/dyresenteret.aalesund/"><img class="footer_icon" style="background-color:white;" src="images/facebook-icon2.png" alt="facebook-icon"></a></li>
+								<li><a target="_blanK" href="https://www.instagram.com/dyresenteret/"><img class="footer_icon" src="images/instagram_icon.svg" alt="instagram-icon"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="footer_copyright">
+							<p class="footer_copyright_text">© Dyresenteret 2017</p>
+						</div>
+					</div>
+				</footer>
+			</div>
 		</div>
-		<div class="col">
-			<h3>Sider</h3>
-			<ul>
-				<li><a href="about-us.html">Om</a></li>
-				<li><a href="knowledge-center.html">Kunnskapssenter</a></li>
-				<li><a href="store.html">Nettbutikk</a></li>
-			</ul>
-		</div>
-        <div class="col">
-			<h3>Sosiale medier</h3>
-			<ul>
-				<li><a target="_blank" href="https://www.facebook.com/dyresenteret.aalesund/"><img class="footer_icon" style="background-color:white;" src="images/facebook-icon2.png" alt="facebook-icon"></a></li>
-				<li><a target="_blanK" href="https://www.instagram.com/dyresenteret/"><img class="footer_icon" src="images/instagram_icon.svg" alt="instagram-icon"></a></li>
-			</ul>
-		</div>
-	</div>
-	<div class="row">
-		<div class="footer_copyright">
-			<p class="footer_copyright_text">© Dyresenteret 2017</p>
-		</div>
-	</div>
-</footer>
-</div>
-</body>
+	</body>
 </html>

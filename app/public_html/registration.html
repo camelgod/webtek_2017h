@@ -64,55 +64,57 @@ PURPOSE: Register customer information
 					<p class="paragraph">Her kan du registrere deg som kunde slik og du blir lagt til i vårt kassasystem</p>
 				</div>
 				<div class="row">
-					<form name="registreringsskjema" action="" method="post">
+					<form name="registreringsskjema" id="registreringsskjema" method="post">
 						<table class="product_table compact">
 							<tr>
 								<th colspan="3">
-									<h3>Kontoinformasjon</h3>
+									<p>Kontoinformasjon</p>
 								</th>
 							</tr>
 							<tr>
 								<th class="th-left-border">
-									<label for="navn">Fullt navn</label>
+									<label>Fullt navn</label>
 								</th>
 							       	<td>
 									<label for="fornavn">Fornavn</label>
-								       	<input type="text" name="fornavn">
+								       	<input type="text" name="fornavn" id="fornavn">
 								</td>
 								<td>
 									<label for="etternavn">Etternavn</label>
-									<input type="text" name="etternavn">
+									<input type="text" name="etternavn" id="etternavn">
 								</td>
 							</tr>
 							<tr>
 								<th class="th-left-border">
-									<label for="kontakt">Kontakt</label>
+									<label>Kontakt</label>
 								</th>
 								<td>
 									<label for="email">Email</label>
-									<input type="text" name="email" onblur="validate_email_register()">
+									<input type="text" id="email" name="email">
 								</td>
 								<td>
 									<label for="tlf">Tlf</label>
-									<input type="number" name="tlf" onblur="validate_tlf_register()">
+									<input type="number" id="tlf" name="tlf">
 								</td>
 							</tr>
 							<tr>
 								<th class="th-left-border">
-									<label for="navn">Adresse</label>
+									<label>Adresse</label>
 								</th>
 								<td>
 									<label for="adresse">Adresse</label>
-									<input type="text" name="adresse">
+									<input type="text" name="adresse" id="adresse">
 								</td>
 								<td>
 									<label for="postnummer">Postnummer</label>
-									<input type="number" name="postnummer" onblur="validate_postnummer_register()">
+									<input type="number" id="postnummer" name="postnummer">
 								</td>
 							</tr>
+							<tr>
 							<th class="th-left-border" colspan="3">
-								<button type="button" class="flat_button" onclick="submit_register()">Registrer</button>
+								<button type="button" class="flat_button" id="submit_button">Registrer</button>
 							</th>
+							</tr>
 						</table>
 					</form>
 				</div>
