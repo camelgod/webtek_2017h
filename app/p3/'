@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>P4 Testing</title>
+</head>
+<body>
+	<div id="content">
+		<section class="header_section">
+			<h1>1. P4 Testing</h1>
+			<h2>Members of SØKAE (Group 31)</h2>
+			<ul>
+				<li>Kent Are Torvik</li>
+				<li>Aleksander Kaldestad Christensen</li>
+				<li>Edvard Nordstrøm Ødegaard</li>
+				<li>Simen Olavesen</li>
+				<li>Øystein Hølland</li>
+			</ul>
+            <p>Document created 03-10-2017</p>
+            <hr>
+		</section>
+		<section>
+			<div class="box-header">
+                <h2>2. Administrative Details</h2>
+			</div>
+			<div class="box-content">
+                <h4>Client Name: Dyresenteret</h4>
+                <p>Contact person: Ine Torvik Totland, CEO</p>
+            </div>
+        </section>
+		<section>
+			<div class="box-header">
+                <h2>3. Testing Document</h2>
+			</div>
+			<div class="box-content">
+                <h4>Brief Summary of testing content</h4>
+                <p>The test is compiled of 3 use cases and a general section. Use case 1: You have to send a message to the store. Use case 2: You have to order a product. Use case 3: You have to register as a costumer </p>
+                <p>The questions revolve around the usability and how hard each of these cases was to complete. They also get asked if they had any problems completing the task and if they have any input on how we can improve the flow of the tasks</p>
+                <p>The last section they was asked to browse the page as they liked for a few minutes before answering the questions. It was general questions about age, device used, browser used, their first impression, how they liked the design, what was frustrating with the page, and if they have any input on improvements. </p>
+                <p><a href="https://goo.gl/forms/jpEsg1lBfdFdqHAI2">Google Testing Form</a></p>
+            </div>
+        </section>
+		<section>
+			<div class="box-header">
+                <h2>4. Tester Audience</h2>
+			</div>
+			<div class="box-content">
+                <p>We reached out to potential target audience through: Email, facebook and in person. We had X testers that we got through these channels and we tested the webpage in person with X fellow students. We also had a question in our questionaire that asked the tester if they owned a pet to be sure that we reached the target audience.</p>
+            </div>
+        </section>
+		<section>
+			<div class="box-header">
+                <h2>5. Testing Platforms</h2>
+			</div>
+			<div class="box-content">
+                <h4></h4>
+                <p></p>
+            </div>
+                <section>
+            <div class="box-header">
+				<h2>8. Plan</h2>
+            </div>
+            <div class="box-content">
+					<p>Organizational Scheme for all the files planned for this project:</p>
+                    <ul>
+                        <li>homepage.html</li>
+                        <li>about-us.html</li>
+                        <li>contact-us.html</li>
+                        <li>knowledge-center.html</li>
+                        <li>article1.html</li>
+                        <li>store.html</li>
+                        <li>dog.html</li>
+                        <li>product1.html</li>
+                        <li>cart.html</li>
+                        <li>registration.html</li>
+                        <li>favicon.ico</li>
+                        <li>css/
+                        <ul>
+                            <li>styling.css</li>
+                        </ul>
+                        <li>scripts/
+                        <ul>
+                            <li>formValidation.js</li>
+                            <li>hamburgerNavigation.js</li>
+                            <li>stepperCart.js</li>
+                            <li>shoppingCart.js</li>
+                        </ul>
+                        </li>
+                        <li>images/
+                            <ul>
+                                <li>logo.png</li>
+                                <li>store-front.png</li>
+                                <li>owners.png</li>
+                                <li><span class="old">employee1.png</span>kjell.jpg</li>
+                                <li><span class="old">employee2.png</span>ine.jpg</li>
+                                <li><span class="old">employee3.png</span>tone.jpg</li>
+                                <div class="old">
+                                	<li>employee4.png</li>
+                                	<li>employee5.png</li>
+                                	<li>employee6.png</li>
+                                </div>
+								<li class="new">hundefrisor.jpg</li>
+								<li class="new">harriet.jpg</li>
+                                <li>category-dog.png</li>
+                                <li>product1.png</li>
+                                <li>knowledge-center.png</li>
+                                <li>article1.png</li>
+								<li class="new">dog.jpg</li>
+								<li class="new">facebook-icon2.png</li>
+								<li class="new">facebook_icon.svg</li>
+								<li class="new">instagram_icon.svg</li>
+								<li class="new">shop-icon.png</li>
+								<li class="new">help-icon.png</li>
+								<li class="new">book-icon.png</li>
+                            </ul>
+                        </li>
+                    </ul>
+            </div>
+		</section>    </section>
+    </div>
+</body>
+</html>
+
